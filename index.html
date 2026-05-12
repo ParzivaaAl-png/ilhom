@@ -1,0 +1,617 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Тестирование — выбор темы</title>
+<style>
+:root{
+  --bg:#07101a; --panel: rgba(18,24,33,0.56);
+  --accent1:#45a8ff; --accent2:#2aa1ff; --muted:#98a0b3; --text:#e6eef8;
+  --danger1:#ff4757; --danger2:#ff3838;
+  --card-shadow: 0 12px 30px rgba(2,6,23,0.6);
+}
+.light{ --bg:#f5f7fb; --panel: rgba(255,255,255,0.92); --text:#081026; --muted:#52606d; --accent1:#2979ff; --accent2:#1e66d7; --danger1:#ff4757; --danger2:#ff3838; }
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial;color:var(--text);background:linear-gradient(180deg,var(--bg), #061018);-webkit-font-smoothing:antialiased}
+.container{max-width:1100px;margin:28px auto;padding:18px}
+.header{display:flex;align-items:center;justify-content:space-between;padding:12px;border-radius:14px;background:var(--panel);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,0.03);box-shadow:var(--card-shadow)}
+.title{font-weight:800;font-size:22px}
+.subtitle{color:var(--muted);font-size:13px}
+
+.card{margin-top:16px;padding:20px;border-radius:16px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border:1px solid rgba(255,255,255,0.03);box-shadow:var(--card-shadow)}
+.progress-row{display:flex;align-items:center;gap:12px;margin-bottom:16px}
+.progress-small{font-size:13px;color:var(--muted);min-width:180px}
+.progress-track{flex:1;height:8px;background:rgba(255,255,255,0.03);border-radius:999px;overflow:hidden}
+.progress-bar{height:100%;width:0%;background:linear-gradient(90deg,var(--accent1),var(--accent2));transition:width .35s ease}
+.progress-pct{width:48px;text-align:right;color:var(--muted);font-size:13px}
+
+.question{font-size:20px;font-weight:700;margin-bottom:12px;color:var(--text);white-space:pre-line;line-height:1.4}
+.options{display:flex;flex-direction:column;gap:10px}
+.option{display:flex;align-items:center;gap:14px;padding:14px;border-radius:12px;background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border:1px solid rgba(255,255,255,0.04);cursor:pointer;transition:transform .16s ease,box-shadow .16s, background .16s;user-select:none}
+.option:hover{transform:translateY(-6px);box-shadow:0 18px 40px rgba(2,6,23,0.55)}
+.option .opt-text{flex:1;font-size:15px;color:var(--text)}
+.option.selected{background:linear-gradient(90deg,var(--accent1),var(--accent2));color:#fff;border-color:transparent;box-shadow:0 12px 30px rgba(45,166,255,0.14)}
+.option.correct{background:linear-gradient(90deg,#2ecc71,#1fbf5b);color:#fff}
+.option.incorrect{background:linear-gradient(90deg,#ff6b6b,#ff4b4b);color:#fff}
+
+.meta{display:flex;align-items:center;justify-content:space-between;margin-top:12px}
+.feedback{padding:10px 12px;border-radius:10px;display:none;font-weight:700}
+.feedback.correct{background:rgba(46,204,113,0.12);color:#2ecc71}
+.feedback.incorrect{background:rgba(255,107,107,0.12);color:#ff6b6b}
+.explain{margin-left:12px;color:var(--muted);display:none}
+
+.nav{display:flex;align-items:center;gap:12px;justify-content:flex-end;margin-top:18px}
+.btn{padding:10px 16px;border-radius:12px;border:none;background:var(--accent1);color:white;font-weight:700;cursor:pointer}
+.btn.ghost{background:transparent;border:1px solid rgba(255,255,255,0.04);color:var(--text)}
+.btn.danger{background:linear-gradient(90deg,var(--danger1),var(--danger2));color:white;border:none}
+.btn.danger:hover{background:linear-gradient(90deg,#ff3838,#ff1e1e)}
+.btn:disabled{opacity:0.45;cursor:not-allowed}
+.auto-skip-toggle{display:flex;align-items:center;gap:8px;color:var(--muted);font-size:14px;cursor:pointer}
+.auto-skip-toggle input{transform:scale(1.12)}
+
+.bottom-cell { margin-top:22px; display:none; }
+.bottom-cell.visible { display:block; }
+.bottom-cell .track {
+  width:100%; height:12px; border-radius:8px; background:rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.03); overflow:hidden; position:relative; box-shadow: 0 8px 20px rgba(2,6,23,0.45);
+}
+.bottom-cell .fill { height:100%; width:0%; background: linear-gradient(90deg,var(--accent1),var(--accent2)); transition: width .05s linear; border-radius:6px; box-shadow:0 6px 16px rgba(45,166,255,0.14); }
+.bottom-cell .label { margin-top:8px; text-align:right; color:var(--muted); font-size:13px; }
+
+.results{padding:22px;text-align:center;color:var(--text);display:none;margin-top:20px;border-radius:16px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border:1px solid rgba(255,255,255,0.03);box-shadow:var(--card-shadow)}
+.score{font-size:36px;font-weight:800;margin-bottom:8px}
+.result-details{margin:20px 0;padding:15px;background:rgba(255,255,255,0.02);border-radius:10px;text-align:left;max-width:400px;margin-left:auto;margin-right:auto}
+.result-details div{margin:10px 0;display:flex;justify-content:space-between}
+.result-details span{font-weight:bold;color:var(--accent1)}
+
+.start-modal{position:fixed;inset:0;background:linear-gradient(rgba(3,6,10,0.6), rgba(3,6,10,0.6));display:flex;align-items:center;justify-content:center;z-index:2000}
+.start-card{background:var(--panel);padding:22px;border-radius:14px;border:1px solid rgba(255,255,255,0.04);width:360px;box-shadow:var(--card-shadow)}
+.mode-btn{width:100%;padding:12px;border-radius:10px;border:none;margin-bottom:10px;font-weight:700;cursor:pointer}
+.mode-single{background:linear-gradient(90deg,var(--accent1),var(--accent2));color:white}
+.mode-mastery{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--text)}
+.subject-btn{width:100%;padding:12px;border-radius:10px;border:none;margin-bottom:10px;font-weight:700;cursor:pointer;background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--text);text-align:left}
+.subject-btn:hover{background:rgba(255,255,255,0.05)}
+.subject-btn.selected{background:linear-gradient(90deg,var(--accent1),var(--accent2));color:white}
+
+.confirm-modal{position:fixed;inset:0;background:linear-gradient(rgba(3,6,10,0.8), rgba(3,6,10,0.8));display:flex;align-items:center;justify-content:center;z-index:3000;display:none}
+.confirm-card{background:var(--panel);padding:22px;border-radius:14px;border:1px solid rgba(255,255,255,0.04);width:360px;box-shadow:var(--card-shadow);text-align:center}
+.confirm-buttons{display:flex;gap:10px;margin-top:20px}
+.confirm-buttons button{flex:1}
+@media(max-width:560px){ .bottom-cell .label{display:none} .bottom-cell .track{height:10px} }
+</style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div>
+        <div class="title" id="testTitle">Выбор теста</div>
+        <div class="subtitle" id="testSubtitle">Выберите предмет для тестирования</div>
+      </div>
+      <div>
+        <button id="themeBtn" style="background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--text);padding:6px 10px;border-radius:999px;cursor:pointer">Тема</button>
+      </div>
+    </div>
+
+    <div class="card" id="questionCard">
+      <div class="progress-row">
+        <div class="progress-small" id="psmall">Вопрос 1 из N</div>
+        <div class="progress-track"><div id="progressBar" class="progress-bar"></div></div>
+        <div class="progress-pct" id="ppct">0%</div>
+      </div>
+
+      <div>
+        <div class="question" id="qtext">Загрузка...</div>
+        <div class="options" id="options"></div>
+        <div class="meta">
+          <div id="feedback" class="feedback"></div>
+          <div id="explain" class="explain"></div>
+        </div>
+      </div>
+
+      <div class="nav">
+        <button id="prevBtn" class="btn ghost">Назад</button>
+        <button id="finishBtn" class="btn danger" style="display:none">Завершить тест</button>
+        <label class="auto-skip-toggle" title="Автоматический переход после ответа">
+          <input type="checkbox" id="autoSkip" />
+          <span>Автопропуск</span>
+        </label>
+        <button id="actionBtn" class="btn">Следующий</button>
+      </div>
+
+      <div class="bottom-cell" id="bottomCell" aria-hidden="true">
+        <div class="track"><div class="fill" id="bottomFill"></div></div>
+        <div class="label" id="bottomLabel">0%</div>
+      </div>
+    </div>
+
+    <div id="results" class="results">
+      <h2>Тест завершён</h2>
+      <div class="score" id="finalScore">0/0</div>
+      <div id="resultMessage"></div>
+      <div class="result-details">
+        <div>Правильных ответов: <span id="correctAnswers">0</span></div>
+        <div>Неправильных ответов: <span id="wrongAnswers">0</span></div>
+        <div>Процент правильных ответов: <span id="percentage">0%</span></div>
+        <div>Пройдено вопросов: <span id="totalAnswered">0</span></div>
+      </div>
+      <div style="margin-top:14px">
+        <button id="restartBtn" class="btn">Пройти снова</button>
+        <button id="backToSubjectsBtn" class="btn ghost" style="margin-left:8px">Выбрать другой тест</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="confirm-modal" id="confirmModal">
+    <div class="confirm-card">
+      <h3>Завершить тест?</h3>
+      <p>Вы уверены, что хотите завершить тест досрочно? Все ответы будут сохранены.</p>
+      <div class="confirm-buttons">
+        <button id="confirmCancelBtn" class="btn ghost">Отмена</button>
+        <button id="confirmFinishBtn" class="btn danger">Завершить</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="start-modal" id="startModal">
+    <div class="start-card">
+      <h2 id="modalTitle">Выберите тему</h2>
+      <div id="subjectList"></div>
+      <div id="modeChoice" style="display: none;">
+        <p>Выберите режим тестирования:</p>
+        <button id="singleBtn" class="mode-btn mode-single">Пройти один раз</button>
+        <button id="masteryBtn" class="mode-btn mode-mastery">Mastery — повторять неверные</button>
+        <button id="backToSubjectsBtn2" class="btn ghost" style="margin-top:10px;width:100%">← Вернуться к выбору темы</button>
+      </div>
+    </div>
+  </div>
+
+<script>
+// ========== ГЛОБАЛЬНЫЕ ПЕРЕМЕННЫЕ ==========
+let mode = 'single';
+let selectedSubject = '';
+let currentQuestions = [];
+let order = [];
+let currentIndex = 0;
+let score = 0;
+let answered = false;
+let userSelections = {};
+let totalQuestionsInTest = 0;
+let questionsAnswered = 0;
+
+let bottomAnim = null, bottomStart = null, bottomDuration = 0, bottomActive = false;
+
+// ========== РАБОТА С LOCALSTORAGE ==========
+function saveState() {
+  const state = { mode, selectedSubject, order, currentIndex, score, answered, userSelections, totalQuestionsInTest, questionsAnswered };
+  localStorage.setItem('testState', JSON.stringify(state));
+}
+function loadState() {
+  const saved = localStorage.getItem('testState');
+  if (saved) try { return JSON.parse(saved); } catch(e) { return null; }
+  return null;
+}
+function clearState() { localStorage.removeItem('testState'); }
+
+// ========== ВСПОМОГАТЕЛЬНЫЕ ФУНКЦИИ ==========
+function shuffleInPlace(a){ for(let i=a.length-1;i>0;i--){ const j=Math.floor(Math.random()*(i+1)); [a[i],a[j]]=[a[j],a[i]]; } return a; }
+function shuffled(a){ return shuffleInPlace(a.slice()); }
+function isMulti(q){ return Array.isArray(q.correctAnswers) && q.correctAnswers.length > 1; }
+
+// ========== ПАРСИНГ ВОПРОСОВ ИЗ .txt ==========
+async function loadQuestionsFromFile(subject) {
+  let fileName = '';
+  if (subject === 'Базы данных и SQL') fileName = 'database_questions.txt';
+  else if (subject === 'Cisco Networking') fileName = 'cisco_questions.txt';
+  else if (subject === 'Машинное обучение') fileName = 'ml_questions.txt';
+  else return [];
+  try {
+    const response = await fetch(fileName);
+    if (!response.ok) throw new Error(`Не удалось загрузить ${fileName}`);
+    const text = await response.text();
+    return parseQuestions(text);
+  } catch (error) {
+    console.error('Ошибка загрузки:', error);
+    alert('Не удалось загрузить вопросы. Будут использованы демо-вопросы.');
+    return createFallbackQuestions(subject);
+  }
+}
+
+function parseQuestions(text) {
+  const questions = [];
+  const lines = text.split('\n');
+  let currentQuestion = null;
+  let questionNumber = 1;
+  
+  for (let i = 0; i < lines.length; i++) {
+    const line = lines[i].trim();
+    if ((/^\d+\./.test(line) && line.includes('?')) || (line.startsWith('**') && line.includes('**'))) {
+      if (currentQuestion && currentQuestion.question) questions.push(currentQuestion);
+      let questionText = line;
+      if (line.startsWith('**') && line.includes('**')) questionText = line.replace(/\*\*/g, '').trim();
+      const cleanQuestion = questionText.replace(/^\d+\.\s*/, '');
+      currentQuestion = {
+        question: cleanQuestion,
+        questionNumber: questionNumber++,
+        options: [],
+        correctAnswers: [],
+        explanation: ''
+      };
+      let j = i+1;
+      while (j < lines.length && lines[j].trim() && !lines[j].trim().startsWith('- ') && !lines[j].includes('Правильный ответ:') && !lines[j].includes('Correct answer:') && !/^\d+\./.test(lines[j].trim())) {
+        currentQuestion.question += '\n' + lines[j].trim();
+        j++; i++;
+      }
+    }
+    else if (line.startsWith('- ') && currentQuestion) {
+      currentQuestion.options.push(line.substring(2).trim());
+    }
+    else if ((line.includes('Правильный ответ:') || line.includes('Correct answer:')) && currentQuestion) {
+      const answerText = line.replace(/Правильный ответ:|Correct answer:/gi, '').trim();
+      const numbers = answerText.match(/\d+/g);
+      if (numbers && numbers.length) {
+        const answerNumbers = numbers.map(num => parseInt(num)-1).filter(idx => idx >=0 && idx < currentQuestion.options.length);
+        answerNumbers.sort((a,b)=>a-b);
+        currentQuestion.correctAnswers = answerNumbers;
+      }
+    }
+    else if (currentQuestion && line && !line.startsWith('- ') && !line.includes('Правильный ответ:') && !line.includes('Correct answer:') && !/^\d+\./.test(line)) {
+      currentQuestion.explanation = currentQuestion.explanation ? currentQuestion.explanation + ' ' + line : line;
+    }
+  }
+  if (currentQuestion && currentQuestion.question) questions.push(currentQuestion);
+  if (questions.length === 0) console.warn('Не удалось распарсить вопросы');
+  return questions;
+}
+
+function createFallbackQuestions(subject) {
+  return [{
+    question: `Пример вопроса для темы "${subject}"`,
+    options: ['Вариант A', 'Вариант B', 'Вариант C'],
+    correctAnswers: [0],
+    explanation: 'Правильный ответ — A.'
+  }];
+}
+
+// ========== ОТРИСОВКА ТЕКУЩЕГО ВОПРОСА ==========
+function renderCurrent() {
+  if (currentIndex >= order.length) { showResults(); return; }
+  const qidx = order[currentIndex];
+  const q = currentQuestions[qidx];
+  if (!q) { optionsEl.innerHTML = '<div style="color:var(--muted);padding:12px">Ошибка загрузки вопроса</div>'; return; }
+  
+  answered = false;
+  feedbackEl.style.display = 'none';
+  explainEl.style.display = 'none';
+  optionsEl.innerHTML = '';
+  actionBtn.disabled = true;
+  
+  actionBtn.textContent = (mode === 'single' && currentIndex === order.length-1) ? 'Завершить тест' : 'Следующий';
+  
+  const qnum = q.questionNumber || (currentIndex+1);
+  psmall.textContent = `Вопрос ${qnum} из ${totalQuestionsInTest}`;
+  const pct = Math.round(((currentIndex+1)/order.length)*100);
+  progressBar.style.width = pct+'%';
+  ppct.textContent = pct+'%';
+  qtext.textContent = q.question;
+  
+  const multi = isMulti(q);
+  const pairs = q.options.map((t,i)=>({t, orig:i}));
+  shuffleInPlace(pairs);
+  
+  pairs.forEach(pair => {
+    const label = document.createElement('label');
+    label.className = 'option';
+    const input = document.createElement('input');
+    input.type = multi ? 'checkbox' : 'radio';
+    input.name = 'opt'+qidx;
+    input.dataset.orig = String(pair.orig);
+    const span = document.createElement('span');
+    span.className = 'opt-text';
+    span.textContent = pair.t;
+    label.appendChild(input);
+    label.appendChild(span);
+    optionsEl.appendChild(label);
+    
+    if (!multi) {
+      label.addEventListener('click', () => {
+        if (answered) return;
+        optionsEl.querySelectorAll('input[type="radio"]').forEach(inp => {
+          inp.checked = false;
+          inp.parentElement.classList.remove('selected');
+        });
+        input.checked = true;
+        label.classList.add('selected');
+        const chosen = Number(input.dataset.orig);
+        userSelections[qidx] = [chosen];
+        evaluateSingle(qidx, chosen);
+      });
+    } else {
+      label.addEventListener('click', (e) => {
+        if (answered) return;
+        input.checked = !input.checked;
+        if (input.checked) label.classList.add('selected');
+        else label.classList.remove('selected');
+        e.stopPropagation();
+        actionBtn.disabled = optionsEl.querySelectorAll('input:checked').length === 0;
+      });
+    }
+  });
+  
+  if(multi) actionBtn.disabled = true;
+  else actionBtn.disabled = true;
+  
+  prevBtn.disabled = (currentIndex === 0);
+  if (!autoSkipEl.checked && !bottomActive) {
+    bottomCell.style.display = 'none';
+    bottomFill.style.width = '0%';
+    bottomLabel.textContent = '0%';
+  }
+  saveState();
+}
+
+function evaluateSingle(qidx, chosenOrig) {
+  const q = currentQuestions[qidx];
+  const correct = q.correctAnswers.includes(chosenOrig);
+  
+  optionsEl.querySelectorAll('.option').forEach(label => {
+    label.style.pointerEvents = 'none';
+    const orig = Number(label.querySelector('input').dataset.orig);
+    label.classList.remove('correct','incorrect','selected');
+    if (q.correctAnswers.includes(orig)) label.classList.add('correct');
+    if (orig === chosenOrig && !correct) label.classList.add('incorrect');
+    if (orig === chosenOrig) label.classList.add('selected');
+  });
+  
+  feedbackEl.textContent = correct ? '✓ Правильно' : '✗ Неправильно';
+  feedbackEl.className = 'feedback ' + (correct ? 'correct' : 'incorrect');
+  feedbackEl.style.display = 'block';
+  if (q.explanation) { explainEl.textContent = q.explanation; explainEl.style.display = 'block'; }
+  if (correct) score++;
+  answered = true;
+  questionsAnswered++;
+  actionBtn.disabled = false;
+  
+  if (autoSkipEl.checked) startBottomFill(3000);
+  else if (!bottomActive) stopBottomFill();
+  saveState();
+}
+
+function evaluateMulti(qidx) {
+  const q = currentQuestions[qidx];
+  const chosen = Array.from(optionsEl.querySelectorAll('input:checked')).map(i => Number(i.dataset.orig)).sort((a,b)=>a-b);
+  userSelections[qidx] = chosen.slice();
+  const corr = q.correctAnswers.slice().sort((a,b)=>a-b);
+  const full = JSON.stringify(chosen) === JSON.stringify(corr);
+  
+  optionsEl.querySelectorAll('.option').forEach(label => {
+    label.style.pointerEvents = 'none';
+    const orig = Number(label.querySelector('input').dataset.orig);
+    label.classList.remove('correct','incorrect','selected');
+    if (corr.includes(orig)) label.classList.add('correct');
+    if (chosen.includes(orig) && !corr.includes(orig)) label.classList.add('incorrect');
+    if (chosen.includes(orig)) label.classList.add('selected');
+  });
+  
+  feedbackEl.textContent = full ? '✓ Полностью правильно' : '✗ Неправильно';
+  feedbackEl.className = 'feedback ' + (full ? 'correct' : 'incorrect');
+  feedbackEl.style.display = 'block';
+  if (q.explanation) { explainEl.textContent = q.explanation; explainEl.style.display = 'block'; }
+  if (full) score++;
+  answered = true;
+  questionsAnswered++;
+  actionBtn.disabled = false;
+  
+  if (autoSkipEl.checked) startBottomFill(4500);
+  else if (!bottomActive) stopBottomFill();
+  saveState();
+}
+
+// ========== НИЖНИЙ ПРОГРЕСС (АВТОПЕРЕХОД) ==========
+function startBottomFill(ms) {
+  if (!autoSkipEl.checked) return;
+  if (bottomActive) return;
+  bottomActive = true;
+  bottomDuration = ms;
+  bottomStart = null;
+  bottomFill.style.width = '0%';
+  bottomLabel.textContent = '0%';
+  bottomCell.style.display = 'block';
+  bottomCell.classList.add('visible');
+  
+  function step(ts) {
+    if (!bottomStart) bottomStart = ts;
+    const elapsed = ts - bottomStart;
+    const pct = Math.min(1, elapsed / bottomDuration);
+    const pctInt = Math.round(pct * 100);
+    bottomFill.style.width = pctInt + '%';
+    bottomLabel.textContent = pctInt + '%';
+    if (pct < 1) bottomAnim = requestAnimationFrame(step);
+    else {
+      bottomAnim = null;
+      bottomActive = false;
+      if (autoSkipEl.checked) proceedToNext(true);
+    }
+  }
+  bottomAnim = requestAnimationFrame(step);
+}
+function stopBottomFill() {
+  if (bottomAnim) cancelAnimationFrame(bottomAnim);
+  bottomAnim = null; bottomActive = false;
+  bottomCell.classList.remove('visible');
+  clearTimeout(bottomCell._hideTimeout);
+  bottomCell._hideTimeout = setTimeout(() => { bottomCell.style.display = 'none'; bottomFill.style.width = '0%'; bottomLabel.textContent = '0%'; }, 160);
+}
+
+function proceedToNext(isAuto) {
+  if (!isAuto && bottomActive) stopBottomFill();
+  if (currentIndex >= order.length) return;
+  const qidx = order[currentIndex];
+  const q = currentQuestions[qidx];
+  if (isMulti(q) && !answered) { evaluateMulti(qidx); return; }
+  if (!isMulti(q) && !answered) return;
+  
+  let wasCorrect = false;
+  if (isMulti(q)) {
+    const chosen = (userSelections[qidx] || []).slice().sort((a,b)=>a-b);
+    const corr = q.correctAnswers.slice().sort((a,b)=>a-b);
+    wasCorrect = JSON.stringify(chosen) === JSON.stringify(corr);
+  } else {
+    wasCorrect = q.correctAnswers.includes((userSelections[qidx] || [])[0]);
+  }
+  
+  if (mode === 'mastery' && !wasCorrect) {
+    const gap = Math.floor(Math.random() * 3) + 5;
+    const insertPos = Math.min(currentIndex + gap, order.length);
+    order.splice(insertPos, 0, qidx);
+  }
+  currentIndex++;
+  if (currentIndex >= order.length) { showResults(); return; }
+  renderCurrent();
+}
+
+// ========== РЕЗУЛЬТАТЫ ==========
+function showResults() {
+  stopBottomFill();
+  document.getElementById('testTitle').textContent = `Результаты: ${selectedSubject}`;
+  document.getElementById('testSubtitle').textContent = `Тест завершен (${mode === 'single' ? 'Один раз' : 'Mastery'})`;
+  document.getElementById('questionCard').style.display = 'none';
+  const resultsEl = document.getElementById('results');
+  resultsEl.style.display = 'block';
+  
+  const wrongAnswers = questionsAnswered - score;
+  const percentage = totalQuestionsInTest > 0 ? Math.round((score / totalQuestionsInTest) * 100) : 0;
+  document.getElementById('finalScore').textContent = `${score} / ${totalQuestionsInTest}`;
+  document.getElementById('correctAnswers').textContent = score;
+  document.getElementById('wrongAnswers').textContent = wrongAnswers;
+  document.getElementById('percentage').textContent = percentage + '%';
+  document.getElementById('totalAnswered').textContent = questionsAnswered + ' из ' + totalQuestionsInTest;
+  
+  let msg = percentage >= 90 ? 'Отличный результат! 🎉' : (percentage >= 70 ? 'Хороший результат! 👍' : (percentage >= 50 ? 'Удовлетворительно. 📚' : 'Нужно поработать. 💪'));
+  document.getElementById('resultMessage').textContent = msg;
+  clearState();
+}
+
+function finishTest() {
+  document.getElementById('confirmModal').style.display = 'none';
+  showResults();
+}
+
+// ========== НАЧАЛО СЕССИИ ==========
+async function startSession(selectedMode, savedState = null) {
+  mode = selectedMode;
+  document.getElementById('startModal').style.display = 'none';
+  document.getElementById('questionCard').style.display = 'block';
+  document.getElementById('results').style.display = 'none';
+  document.getElementById('actionBtn').disabled = true;
+  
+  if (savedState) {
+    order = savedState.order;
+    currentIndex = savedState.currentIndex;
+    score = savedState.score;
+    answered = savedState.answered;
+    userSelections = savedState.userSelections;
+    totalQuestionsInTest = savedState.totalQuestionsInTest;
+    questionsAnswered = savedState.questionsAnswered;
+    currentQuestions = savedState.currentQuestions || [];
+    if (!currentQuestions.length) currentQuestions = await loadQuestionsFromFile(selectedSubject);
+  } else {
+    currentQuestions = await loadQuestionsFromFile(selectedSubject);
+    totalQuestionsInTest = currentQuestions.length;
+    order = shuffled(Array.from({length: totalQuestionsInTest}, (_,i)=>i));
+    currentIndex = 0;
+    score = 0;
+    questionsAnswered = 0;
+    answered = false;
+    userSelections = {};
+  }
+  document.getElementById('testTitle').textContent = `Тест: ${selectedSubject}`;
+  document.getElementById('testSubtitle').textContent = `Режим: ${mode === 'single' ? 'Один раз' : 'Mastery'}`;
+  document.getElementById('finishBtn').style.display = 'inline-block';
+  renderCurrent();
+  saveState();
+}
+
+// ========== ПОКАЗ ВЫБОРА ТЕМ ==========
+function showSubjectSelection() {
+  document.getElementById('results').style.display = 'none';
+  document.getElementById('questionCard').style.display = 'none';
+  document.getElementById('testTitle').textContent = 'Выбор теста';
+  document.getElementById('testSubtitle').textContent = 'Выберите предмет для тестирования';
+  const subjectList = document.getElementById('subjectList');
+  subjectList.innerHTML = '';
+  const subjects = ['Базы данных и SQL', 'Cisco Networking', 'Машинное обучение'];
+  subjects.forEach(subj => {
+    const btn = document.createElement('button');
+    btn.className = 'subject-btn';
+    btn.textContent = subj;
+    btn.dataset.subject = subj;
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.subject-btn').forEach(b => b.classList.remove('selected'));
+      btn.classList.add('selected');
+      selectedSubject = subj;
+      document.getElementById('modeChoice').style.display = 'block';
+      document.getElementById('modalTitle').textContent = `${subj}: выберите режим`;
+    });
+    subjectList.appendChild(btn);
+  });
+  document.getElementById('modeChoice').style.display = 'none';
+  document.getElementById('startModal').style.display = 'flex';
+  clearState();
+}
+
+// ========== СОБЫТИЯ И ИНИЦИАЛИЗАЦИЯ ==========
+const actionBtn = document.getElementById('actionBtn');
+const prevBtn = document.getElementById('prevBtn');
+const finishBtn = document.getElementById('finishBtn');
+const autoSkipEl = document.getElementById('autoSkip');
+const feedbackEl = document.getElementById('feedback');
+const explainEl = document.getElementById('explain');
+const optionsEl = document.getElementById('options');
+const singleBtn = document.getElementById('singleBtn');
+const masteryBtn = document.getElementById('masteryBtn');
+const restartBtn = document.getElementById('restartBtn');
+const backToSubjectsBtn = document.getElementById('backToSubjectsBtn');
+const backToSubjectsBtn2 = document.getElementById('backToSubjectsBtn2');
+const confirmModal = document.getElementById('confirmModal');
+const confirmCancelBtn = document.getElementById('confirmCancelBtn');
+const confirmFinishBtn = document.getElementById('confirmFinishBtn');
+const themeBtn = document.getElementById('themeBtn');
+
+actionBtn.addEventListener('click', () => {
+  const qidx = order[currentIndex];
+  const q = currentQuestions[qidx];
+  if (isMulti(q) && !answered) evaluateMulti(qidx);
+  else if (currentIndex === order.length-1 && mode === 'single') showResults();
+  else proceedToNext(false);
+});
+prevBtn.addEventListener('click', () => { if(bottomActive) stopBottomFill(); if(currentIndex>0){ currentIndex--; renderCurrent(); } });
+finishBtn.addEventListener('click', () => confirmModal.style.display = 'flex');
+confirmCancelBtn.addEventListener('click', () => confirmModal.style.display = 'none');
+confirmFinishBtn.addEventListener('click', finishTest);
+autoSkipEl.addEventListener('change', () => { if(!autoSkipEl.checked && bottomActive) stopBottomFill(); });
+singleBtn.addEventListener('click', () => startSession('single'));
+masteryBtn.addEventListener('click', () => startSession('mastery'));
+restartBtn.addEventListener('click', () => { startSession(mode); });
+backToSubjectsBtn.addEventListener('click', showSubjectSelection);
+backToSubjectsBtn2.addEventListener('click', showSubjectSelection);
+themeBtn.addEventListener('click', () => document.documentElement.classList.toggle('light'));
+document.addEventListener('keydown', (e) => { if(e.key === 'Enter') proceedToNext(false); });
+
+function checkSavedSession() {
+  const saved = loadState();
+  if (saved && saved.selectedSubject && ['Базы данных и SQL','Cisco Networking','Машинное обучение'].includes(saved.selectedSubject)) {
+    if (confirm('Найдена незавершённая сессия. Продолжить?')) {
+      startSession(saved.mode, saved);
+      return true;
+    } else clearState();
+  }
+  return false;
+}
+
+function init() {
+  if (!checkSavedSession()) showSubjectSelection();
+}
+init();
+</script>
+</body>
+</html>
