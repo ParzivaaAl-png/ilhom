@@ -635,7 +635,7 @@ function parseDocxHtml(html, subject) {
       } else if (unescapedRaw.match(/^<\s*variantright\s*>/i)) {
           if (currentQuestion) {
               currentQuestion.options.push(unescapedHTML.replace(/<\s*variantright\s*>/i, '').trim());
-              currentQuestion.correctAnswers.push(currentQuestion.options.length); // 0-indexed, so it will be the current length
+              currentQuestion.correctAnswers.push(currentQuestion.options.length - 1);
           }
       } else {
           if (currentQuestion && unescapedHTML.trim() !== '') {
