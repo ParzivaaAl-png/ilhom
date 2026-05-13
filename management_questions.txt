@@ -1,0 +1,1323 @@
+**1. Relational Algebra is a __________ query language that takes two relations as input and produces another relation as an output of the query**
+- Structural
+- Relational
+- Procedural
+- Fundamental
+Правильный ответ: 3
+
+**2. A relation is in 1NF if it doesn’t contain any_____________?**
+- Determinants
+- Repeating groups
+- Null values in primary key fields
+- Functional dependencies
+Правильный ответ: 2
+
+**3. A table is in 2NF if the table is in 1NF and what other conditions is met?**
+- There are no functional dependencies.
+- There are no null values in primary key fields.
+- There are no repeating groups.
+- There are no attributes that a not functionally dependent on the relation’s primary key.
+Правильный ответ: 4
+
+**4. When you normalize a relation by breaking it into two smaller relations, what must you do to maintain data integrity?**
+- Link the relations by a common field
+- Remove any functional dependencies from both relations
+- Assign both relations the same primary key field(s)
+- Create key(s) for the old relation
+Правильный ответ: 1
+
+**5. Which of the following statements is true:**
+- Normal forms can be derived by inspecting the data in various tables
+- Normal forms speed up all queries
+- Normal forms reduce the risk of inconsistent update of replicated dataitems
+- Normal forms completely eliminate all redundant storage of dataitems
+Правильный ответ: 3
+
+**6. First normal form prohibits the occurrence of**
+- Null values in a column
+- Repeating group in a table
+- Multiple candidate keys in a table
+- Multiple foreign keys in a table
+Правильный ответ: 2
+
+**7. If all non-keys in a table depend on the key, the whole key and nothing but the key, then the table is in**
+- 1NF, but not in 2NF
+- 2NF, but not in 3NF
+- 3NF
+- BCNF
+Правильный ответ: 3
+
+**8. When a part of a key determines a nonkey, it is a violation of**
+- First Normal Form
+- Second Normal Form
+- BCNF
+- All of the above
+Правильный ответ: 2
+
+**9. Normal forms can be used with**
+- Relational data model
+- Entity Relationship Model
+- UML
+- All of the above
+Правильный ответ: 4
+
+**10. Can a software design tool identify functional dependencies?**
+- No
+- yes
+Правильный ответ: 1
+
+**11. Normalisation is:**
+- Removing all necessary data from a database
+- Putting fields from different tables into one big database
+- Organising a database to remove repeated entries and increase the accuracy of data
+Правильный ответ: 3
+
+**12. When you normalize a relation by breaking it into two smaller relations, what must you do to maintain data integrity?**
+- Remove any functional dependencies from both relations
+- Create a primary key(s) for the new relation
+- Assign both relations the same primary key field(s)
+Правильный ответ: 2
+
+**13. Which one of these do you want to avoid in good database design?**
+- Redundancy!
+- Third normal from
+- Giant squid!
+- Data!
+Правильный ответ: 1
+
+**14. What is the purpose of normalisation?**
+- Eliminate redundant data
+- Produce redundant data
+- Reduce data consistencies
+- Increase data inconsistencies
+Правильный ответ: 1
+
+**15. How often should you issue the dump database command?**
+- Daily.
+- Weekly.
+- Monthly.
+- Annually.
+- It depends on the size of the database and the frequency of database changes.
+Правильный ответ: 5
+
+**16. When is a trigger fired?**
+- When the trigger fire statement is executed
+- Before data modification
+- Before constraint validation
+- After the transaction completes
+- After constraint validation but before the transaction commits
+Правильный ответ: 5
+
+**17. In client/server architecture, what is the normal purpose of a server?**
+- Format data for displaying to the end user
+- Enforce data integrity
+- Control the graphical user interface
+- Supply the end user with automatic corrections to misspelled words as they are typed
+Правильный ответ: 2
+
+**18. What does the TRUNCATE statement do?**
+- Removes the table
+- Removes all rows from a table
+- Shortens the table to 10 rows
+- Removes all columns from a table
+Правильный ответ: 2
+
+**19. Choose the right answer. Virtual table which gives the access to column subset from one or more tables, is:**
+- Cursor
+- View
+- Stored procedure
+- Trigger
+Правильный ответ: 2
+
+**20. Choose the right answer. Inner table structure, which is used by SQL-server for fast access to the rows and it shows the values of one or more columns is:**
+- Cursor
+- View
+- Stored procedure
+- Trigger
+Правильный ответ: 2
+
+**21. Which stored procedures you can get access from different servers if the users have the necessary permissions?**
+- user-defined
+- system
+- temporary
+- extended
+Правильный ответ: 4
+
+**22. Which stored procedures have the names, starting with “#” symbol and are deleted automatically by the connection termination of client with server?**
+- user-defined
+- system
+- temporary
+- extended
+Правильный ответ: 3
+
+**23. Which stored procedures have the names started with “sp_”? They provide different administrative tasks and help in SQL Server management. They are stored in msdb database**
+- user-defined
+- system
+- temporary
+- extended
+Правильный ответ: 2
+
+**24. Which command(-s) provide stored procedure execution?**
+- EXECUTE proc_name
+- F5
+- sp_help
+- sp_dboption
+Правильный ответ: 1
+
+**25. Choose the right answer. A group or set of T-SQL instructions and data manipulation language which are saved by one name and are used as a whole, is:**
+- cursor
+- view
+- stored procedure
+- trigger
+Правильный ответ: 3
+
+**26. Choose the right answer. Part of program which consists of T-SQL instructions, activated in response to definite actions, is:**
+- Table
+- View
+- Stored procedure
+- Trigger
+Правильный ответ: 4
+
+**27. Choose the right answer. Type of stored procedure which is automatically called in definite cases in the database:**
+- cursor
+- view
+- stored procedure
+- trigger
+Правильный ответ: 4
+
+**28. Choose the wrong answers. DML trigger runs each time when the data in the base table is changed by any operator:**
+- INSERT
+- UPDATE
+- DROP
+- DELETE
+Правильный ответ: 3
+
+**29. What should you do before backing up a database?**
+- Decide how often to back it up.
+- Decide where you are backing it up to.
+- Define the device on which you are backing it up.
+- Determine dump frequency.
+- All of the above
+Правильный ответ: 5
+
+**30. What can you do while a database is being backed up?**
+- All normal processing.
+- Anything that doesn’t affect the log.
+- Queries only.
+- All transactions, except non-logged operations.
+- Absolutely nothing. All users are blocked during a backup.
+Правильный ответ: 4
+
+**31. When would you restore a database?**
+- Daily
+- Weekly
+- During a database migration
+- When prompted to do so by Server
+Правильный ответ: 3
+
+**32. What is the object which is not grantable:**
+- login on the SQL server level
+- login on the database level
+- table on the scheme level
+- application role
+- endpoint
+Правильный ответ: 4
+
+**33. The existence in the database of the procedure is checked using command:**
+- sp_help
+- sp_helptext
+- sp_helptextproc_name
+- sp_helpproc_name
+Правильный ответ: 4
+
+**34. Derive students’ ID, Full name, and email from the Student table with a high GPA of 3.8 or higher. The Student table includesID, Full name, address, email, and GPA.**
+- SELECT DISTINCT ID, Full name, address, email, GPA FROM student  where gpa >= 3.8
+- SELECT DISTINCT ID, Full name, email FROM student  WHERE gpa >= 3.8
+- SELECT * FROM student  WHERE gpa >= 3.8
+- SELECT DISTINCT ID, Full name, email FROM student  WHERE gpa <= 3.8
+Правильный ответ: 2
+
+**35. Select full name workers from the Workers table with id equal to 001, 002, 007, 009, and their position. The Workers table includesID, Full name, position, address, email, and phone number.**
+- SELECT * FROM workers  WHERE id IN(001, 002, 007, 009)
+- SELECT full name, ID, position FROM workers WHERE id =001, 002, 007, 009
+- SELECT ID, Full name, position, address, email, phone number FROM workers WHERE id =001, 002, 007, 009
+- SELECT full name, ID, position FROM workers WHERE id IN(001, 002, 007, 009)
+Правильный ответ: 4
+
+**36. Select from the Employee table all records with salaries from 100 000 to 180 000 tenge. The Employee table includes employee_id, last_name, first_name, hire_date, salary, department_id**
+- SELECT*FROM Employee WHERE salary BETWEEN 100 000 AND 180 000
+- SELECTemployee_id, last_name, first_name, salary FROMEmployee WHEREsalary>100 000 and  salary<180 000
+- SELECT*FROMEmployee WHEREsalary<100 000   and  salary>180 000
+- SELECT*FROMEmployee WHEREsalary =100 000 AND180 000
+Правильный ответ: 1
+
+**37. Select records from the Product table so that product_name instead of name, product_price instead of price, product_type instead of type.**
+- SELECTnameASproduct_name, priceASproduct_price, typeASproduct_type FROMProduct
+- SELECT* FROM Product WHERE nameASproduct_name, priceASproduct_price, typeASproduct_type
+- SELECT* FROM Product nameASproduct_name, priceASproduct_price, typeASproduct_type
+- SELECTnameASproduct_name, priceASproduct_price, typeASproduct_type FROMas Product
+Правильный ответ: 1
+
+**38. Find the smallest salaries by department_id (department_id has its minimum salary).**
+- SELECT MIN(salary), department_id FROM employee  GROUP BY salary
+- SELECT MIN(department_id), salary  FROM employee  GROUP BY department_id
+- SELECT salary, department_id FROM employee  GROUP BY department_id
+- SELECT MIN(salary), department_id FROM employee  GROUP BY department_id
+Правильный ответ: 4
+
+**39. Find the highest salaries by department_id (department_id has its maximum salary).**
+- SELECT Max(salary), department_id FROM employee  GROUP BY salary
+- SELECT Max(department_id), salary  FROM employee  GROUP BY department_id
+- SELECT Max(salary), department_id FROM employee  GROUP BY department_id
+- SELECT salary, department_id FROM employee  GROUP BY department_id
+Правильный ответ: 3
+
+**40. Select all records from the product table so that only records with different prices get there**
+- SELECT DISTINCT price FROM product
+- SELECT price FROM product  GROUP BY product
+- SELECT price FROM product order by priceASK
+- SELECT price FROM product order by product DESC
+Правильный ответ: 1
+
+**41. Select all records from the employee table so that only records with different salaries get there**
+- SELECT salary FROM employee  GROUP BY employee
+- SELECT salary FROM employee order by salary DESC
+- SELECTDISTINCTsalaryFROMemployee
+- SELECT salary FROM employee order by employee ASK
+Правильный ответ: 3
+
+**42. Select a customer_id, address, and credit_limit from the customer table and sort the result by credit_limit in descending order**
+- SELECT DISTINCTcustomer_id, address, credit_limit FROMcustomer ORDERBYcredit_limitASC
+- SELECTDISTINCTcustomer_id, address, credit_limit FROMcustomer ORDERBYcredit_limit DESC
+- SELECT* FROMcustomer ORDERBYcredit_limit DESC
+- SELECTDISTINCTcustomer_id, address, credit_limit FROMcustomer ORDERBYcustomer_id DESC
+Правильный ответ: 2
+
+**43. Select a customer_id, address, and credit_limit from the customer table and sort the result by credit_limit in ascending order.**
+- SELECTDISTINCTcustomer_id, address, credit_limit FROMcustomer ORDERBYcredit_limit DESC
+- SELECTDISTINCTcustomer_id, address, credit_limit FROMcustomer ORDERBYcredit_limitASC
+- SELECT* FROMcustomer ORDERBYcredit_limit DESC
+- SELECTDISTINCTcustomer_id, address, credit_limit FROMcustomer ORDERBYcustomer_idASC
+Правильный ответ: 2
+
+**44. SELECT * FROM employee WHERE department_id = 100 AND salary > 2500;**
+- Table employee. Get a list of all employees from the 100th department (department_id) with a salary greater than 2500
+- Employee table includes name, department_id, salary, and address. Get all recordsfrom the employee table with a salary greater than 2500
+- Table employee. Get a list of all employees from the 100th employee (employee _id) with a salary of less than 2500
+- Table employee. Get a list of all employees from the 100th department (department_id) with a salary of less than 2500
+Правильный ответ: 1
+
+**45. SELECT *FROMStudent WHERElast_name LIKE'%d';**
+- Table student. Get a list of all students whose last letter in their last_name is 'd'
+- Table student. Get a list of all students whose last letter in their first_name is 'd'
+- Table student. Get a list of all students whose first letter in their last_name is "d".
+- Table student. Get a list of all students who have a letter "d" in the middle of their last_name.
+Правильный ответ: 1
+
+**46. Find a correctly composed task with EXCEPT statement:Select a book name from the Books 1 table that is not present in the Books 2 table. Book1 (ID, bname, type); Book2  (ID, , bname, type)**
+- SELECT bname FROM Book1  or NOT Book2;
+- SELECT bname FROM Book1           EXCEPT        FROM Book2;
+- SELECT * FROM Book1           EXCEPT        SELECT * FROM Book2;
+- SELECT bname FROM Book1           EXCEPT        SELECT bname FROM Book2;
+Правильный ответ: 4
+
+**47. Find a correctly composed task with UNION statement: Find model numbers and types for PCs and laptops from the table of Products: The table Product(maker, model, type)**
+- SELECT model, type    FROM Product WHERE type ='PC and Laptop'
+- SELECT product FROM model, type     WHERE type ='PC and Laptop'
+- SELECT*    FROM Product WHERE type ='PC' UNION SELECT model, type   FROM Product WHERE type ='Laptop'
+- SELECT model, type    FROM Product WHERE type ='PC' UNION SELECT model, type   FROM Product WHERE type ='Laptop'
+Правильный ответ: 4
+
+**48. SELECT model, speed, hd        FROM PC      where price < 600      and     ( cd = '12x' or cd = '24x' )**
+- Find all from PCs cheaper than $600 has a 12x or a 24x CD drive.
+- Find the model number, speed, and hard drive capacity of PCs cheaper than $600 having a 12x or a 24x CD drive.
+- Find the model number, speed, and hard drive capacity of PCs over $600 having a 12x or a 24x CD drive.
+- Find the PCs cheaper than $600 having a 12x or a 24x CD drive.
+Правильный ответ: 2
+
+**49. Select the group name from the groups table in which there are more boys than girls.The Groups table includesID, group_name, year, boys, and girls.**
+- SELECTgroup_nameFROMgroupsWHEREboys<girls
+- SELECT group_name FROM groups WHERE boys > girls
+- SELECT*FROM groups WHERE boys > girls
+- SELECTgroupsFROMgroup_nameWHERE boys > girls
+Правильный ответ: 2
+
+**50. When selecting from the employee table, add 1 year to the date.**
+- SELECT DATE_ADD(date, INTERVAL1YEAR) as date FROMemployee
+- SELECT DATEDIFF (date, INTERVAL1YEAR) as date FROM employee
+- SELECT ADD(date, INTERVAL1YEAR) as date FROM employee
+- SELECTDATE_ADD(1YEAR) as date FROM employee
+Правильный ответ: 1
+
+**51. Select from the SHIPS table records with id equals 11, 12, 13, 25, 24.**
+- SELECTshipsFROM SHIPS WHERE id IN(11, 12, 13, 25, 24)
+- SELECT id IN(11, 12, 13, 25, 24) FROM SHIPS
+- SELECT*FROM SHIPS WHERE id IN(11, 12, 13, 25, 24)
+- SELECT*FROM SHIPS WHERE id 11, 12, 13, 25, 24
+Правильный ответ: 3
+
+**52. Choose the correct condition: SELECTSUM(salary) FROM employee WHERE id IN(11, 12, 13, 25, 24)**
+- Find the total salary in the employee table for id 11, 12, 13, 25, 24.
+- Find employees by id 11, 12, 13, 25, 24 and their salary in the table of employee.
+- Find employees by id 11, 12, 13, 25, 24 and their average salary in the employee table.
+- find the average salary in the employee table for id 11, 12, 13, 25, 24.
+Правильный ответ: 1
+
+**53. Find in the table employee the total salary for people aged 25 to 30.**
+- SELECTAVG(salary) FROMemployeeWHERE age BETWEEN25AND30
+- SELECT * from employeeWHERE SUM(salary), age BETWEEN25AND30
+- SELECTSUM(salary) FROMemployeeWHERE age BETWEEN25AND30
+- SELECT * from employeeSUM(salary)WHERE age =25AND30
+Правильный ответ: 3
+
+**54. Select answer with which you can give permission to INSERT, DELETE , UPDATE , SELECT table ‘Solary’ for user 'Zer0':**
+- GRANT * FROM Solary WHERE username LIKE ‘%Zer0%’
+- CREATE Permission SELECT, UPDATE, DELETE, INSERT FOR ‘Zer0’ TO ‘Solary’
+- GRANT SELECT, INSERT, UPDATE, DELETE ON ‘Solary’ TO ‘Zer0’
+- GRANT SELECT, INSERT, UPDATE, DELETE FROM ‘Solary’ WHERE username LIKE ‘%Zer0%’
+Правильный ответ: 3
+
+**55. Decipher the abbreviation DCL**
+- Database control license
+- Data consistency law
+- Data controllogic
+- Data control language
+Правильный ответ: 4
+
+**56. What command is not a part of the DDL category**
+- TRUNCATE
+- SELECT
+- CREATE
+- DROP
+Правильный ответ: 2
+
+**57. What command is not a part of the DCL category**
+- GRANT
+- REVOKE
+- DENY
+- UPDATE
+Правильный ответ: 4
+
+**58. What is the difference between CREATE and ALTER**
+- There is no difference
+- ALTER command needs explicit privileges, while CREATE doesn’t
+- They belong to the different categories of the commands
+- CREATE creates an object, ALTER alters the object
+Правильный ответ: 4
+
+**59. What condition is NOT needed in order to use the ALTER command**
+- The altering object needs to exist
+- The user must have the permissions to perform the alter command
+- The user must specify the correct name for the altering object
+- The database structure must comply the rules for using the alter command
+Правильный ответ: 4
+
+**60. The CREATE command can be used only to create tables and databases**
+- True
+- False
+Правильный ответ: 2
+
+**61. What is the main purpose of using the GRANT command**
+- To give the permissions to the certain users
+- To give the permissions to the certain operations
+- To take away the rights from the certain users
+- To take away the rights to the certain operations
+Правильный ответ: 1
+
+**62. What privileges can be given to the users in SQL**
+- SELECT, INSERT, DELETE
+- TRIGGER, PROCEDURE
+- DATABASE, TABLE
+- USER, DATABASE OWNER
+Правильный ответ: 1
+
+**63. What is the default syntax of GRANT command**
+- GRANTpermission1, permission2 … ON object_name TO username
+- GRANT permission ON object_name
+- GRANT PERMISSION TO username
+- GRANT PERMISSIONS permission1, permission2 ON object_name TO username
+Правильный ответ: 1
+
+**64. The REVOKE command is mainly used for**
+- To grant the permissions to the certain users
+- To grant the permissions to the certain operations
+- To take away the rights from the certain users
+- To take away the rights to the certain operations
+Правильный ответ: 3
+
+**65. What is the syntax of the TRUNCATE command**
+- TRUNCATE TABLE table_name;
+- TRUNCATE DATABASE database_name;
+- TRUNCATE table_name;
+- TRUNCATE database_name;
+Правильный ответ: 1
+
+**66. While creating a table with CREATE command, how can you specify that some fields mustn’t contain the NULL value**
+- NOT NULL
+- DEFAULT
+- NULL
+- CHECK
+Правильный ответ: 1
+
+**67. Find the error in the command below:  createtable Students Info ( ID int, NAME varchar(20), SUBJECT varchar(20) );**
+- You can’t specify the length for the data type int
+- “create table” must be written in uppercase
+- You must specify the database in the query
+- Table name cannot contain spaces
+Правильный ответ: 4
+
+**68. While creating the table, how do you specify the data type of the field**
+- By omitting the data type, so it will be automatically specified
+- By writing the data type name and length after the field name
+- By writing the data type before the column name
+- By writing the data type after table name
+Правильный ответ: 2
+
+**69. You need to create an Employees table with the fields id, full name, age, email, phone.**
+- CREATE TABLE `employee` (`Id` INT NOT NULL,`full_name` VARCHAR(100) NOT NULL,`age` INT NOT NULL,`email` VARCHAR(50) NOT NULL,`phone` VARCHAR(50) NOT NULL,PRIMARY KEY (`Id`));
+- CREATE DATABASE `employee` (`Id` INT NOT NULL,`full_name` VARCHAR NOT NULL,`age` INT NOT NULL,`email` VARCHAR NOT NULL,`phone` VARCHAR NOT NULL);
+- CREATE TABLE ‘employee’ (‘id’ varchar(50) NOT NULL,’full_name` VARCHAR NOT NULL,`age` INT NOT NULL,`email` VARCHAR NOT NULL,`phone` VARCHAR NOT NULL );
+- CREATE TABLE employee (id,full_name, age, email, phone);
+Правильный ответ: 1
+
+**70. The user 'Zer0 ' has full privileges on the Employees, Departments, and Salary tables. You need to restrict the rights to the Departments table so that the user wouldnt be able to Modify and Delete existing data.**
+- DELETE PERMISSION FROM Departments TO ‘Zer0’ WHERE permission LIKE ‘%UPDATE%’ AND permission LIKE ‘%DELETE%’
+- UNGRANT UPDATE, DELETE ON Departments TO ‘Zer0’
+- SELECT ‘Zer0’; DELETE Permission ON Departments; PERMISSION = ‘UPDATE, DELETE’
+- REVOKE UPDATE , DELETE ON Department TO ‘Zer0’
+Правильный ответ: 4
+
+**71. Find the error in the command below**
+- The variable ‘name’ is not specified in the procedure params
+- You can notcreate procedures with select statements inside
+- The JOIN operator is used incorrectly
+- The pattern in LIKE operatorcan not contain several ‘%’
+Правильный ответ: 1
+
+**72. Given the code below**
+- The trigger Products_INSERTexists in the database, therefore it cannot be created
+- The name of the trigger can’t contain underscore
+- The trigger can not be added to the table which doesn’t exist in the database
+- The database wasn’t specified for the trigger
+Правильный ответ: 1
+
+**73. Select the option with the answer where the user 'Zer0' is not allowed to add or select from the Department table:**
+- UNGRANT * FROM DEPARTMENT WHERE username LIKE ‘%Zer0%’
+- DELETE Permission SELECT, INSERT FOR ‘Zer0’ TO ‘Department’
+- DENY INSERT, SELECT ON ‘Department’ TO ‘Zer0’
+- UPDATE SELECT, INSERT, UPDATE, DELETE FROM ‘Department’ WHERE username LIKE ‘%Zer0%’
+Правильный ответ: 3
+
+**74. What does the following procedure do:**
+- Procedure deletes the row for the given id
+- Procedure returns all rows from the customer table
+- Procedure inserts a new customer
+- Procedure returns the entire row for the given id
+Правильный ответ: 4
+
+**75. Relational Algebra is a __________ query language that takes two relations as input and produces another relation as an output of the query**
+- Structural
+- Relational
+- Procedural
+- Fundamental
+Правильный ответ: 3
+
+**76. Retrieve all data from the table office {id, locations, name}**
+- Select *from office;
+- Select from office;
+- Select name from office;
+- Select *form office;
+Правильный ответ: 1
+
+**77. πsName,sAddress(Student) is equal to?**
+- SELECT Sname FROM Students
+- SELECT Sname, SAddress FORM Students
+- SELECT Sname and SAddress FROM Students
+- SELECT Sname, SAddress FROM Student
+Правильный ответ: 4
+
+**78. Define an union**
+- combines the result set of two or more select statements
+- returns all rows from the left table (1) and from the right table (2)
+- returns all rows from the right table (2), with the matching rows in the right table (1)
+- returns all rows from the left table (1), with the matching rows in the right table (2)
+Правильный ответ: 1
+
+**79. Find the SQL statement that is equal to: SELECT NAME FROM CUSTOMER WHERE STATE = 'VA';**
+- SELECT NAME IN CUSTOMER WHERE STATE IN 'VA';
+- SELECT NAME IN CUSTOMER WHERE STATE = 'VA';
+- SELECT NAME FROM CUSTOMER WHERE STATE IN 'VA';
+- SELECT NAME IN CUSTOMER WHERE STATE = 'V';
+Правильный ответ: 3
+
+**80. How can you change "Hansen" into "Nilsen" in the "LastName" column in the Students table?**
+- Update persons set lastname = 'hansen' into lastname = 'nilsen'
+- Update students set lastname = 'hansen' into lastname = 'nilsen'
+- Update persons set lastname = 'hansen' where lastname = 'nilsen'
+- Update students set lastname = 'nilsen' where lastname = 'hansen'
+Правильный ответ: 4
+
+**81. how to Add a new column into existing table?**
+- ALTER TABLE Student MODIFY COLUMN sDegree CHAR(64) NOT NULL
+- ALTER TABLE Student ADD COLUMN sDegree VARCHAR(64) NOT NULL
+- ALTER TABLE S ADD COLUMN s VACHAR(64) NOT NULL
+- ALTER TABLE Student DROP COLUMN sDegree VARCHAR(64) NOT NULL
+Правильный ответ: 2
+
+**82. how to change the row(s) in a table**
+- insert
+- update
+- change
+- delete
+Правильный ответ: 2
+
+**83. how to remove the row(s) from a table**
+- insert
+- update
+- change
+- delete
+Правильный ответ: 4
+
+**84. how to rename a column in existing table?**
+- ALTER TABLE Student MODIFY COLUMN sDegree CHAR(64) NOT NULL
+- ALTER TABLE Student CHANGE COLUMN sDegree Degree VARCHAR(64) NOT NULL
+- ALTER TABLE Student RENAME COLUMN s to SS VACHAR(64) NOT NULL
+- ALTER TABLE Student DROP COLUMN sDegree VARCHAR(64) NOT NULL
+Правильный ответ: 2
+
+**85. In E\R diagrams, we will represent Attributes as**
+- Boxes with rounded corners
+- Links between two entities
+- Ovals
+- Diamond box
+Правильный ответ: 3
+
+**86. In E\R diagrams, we will represent Entities as**
+- Boxes with rounded corners
+- Links between two entities
+- Ovals
+- Diamond box
+Правильный ответ: 1
+
+**87. In E\R diagrams, we will represent Relationships as**
+- Boxes with rounded corners
+- Links between two entities
+- Ovals
+- Diamond box
+Правильный ответ: 4
+
+**88. Many to many relationships are difficult to represent in database, so we need to**
+- Split many to many relationship into two one to many relationships
+- Split one to many relationship into two one to many relationships
+- Split many to many relationship into one to many relationships
+- Split many to many relationship into three one to many relationships
+Правильный ответ: 1
+
+**89. Please increase salary for 10%?**
+- UPDATE Employee SET Salary = Salary*0.5
+- UPDATE Employee SET Salary = Salary * 0.1
+- UPDATE Employee SET Salary = Salary * 1.1
+- UPDATE Employee Update Salary = Salary*0.1
+Правильный ответ: 3
+
+**90. Please remove staff, who earns more than 22000?**
+- DELETE FROM Employee WHERE Salary >=22000;
+- DELETE FROM Employe WHERE Salary => 22000;
+- REMOVE FROM Employee WHERE Salary >22000;
+- DELETE FROM Employee WHERE Salary = 22000;
+Правильный ответ: 1
+
+**91. Retrieve office id from the table office {id, locations, name}**
+- Select *from office;
+- Select id from office;
+- Select name from office;
+- Select id form office;
+Правильный ответ: 2
+
+**92. SQL can be used to**
+- create database structures only
+- query database data only
+- modify database data only
+- All of the these can be done by SQL
+Правильный ответ: 4
+
+**93. SQL data definition commands make up a(n)**
+- DDC
+- DML
+- DDL
+- DDD
+Правильный ответ: 3
+
+**94. SQL stands for**
+- Sequence Quuestion Language
+- Structured Query Language
+- Structured Querty Language
+- Selection Query Language
+Правильный ответ: 2
+
+**95. The ___________ operation, denoted by −, allows us to find tuples that are in one relation but are not in another.**
+- Union
+- Difference
+- Selection
+- Intersection
+Правильный ответ: 2
+
+**96. The command to eliminate a table from a database**
+- Drop
+- Delete
+- Remove
+- Update
+Правильный ответ: 1
+
+**97. The command to remove rows from a table "Customer"**
+- Remove from Customer
+- Delete from Customer
+- Drop from Customer
+- Update row from Customer
+Правильный ответ: 2
+
+**98. The result of a SQL SELECT statement is a(n)**
+- Report
+- Table
+- Form
+- File
+Правильный ответ: 2
+
+**99. The OR operator displays a record if ANY conditions listed are true.**
+- True
+- false
+Правильный ответ: 1
+
+**100. The AND operator displays a record if ALL of the conditions listed are true**
+- True
+- false
+Правильный ответ: 1
+
+**101. M:M connection type is not available in the data model:**
+- object-oriented
+- hierarchical
+- network
+- multivariate
+- post-relational
+Правильный ответ: 2
+
+**102. Integrity control of the relationships is maintained automatically in the data model:**
+- hierarchical
+- object-oriented
+- network
+- relational
+- multivariate
+Правильный ответ: 1
+
+**103. Record-"Descendant" can’t have many of records, "ancestors" in the data model:**
+- hierarchical
+- object-oriented
+- network
+- post-relational
+- multivariate
+Правильный ответ: 1
+
+**104. "Entity - Relationship" scheme  is an example of a data model:**
+- object-oriented
+- object-relational
+- relational
+- multivariate
+- post-relational
+Правильный ответ: 1
+
+**105. Which model is an extension of the relational model and removes restrictions of indivisibility of the data stored in the records in the tables?**
+- multivariate
+- object-relational
+- network
+- post-relational
+- relational
+Правильный ответ: 4
+
+**106. Which of data models is designed for online analytical processing?**
+- relational
+- multivariate
+- object-oriented
+- object-relational
+- post-relational
+Правильный ответ: 2
+
+**107. Which of the data models is the most understandable to the customer and convenient for designing a database from scratch?**
+- relational
+- multivariate
+- object-oriented
+- network
+- post-relational
+Правильный ответ: 3
+
+**108. "Entity - Relationship" scheme is an example of a data model:**
+- object-relational
+- relational
+- object-oriented
+- multivariate
+- post-relational
+Правильный ответ: 3
+
+**109. Which of these models is based not on records?:**
+- relational
+- hierarchical
+- object-oriented
+- network
+- multivariate
+Правильный ответ: 3
+
+**110. What gives the result of the combination of entities?**
+- E/R scheme
+- supertype
+- relation
+- attribute
+Правильный ответ: 1
+
+**111. Which of the following means the entity property?**
+- subtype
+- scheme E/ R
+- supertype
+- attribute
+Правильный ответ: 4
+
+**112. Which functional component controls matches in the database?**
+- database manager
+- file manager
+- disk manager
+- database administrator
+- administrator
+Правильный ответ: 1
+
+**113. Who is responsible for the design, maintenance and database security?**
+- application developer
+- database administrator
+- database manager
+- user
+Правильный ответ: 2
+
+**114. Which of the actions in the design of a relational database is not included in the stage of deployment?**
+- DBMS selection and purchase
+- The transformation of the conceptual model to the real
+- Creating of the Data Dictionary
+- Testing and maintenance of the database
+Правильный ответ: 4
+
+**115. What is the last stage in relational database design?**
+- Determine requirements
+- Database testing and maintenance
+- Conceptual design
+- Deployment
+Правильный ответ: 2
+
+**116. Who is the primary user of the database or who is the database intended for?**
+- database manager
+- database administrator
+- user
+- application developer
+- database developer
+Правильный ответ: 3
+
+**117. To ensure good quality of the database design you should not adhere to one of the rules:**
+- Each table must have unique name
+- Each table should store data of one entity type
+- Avoid the NULL column
+- Avoid repeating values or columns
+- Each table should store data of different entity types
+Правильный ответ: 5
+
+**118. In which system database all information about specific server configuration is stored, particularly about data of registered users, databases, configuration options of the system and remote servers:**
+- Master
+- TempDB
+- Model
+- MSDB
+- Purpose
+Правильный ответ: 1
+
+**119. Which of the following are necessary for the communication compatibility between the two tables?**
+- Attributes with the same data type
+- Attributes with unique data
+- Attributes with different data types
+Правильный ответ: 1
+
+**120. What is the state which requires duplication to provide mutual independence of multi-value attributes?**
+- Denormalization
+- Multi-value dependency
+- Multi-value independency
+- Concretization
+- Generalization
+Правильный ответ: 2
+
+**121. In case of a SELECT statement which includes a WHERE clause, where is the GROUP BY clause statement placed?**
+- Immediately after the SELECT clause
+- After the WHERE clause
+- After the ORDER BY clause
+- Before the WHERE clause
+Правильный ответ: 2
+
+**122. Which of the following is an attribute of a key that could have been a primary key but wasn’t chosen by it?**
+- alternative
+- foreign
+- possible /candidate/
+- composite
+- no such attribute
+Правильный ответ: 1
+
+**123. Which of these objects is a set of values​​, based on which one or more attributes are retrieve their actual values​​?**
+- domain
+- entity
+- relation
+- supertype
+Правильный ответ: 1
+
+**124. Some attributes(or set of attributes)that uniquely identifies a row in the table is the key:**
+- possible
+- primary
+- alternative
+- composite
+- foreign
+Правильный ответ: 1
+
+**125. Which method of selecting the primary key isn’t optimal:**
+- The primary key must be numeric.
+- The primary key must consist of a single column.
+- The primary key should not be changed with time.
+- Primary key must be meaningless.
+- The primary key must not be numeric.
+Правильный ответ: 5
+
+**126. The operator creates a relation consisting of tuples belonging to both relations.**
+- selection
+- intersection
+- union
+- cross join
+- subtraction
+Правильный ответ: 2
+
+**127. The operator selects the sample tuples or rows from relation, based on the condition.**
+- selection
+- intersection
+- union
+- cross join
+- division
+Правильный ответ: 1
+
+**128. The operator creates all possible combinations of tuples, taken one by one from each of the two relations:**
+- selection
+- intersection
+- union
+- left, right, full join
+- cross join
+Правильный ответ: 5
+
+**129. The operator forms the relation from two relations, taken in pairs from each relation and satisfied the condition:**
+- selection
+- intersection
+- union
+- left, right, full join
+- cross join
+Правильный ответ: 4
+
+**130. The operator selects the attributes or columns from the relation.**
+- division
+- subtraction
+- projection
+- intersection
+- cross join
+Правильный ответ: 3
+
+**131. The operator generates relation of tuples belonging to the first, but absent in the second of the two relations.**
+- division
+- subtraction
+- projection
+- intersection
+- cross join
+Правильный ответ: 2
+
+**132. Which operator can split the data of one table into the data of another table?**
+- division
+- subtraction
+- projection
+- intersection
+- cross join
+Правильный ответ: 1
+
+**133. Which operator can collect the data of two tables into one table, provided that the number of columns is the same and the data types in these columns are the same?**
+- selection
+- intersection
+- union
+- left, right, full join
+- cross join
+Правильный ответ: 3
+
+**134. In case of a SELECT statement which includes a WHERE clause, where is the GROUP BY clause statement placed?**
+- Immediately after the SELECT clause
+- After the WHERE clause
+- After the ORDER BY clause
+- Before the WHERE clause
+Правильный ответ: 2
+
+**135. The preferred method of defaulting a value in a column is:**
+- To use a constraint
+- To use a default
+- Write the application code currently
+- None of the above
+- All of the above
+Правильный ответ: 2
+
+**136. ** A ? B ****.****
+- SELECT * FROM A LEFT JOIN B ON A.a=B.е
+- SELECT * FROM A LEFT JOIN B ON A.a=B.d
+- SELECT * FROM A RIGHT JOIN B ON A.a=B.d
+- SELECT * FROM A INNER JOIN B ON A.a=B.d
+Правильный ответ: 2
+
+**137. The syntax for creating a View:**
+- Create View ViewName SELECT * FROM TableName
+- Create View ViewName AS SELECT * FROM TableName
+- Create View ProcName SELECT * FROM ViewName
+- Create Procedure ProcedureName AS BEGIN Procedure Body END
+Правильный ответ: 2
+
+**138. Following code**
+- Naming the user-defined stored procedures
+- tored procedure with parameters
+- Executing the procedure
+- Stored procedure without parameter
+Правильный ответ: 4
+
+**139. Which of these options are NOT correct way to call a Stored Procedure in SQL Server?**
+- EXEC Values
+- EXECUTE ProcedureName VALUES
+- ProcedureName VALUES
+- EXEC ProcedureName VALUES
+Правильный ответ: 1
+
+**140. Which of these options are NOT correct way to delete a Stored Procedure in SQL Server?:**
+- DROP PROCEDURE ProcedureName
+- Delete PROCEDURE ProcedureName
+- Drop proc spGetEmployee1
+- Drop Procedure spGetEmployee1
+Правильный ответ: 2
+
+**141. The parameters of a Stored Procedure:**
+- Simple, complex
+- Updatable, non-updatable
+- Defined, undefined
+- Input, output
+Правильный ответ: 4
+
+**142. Output of the following code:**
+- 
+- 
+- 
+- 
+Правильный ответ: 3
+
+**143. Output of the following code:**
+- 
+- 
+- 
+- 
+Правильный ответ: 1
+
+**144. Output of the following code:**
+- 
+- 
+- 
+- 
+Правильный ответ: 4
+
+**145. Output of the following code:**
+- 
+- 
+- 
+- 
+Правильный ответ: 2
+
+**146. Output of the following code:**
+- 
+- 
+- 
+- 
+Правильный ответ: 3
+
+**147. Output of the following code:**
+- 
+- 
+- 
+- 
+Правильный ответ: 4
+
+**148. Example of a stored procedure with default value:**
+- 
+- 
+- 
+- 
+Правильный ответ: 2
+
+**149. Example of a stored procedure calling another procedure:**
+- 
+- 
+- 
+- 
+Правильный ответ: 1
+
+**150. A stored procedure that gets the names, gender, and the dob of all teachers from the table Teachers table:**
+- CREATE PROCEDURE spGetTeachers AS BEGIN Select t_name, t_surname, t_course from Teachers END
+- CREATE PROCEDURE spGetEmployee AS BEGIN Select t_name, t_gender and dob from Employee END
+- CREATE PROCEDURE spGetTeachers AS BEGIN Select t_name, DOB from Teachers END
+- CREATE PROCEDURE spGetTeachers AS BEGIN Select t_name, t_gender, dob from Teachers END
+Правильный ответ: 4
+
+**151. Types of views:**
+- Simple, complex
+- Reusable, non-reusable
+- Defined, undefined
+- Input, output
+Правильный ответ: 1
+
+**152. A view created based on a single table but with distinct/ aggregate function/ group by clause/ having clause/ calculated columns/ set operations is considered to be a:**
+- Simple view
+- Dependent view
+- Complex view
+- Stored procedure
+Правильный ответ: 3
+
+**153. A keyword used for procedure modification:**
+- ALTER
+- CHANGE
+- DROP
+- CREATE
+Правильный ответ: 1
+
+**154. Following code is an example of:**
+- Stored procedure with parameters
+- Stored procedure without parameters
+- Executing the procedure
+- Checking the procedure
+Правильный ответ: 1
+
+**155. What does the following procedure do:**
+- Procedure deletes the row for the given id
+- Procedure returns all rows from the customer table
+- Procedure inserts a new customer
+- Procedure returns the entire row for the given id
+Правильный ответ: 4
+
+**156. What does the following procedure do:**
+- Procedure deletes the row for the given id
+- Procedure returns all rows from the customer table
+- Procedure inserts a new customer
+- Procedure returns the entire row for the given id
+Правильный ответ: 1
+
+**157. In case of a SELECT statement which includes a WHERE clause, where is the GROUP BY clause statement placed?**
+- Immediately after the SELECT clause
+- After the WHERE clause
+- After the ORDER BY clause
+- Before the WHERE clause
+Правильный ответ: 2
+
+**158. The preferred method of defaulting a value in a column is:**
+- To use a constraint
+- To use a default
+- Write the application code currently
+- None of the above
+- All of the above
+Правильный ответ: 2
+
+**159. What is the scientific method of splitting of the complex table structures on the simple table structures by definite rules?**
+- Concretization
+- Normalization
+- Generalization
+- Denormalization
+- Functional dependence
+Правильный ответ: 2
+
+**160. Result of samplinga subsetfromthe high-level entityset to forma lower level entity setis:**
+- specification
+- normalization
+- generalization
+- denormalization
+- functional dependence
+Правильный ответ: 1
+
+**161. What is the relation type of functional dependencies?**
+- М : 1
+- 1 : 1
+- М : М
+- There is no any relation
+Правильный ответ: 1
+
+**162. What is used for normalization reducing?**
+- E/R scheme
+- Primary and foreign keys
+- Decomposition without redundancy
+- Bottom-up method
+- Generalization
+Правильный ответ: 3
+
+**163. In which type of below normal forms each determinant in relation is possible key?**
+- 1NF.
+- 2NF.
+- 3NF.
+- BCNF.
+- 4NF.
+Правильный ответ: 4
+
+**164. Which of the followingis the resultof combining two ormore low-levelentity setsto create higher levelentity set?**
+- relation
+- specification
+- supertype
+- generalization
+- normalization
+Правильный ответ: 4
+
+**165. What is the type of NF, if the table is in previous NF and doesn’t have multi-value dependencies?**
+- DKNF
+- BCNF
+- 4NF
+- 5NF
+- There is no such NF
+Правильный ответ: 3
+
+**166. What is the reason of the anomalies insertion in the database?**
+- Redundancy
+- Concretization
+- Relations between entities
+- Functional dependency
+- Normalization
+Правильный ответ: 1
+
+**167. Which of the following statements are true about normalization?**
+- Normalization is used to reduce the number of tables in a database.
+- Normalization can remove redundant data from the database.
+- Normalization simplifies select statements.
+- Most databases are in fifth normal form.
+Правильный ответ: 2
+
+**168. The opposite method for specification in ER is:**
+- identification
+- normalization
+- denormalization
+- generalization
+- simplification
+Правильный ответ: 4
+
+**169. What type of NF **aren’t** based on functional dependency ?**
+- 1NF
+- 2NF, 3NF
+- BCNF,4NF
+- 5NF, DKNF
+- All NF
+Правильный ответ: 1
+
+**170. Which of the following NF has no transitive functional dependencies?**
+- DKNF
+- 3NF
+- 2NF
+- 1NF
+- BCNF
+Правильный ответ: 2
+
+**171. What functional dependency requires for functional definition of the other attributes?**
+- Requires the attribute to be the key
+- Doesn’t require the attribute to be the key
+- Requires the attribute not to be the key
+- Doesn’t require the attribute not to be the key
+- There is no any relation between key and functional dependency
+Правильный ответ: 2
+
+**172. What is the type of NF, when and only when the determinant in the table is possible key?**
+- 3NF
+- 2NF
+- 1NF
+- BCNF
+Правильный ответ: 4
+
+**173. What is the type of Normal Form, which is based on defining the keys and attribute domains?**
+- DKNF
+- 3NF
+- 2NF
+- BCNF
+Правильный ответ: 1
+
+**174. What is the type of NF, if the table has previous NF and each not key attribute functionally depends on **only** Primary Key?**
+- DKNF
+- 3NF
+- 2NF
+- 1NF
+- BCNF
+Правильный ответ: 2
+
+**175. What is the type of NF, if the table has previous NF and each attribute functionally depends on all key, not only on part of the key?**
+- DKNF
+- 3NF
+- 2NF
+- 1NF
+- BCNF
+Правильный ответ: 3
+
+**176. What is the type of NF, if the table has previous NF and each attribute functionally depends on all key, **not only** on part of the key?**
+- DKNF
+- 3NF
+- 2NF
+- 1NF
+- BCNF
+Правильный ответ: 3
+
+**177. Logical database design is:**
+- Generalization and Relation
+- Relation
+- Normalization and E/R
+- Functional relation
+- Concretization
+Правильный ответ: 3
+
+**178. If *A* attribute in relation to *B* attribute is functionally depends on it, what is the name of *B* attribute?**
+- Alternative key
+- Determinant
+- Possible key
+- Compound key
+- There is no such key
+Правильный ответ: 2
+
+**179. First normal form prohibits the occurrence of**
+- Null values in a column
+- Repeating group in a table
+- Multiple candidate keys in a table
+- Multiple foreign keys in a table
+Правильный ответ: 2
+
+**180. A table is in 2NF if the table is in 1NF and what other conditions is met?**
+- There are no functional dependencies.
+- There are no null values in primary key fields.
+- There are no repeating groups.
+- There are no attributes that a not functionally dependent on the relation’s primary key.
+Правильный ответ: 4
+
+**181. Which of the following statements is true:**
+- Normal forms can be derived by inspecting the data in various tables
+- Normal forms speed up all queries
+- Normal forms reduce the risk of inconsistent update of replicated dataitems
+- Normal forms completely eliminate all redundant storage of dataitems
+Правильный ответ: 3
+
+**182. If all non-keys in a table depend on the key, the whole key and nothing but the key,  then the table is in**
+- 1NF, but not in 2NF
+- 2NF, but not in 3NF
+- 3NF
+- BCNF
+Правильный ответ: 3
+
+**183. When a part of a key determines a nonkey, it is a violation of**
+- First Normal Form
+- Second Normal Form
+- BCNF
+- All of the above
+Правильный ответ: 2
+
+**184. When you normalize a relation by breaking it into two smaller relations, what must you do to maintain data integrity?**
+- Remove any functional dependencies from both relations
+- Create a primary key(s) for the new relation
+- Assign both relations the same primary key field(s)
+Правильный ответ: 2

@@ -1,0 +1,1959 @@
+**1. What type of task does K-Nearest Neighbors (K-NN) primarily solve?**
+- Dimensionality reduction
+- Unsupervised clustering
+- Density estimation
+- Supervised classification
+Правильный ответ: 4
+
+**2. Which of the following is NOT a supervised learning task?**
+- Spam email classification
+- Predicting house prices
+- Digit recognition
+- Grouping customers by purchase behavior
+Правильный ответ: 4
+
+**3. What does ****'****k****'**** represent in the K-NN algorithm?**
+- Number of features used
+- Number of training examples
+- Distance threshold
+- Number of nearest neighbors considered for prediction
+Правильный ответ: 4
+
+**4. In K-NN classification, how is the final prediction determined?**
+- By the distance to the farthest neighbor
+- By averaging all training labels
+- By the label of only the single closest point
+- By majority vote among the k nearest neighbors
+Правильный ответ: 4
+
+**5. What is the purpose of a validation set in K-NN hyperparameter selection?**
+- To retrain the model with more data
+- To test final model performance
+- To compute feature importance
+- To choose the best K without using the test set
+Правильный ответ: 4
+
+**6. Why should the test set NOT be used during model development?**
+- Because it is too small
+- Because it contains wrong labels
+- Because it slows down training
+- To avoid biasing the final evaluation with development decisions
+Правильный ответ: 4
+
+**7. What happens when K = 1 in K-NN?**
+- Model always predicts the most common class
+- Model averages all training labels
+- Model ignores closest point
+- The model memorizes training data and is prone to overfitting
+Правильный ответ: 4
+
+**8. Which distance metric is most commonly used in K-NN for continuous features?**
+- Cosine similarity
+- Jaccard distance
+- Manhattan distance
+- Euclidean distance
+Правильный ответ: 4
+
+**9. What is the main disadvantage of a very large K in K-NN?**
+- Training becomes very slow
+- Model fails to run
+- Memory usage increases exponentially
+- The model underfits by over-smoothing decision boundaries
+Правильный ответ: 4
+
+**10. In a K-NN example with k=3, two neighbors are ****'****cat****'**** and one is ****'****dog****'****. What is the predicted class?**
+- dog
+- Cannot be determined
+- The label of the closest neighbor
+- cat
+Правильный ответ: 4
+
+**11. What is the time complexity of K-NN prediction for a single test point against n training points with d features?**
+- O(log n)
+- O(d)
+- O(n)
+- O(n·d)
+Правильный ответ: 4
+
+**12. Which set is used only once at the very end of the ML development process?**
+- Training set
+- Validation set
+- Development set
+- Test (holdout) set
+Правильный ответ: 4
+
+**13. Arthur Samuel defined machine learning as the ability of computers to:**
+- Execute logical rules written by experts
+- Memorize all training examples
+- Simulate human brain neurons
+- Learn without being explicitly programmed
+Правильный ответ: 4
+
+**14. In unsupervised K-means clustering, what does the algorithm assign to each data point?**
+- A probability score
+- A feature weight
+- A regression coefficient
+- A cluster label based on nearest centroid
+Правильный ответ: 4
+
+**15. What is the key difference between classification and clustering?**
+- Clustering uses more data
+- Classification is always faster
+- Clustering requires labeled data
+- Classification uses labeled data; clustering does not
+Правильный ответ: 4
+
+**16. Which of the following is an example of a supervised learning task?**
+- Finding natural groups in customer data
+- Reducing feature dimensions
+- Detecting anomalies in unlabeled logs
+- Predicting whether a patient has cancer based on symptoms
+Правильный ответ: 4
+
+**17. What is feature scaling important for in K-NN?**
+- It reduces the number of classes
+- It makes the model faster to train
+- It removes irrelevant features automatically
+- To prevent features with large ranges from dominating the distance
+Правильный ответ: 4
+
+**18. You have salary (0–100,000) and age (0–60) as features. Without scaling, which feature dominates K-NN distance?**
+- Age dominates
+- Both contribute equally
+- Neither dominates
+- Salary dominates due to its larger numerical range
+Правильный ответ: 4
+
+**19. In K-means, what is computed at each iteration after assigning points to clusters?**
+- New feature weights
+- Cross-validation score
+- Entropy of each cluster
+- New cluster centroids (means)
+Правильный ответ: 4
+
+**20. K-means clustering is considered unsupervised because:**
+- It does not use any distance metric
+- It runs only once
+- It requires a separate test set
+- It learns patterns from data without any class labels
+Правильный ответ: 4
+
+**21. What is the primary goal of regression in machine learning?**
+- Assign labels to groups
+- Detect anomalies
+- Reduce dimensions
+- Predict a continuous numeric output value
+Правильный ответ: 4
+
+**22. Which of the following is a regression task?**
+- Classifying emails as spam or not
+- Identifying dog breeds in photos
+- Segmenting customers into groups
+- Predicting the monthly electricity bill based on usage
+Правильный ответ: 4
+
+**23. What does R² (coefficient of determination) measure?**
+- The number of features in the model
+- The mean error across folds
+- The training time of the model
+- The proportion of variance in the target explained by the model
+Правильный ответ: 4
+
+**24. In linear regression, what are the model parameters learned during training?**
+- Number of folds for cross-validation
+- Learning rate and epochs
+- Type of distance metric
+- Intercept and feature coefficients (weights)
+Правильный ответ: 4
+
+**25. What does the Mean Squared Error (MSE) penalize more heavily than Mean Absolute Error (MAE)?**
+- Small errors
+- Correct predictions
+- Zero-error predictions
+- Large outlier errors due to squaring
+Правильный ответ: 4
+
+**26. What is the difference between training error and test error?**
+- Training error is always smaller only for linear models
+- Test error is computed during model fitting
+- They are always identical if the dataset is large
+- Training error measures fit on seen data; test error measures generalization
+Правильный ответ: 4
+
+**27. What is k-fold cross-validation?**
+- Splitting data once into train and test
+- Training k separate models on the full dataset
+- Using k different algorithms simultaneously
+- Rotating data into k folds: each fold serves as validation once
+Правильный ответ: 4
+
+**28. What does cross_val_score with cv=5 return?**
+- A single trained model
+- The average weight of each feature
+- A confusion matrix
+- Five scores, one for each fold
+Правильный ответ: 4
+
+**29. What is the explanatory (independent) variable in regression?**
+- The output we want to predict
+- The loss function value
+- The cross-validation score
+- The input feature used to make predictions
+Правильный ответ: 4
+
+**30. What is the response (dependent) variable in regression?**
+- The input feature
+- The model coefficient
+- The regularization parameter
+- The target value the model is trying to predict
+Правильный ответ: 4
+
+**31. When a model has very low training error but high test error, this is called:**
+- Underfitting
+- Regularization
+- Bias
+- Overfitting
+Правильный ответ: 4
+
+**32. What happens to variance of OLS estimates when number of features p approaches n (number of samples)?**
+- Variance decreases
+- Variance stays constant
+- Variance becomes negative
+- Variance increases dramatically, risking overfitting
+Правильный ответ: 4
+
+**33. What does increasing the number of folds from 5 to 10 in cross-validation affect?**
+- Model accuracy always increases
+- Training data is permanently removed
+- Feature importance changes
+- Computational cost increases and variance of the estimate decreases
+Правильный ответ: 4
+
+**34. Predicting a customer****'****s next month spending is best modeled as:**
+- Classification problem
+- Clustering problem
+- Anomaly detection
+- Regression problem
+Правильный ответ: 4
+
+**35. What metric would you use to evaluate a regression model on the same scale as the target variable?**
+- R²
+- MSE
+- Precision
+- RMSE (Root Mean Squared Error)
+Правильный ответ: 4
+
+**36. What is the correct order of operations in a regression pipeline to avoid data leakage?**
+- Scale all data → train model → split into train/test
+- Fit model → split data → scale
+- Split data → scale test set → scale train set separately
+- Split data → fit scaler on train → transform both train and test
+Правильный ответ: 4
+
+**37. What does a negative R² value indicate?**
+- Perfect prediction
+- Model fits as well as random guessing
+- All predictions are negative
+- Model performs worse than simply predicting the mean
+Правильный ответ: 4
+
+**38. Selecting the model that fits best on training data alone will likely:**
+- Generalize perfectly to new data
+- Reduce the number of features automatically
+- Minimize both bias and variance
+- Lead to overfitting and poor generalization
+Правильный ответ: 4
+
+**39. Which model comparison approach is considered most reliable for small datasets?**
+- Simple train-test split
+- Using only training accuracy
+- Using validation on a fixed subset
+- Leave-one-out cross-validation (LOOCV)
+Правильный ответ: 4
+
+**40. What does adding more training data typically do to a model?**
+- Always reduces training accuracy
+- Increases model complexity
+- Has no effect on performance
+- Reduces variance and improves generalization
+Правильный ответ: 4
+
+**41. What is the main goal of regularization in machine learning?**
+- Speed up training
+- Increase model complexity
+- Guarantee zero training error
+- Reduce overfitting by penalizing large model coefficients
+Правильный ответ: 4
+
+**42. What penalty does Ridge regression add to the loss function?**
+- Sum of absolute values of coefficients (L1)
+- Sum of cubed coefficients
+- Square root of coefficients
+- Sum of squared coefficients (L2 norm)
+Правильный ответ: 4
+
+**43. What penalty does LASSO regression add to the loss function?**
+- Sum of squared coefficients (L2)
+- Square root of sum of squares
+- Inverse of coefficients
+- Sum of absolute values of coefficients (L1 norm)
+Правильный ответ: 4
+
+**44. Which regularization method can shrink coefficients exactly to zero?**
+- Ridge regression
+- Elastic Net only
+- Ordinary Least Squares
+- LASSO regression
+Правильный ответ: 4
+
+**45. Why is LASSO useful for feature selection?**
+- It adds more features automatically
+- It increases variance
+- It speeds up distance computation
+- It sets some coefficients exactly to zero, removing irrelevant features
+Правильный ответ: 4
+
+**46. What happens to Ridge regression coefficients when λ is very large?**
+- They become very large
+- They remain unchanged
+- They become negative
+- They shrink towards zero (but not exactly zero)
+Правильный ответ: 4
+
+**47. What happens when λ = 0 in LASSO or Ridge regression?**
+- All coefficients are set to zero
+- Regularization is maximized
+- Model fails to converge
+- The solution reduces to ordinary least squares (OLS)
+Правильный ответ: 4
+
+**48. How should the regularization parameter λ be selected?**
+- Always set λ = 1
+- Pick the largest value possible
+- Set λ to the number of features
+- Using cross-validation to minimize test error
+Правильный ответ: 4
+
+**49. What is the bias-variance trade-off in Ridge regression?**
+- Higher λ decreases both bias and variance
+- Higher λ decreases bias and increases variance
+- Higher λ has no effect
+- Higher λ increases bias but decreases variance
+Правильный ответ: 4
+
+**50. What code applies L1 regularization in scikit-learn?**
+- Ridge(alpha=0.1)
+- ElasticNet(alpha=0)
+- LinearRegression(penalty='l1')
+- Lasso(alpha=0.1)
+Правильный ответ: 4
+
+**51. Geometrically, why does LASSO produce sparse solutions?**
+- Its constraint region is circular
+- Its loss function has no gradient
+- Its constraint region is a sphere
+- Its diamond-shaped constraint region intersects the loss ellipse at axes corners
+Правильный ответ: 4
+
+**52. Ridge regression can be used when p ****>**** n (more features than samples). Why?**
+- It automatically removes features until p < n
+- It doesn't use matrix inversion
+- It selects only positive features
+- The L2 penalty makes the matrix invertible even when p > n
+Правильный ответ: 4
+
+**53. What is the LASSO loss function formula?**
+- MSE + λ Σw²
+- MSE − λ Σ|w|
+- MSE × Σ|w|
+- MSE + λ Σ|w|
+Правильный ответ: 4
+
+**54. What is the Ridge loss function formula?**
+- MSE + λ Σ|w|
+- MSE − λ Σw²
+- MSE / Σw²
+- MSE + λ Σw²
+Правильный ответ: 4
+
+**55. Which statement about model interpretability is true for LASSO?**
+- LASSO makes all coefficients equal
+- LASSO increases the number of predictors
+- LASSO never changes the sign of coefficients
+- LASSO improves interpretability by zeroing out irrelevant predictors
+Правильный ответ: 4
+
+**56. What is one advantage of Ridge over LASSO when predictors are correlated?**
+- Ridge removes all correlated features
+- Ridge always produces sparser models
+- Ridge zeroes out correlated features randomly
+- Ridge shrinks correlated predictors together rather than arbitrarily selecting one
+Правильный ответ: 4
+
+**57. What does the regularization path show in Ridge or LASSO?**
+- Training loss over epochs
+- Feature correlation matrix
+- Number of clusters
+- How coefficients change as λ varies
+Правильный ответ: 4
+
+**58. What is Elastic Net regularization?**
+- Only L1 penalty
+- Only L2 penalty
+- An alternative to cross-validation
+- A combination of L1 and L2 penalties
+Правильный ответ: 4
+
+**59. What is the irreducible error in a model?**
+- Error caused by a bad choice of λ
+- Error that regularization eliminates
+- Error from using too few training samples
+- Error that cannot be reduced regardless of the algorithm chosen
+Правильный ответ: 4
+
+**60. Which algorithm has high variance and low bias?**
+- Linear Regression
+- Logistic Regression
+- Linear Discriminant Analysis
+- Decision Tree (unpruned)
+Правильный ответ: 4
+
+**61. What is the output of logistic regression?**
+- A continuous numeric value
+- A cluster assignment
+- A distance between two points
+- A probability between 0 and 1
+Правильный ответ: 4
+
+**62. What is the sigmoid function used for in logistic regression?**
+- To compute pairwise distances
+- To normalize features
+- To calculate feature importance
+- To map any real value to a probability between 0 and 1
+Правильный ответ: 4
+
+**63. What is the default decision threshold in binary logistic regression?**
+- 0.0
+- 1.0
+- 0.25
+- 0.5
+Правильный ответ: 4
+
+**64. What does precision measure?**
+- Proportion of actual positives correctly identified
+- Total number of predictions
+- Proportion of true negatives
+- Proportion of predicted positives that are actually positive
+Правильный ответ: 4
+
+**65. What does recall (sensitivity) measure?**
+- Proportion of predicted positives that are correct
+- True negative rate
+- Overall accuracy of the model
+- Proportion of actual positives correctly identified by the model
+Правильный ответ: 4
+
+**66. What is specificity?**
+- True positive rate
+- Proportion of all predictions that are correct
+- Proportion of positives correctly identified
+- Proportion of actual negatives correctly identified (true negative rate)
+Правильный ответ: 4
+
+**67. Given TP=80, TN=60, FP=20, FN=10, what is accuracy?**
+- 0.80
+- 0.82
+- 0.88
+- 0.83
+Правильный ответ: 4
+
+**68. Given TP=80, FP=20, what is precision?**
+- 0.75
+- 0.85
+- 0.90
+- 0.80
+Правильный ответ: 4
+
+**69. Given TP=80, FN=20, what is recall?**
+- 0.75
+- 0.85
+- 0.90
+- 0.80
+Правильный ответ: 4
+
+**70. What is the F1-score?**
+- Sum of precision and recall
+- Difference between precision and recall
+- Precision divided by recall
+- Harmonic mean of precision and recall
+Правильный ответ: 4
+
+**71. When should recall be prioritized over precision?**
+- When false positives are very costly
+- When all errors are equally costly
+- When the dataset is balanced
+- When false negatives are more costly (e.g., cancer screening)
+Правильный ответ: 4
+
+**72. When should precision be prioritized over recall?**
+- When missing positives is the main risk
+- In fraud detection where missing fraud is costly
+- When the dataset is highly imbalanced toward negatives
+- When false positives are very costly (e.g., spam filter)
+Правильный ответ: 4
+
+**73. What is the ROC curve?**
+- Plot of precision vs. recall
+- Plot of training loss vs. epoch
+- Plot of feature importance vs. threshold
+- Plot of true positive rate vs. false positive rate at various thresholds
+Правильный ответ: 4
+
+**74. What does AUC (Area Under ROC Curve) close to 1.0 indicate?**
+- Model performs randomly
+- Model only predicts negatives
+- Model has low recall
+- Model has excellent discrimination between classes
+Правильный ответ: 4
+
+**75. What is a key disadvantage of logistic regression?**
+- It cannot handle binary outputs
+- It is computationally very expensive
+- It cannot output probabilities
+- It is prone to underfitting on complex nonlinear problems
+Правильный ответ: 4
+
+**76. What is the confusion matrix for a binary classifier?**
+- A plot of the sigmoid function
+- A grid showing precision vs. recall
+- A table of feature correlations
+- A 2×2 table showing TP, TN, FP, FN counts
+Правильный ответ: 4
+
+**77. In multinomial logistic regression, how many class probability outputs are produced?**
+- Always 1
+- Always 2
+- Depends on the threshold
+- One probability per class, summing to 1
+Правильный ответ: 4
+
+**78. What is the logit transformation in logistic regression?**
+- Log of the squared error
+- Inverse of the sigmoid applied to the output
+- Square root of the probability
+- Log of the odds: log(p / (1-p))
+Правильный ответ: 4
+
+**79. If a logistic regression model predicts P(y=1|x) = 0.7 with threshold 0.5, what is the predicted class?**
+- 0
+- Cannot determine
+- 0.7
+- 1
+Правильный ответ: 4
+
+**80. Lowering the classification threshold from 0.5 to 0.3 will:**
+- Increase precision and decrease recall
+- Not change any metric
+- Reduce the number of positives predicted
+- Increase recall and potentially decrease precision
+Правильный ответ: 4
+
+**81. What is the purpose of the holdout (test) set?**
+- To tune hyperparameters
+- To train the final model
+- To measure cross-validation error
+- To provide a final unbiased estimate of model performance
+Правильный ответ: 4
+
+**82. What is the difference between model parameters and hyperparameters?**
+- Parameters are set before training; hyperparameters are learned
+- They are the same thing
+- Hyperparameters are only relevant for neural networks
+- Parameters are learned during training; hyperparameters are set before training
+Правильный ответ: 4
+
+**83. Which of the following is a hyperparameter of a Decision Tree?**
+- Split threshold values learned from data
+- Leaf node predictions
+- Node impurity values
+- max_depth
+Правильный ответ: 4
+
+**84. What does Grid Search do?**
+- Randomly samples hyperparameter combinations
+- Uses gradient descent to optimize hyperparameters
+- Selects hyperparameters using Bayesian inference
+- Exhaustively evaluates every combination in a predefined hyperparameter grid
+Правильный ответ: 4
+
+**85. What is the main advantage of RandomizedSearchCV over GridSearchCV?**
+- It always finds the global optimum
+- It requires no cross-validation
+- It uses gradient-based optimization
+- It is faster by sampling only a fixed number of random combinations
+Правильный ответ: 4
+
+**86. What is a learning curve in machine learning?**
+- Plot of loss vs. number of features
+- Plot of regularization vs. accuracy
+- Plot of model depth vs. entropy
+- Plot showing training and validation scores as training set size grows
+Правильный ответ: 4
+
+**87. What does high training accuracy and low validation accuracy indicate?**
+- Underfitting
+- Correct model selection
+- Bias problem
+- Overfitting — model memorizes training data
+Правильный ответ: 4
+
+**88. What criterion does a Decision Tree use to choose the best split?**
+- Euclidean distance
+- Manhattan distance
+- Cosine similarity
+- Impurity measure such as Gini or Information Gain (entropy)
+Правильный ответ: 4
+
+**89. What is entropy in the context of Decision Trees?**
+- Mean squared error of the node
+- Depth of the current node
+- Number of samples in a node
+- Measure of disorder or impurity: -Σ p·log(p)
+Правильный ответ: 4
+
+**90. An entropy of 0 in a node means:**
+- The node is a root node
+- All samples have the same feature value
+- The node is empty
+- All samples in the node belong to the same class (pure node)
+Правильный ответ: 4
+
+**91. What is the effect of limiting max_depth in a Decision Tree?**
+- Always increases accuracy
+- Removes all leaves
+- Causes the tree to ignore all features
+- Prevents overfitting by limiting tree complexity
+Правильный ответ: 4
+
+**92. What does min_samples_leaf control?**
+- Maximum depth of the tree
+- Number of training iterations
+- The distance metric used for splits
+- Minimum number of samples required to be at a leaf node
+Правильный ответ: 4
+
+**93. What is the Gini impurity?**
+- Probability that a node contains outliers
+- Measure of how sorted the target is
+- Sum of errors across all leaves
+- Probability of incorrectly classifying a randomly chosen sample at a node
+Правильный ответ: 4
+
+**94. What is Bayesian Optimization for hyperparameter tuning?**
+- Random search with replacement
+- Exhaustive grid over parameters
+- Using gradient descent on parameters
+- Using a probabilistic surrogate model to guide the hyperparameter search
+Правильный ответ: 4
+
+**95. What is the surrogate model typically used in Bayesian Optimization?**
+- Decision Tree
+- Linear Regression
+- K-Nearest Neighbors
+- Gaussian Process
+Правильный ответ: 4
+
+**96. What does the acquisition function do in Bayesian Optimization?**
+- Computes cross-validation accuracy
+- Trains the final model
+- Selects features
+- Determines the next hyperparameter point to evaluate
+Правильный ответ: 4
+
+**97. An unpruned Decision Tree trained until all leaves are pure will most likely:**
+- Underfit the training data
+- Have high bias
+- Reduce variance
+- Overfit the training data
+Правильный ответ: 4
+
+**98. What is the advantage of Decision Trees over linear models?**
+- They always have lower variance
+- They cannot overfit
+- They require feature scaling
+- They can capture non-linear relationships without feature engineering
+Правильный ответ: 4
+
+**99. What does setting random_state=42 in DecisionTreeClassifier ensure?**
+- Model ignores noisy features
+- Model always achieves 42% accuracy
+- Better accuracy than other seeds
+- Reproducible results across multiple runs
+Правильный ответ: 4
+
+**100. Which hyperparameter tuning method explores the search space most efficiently for large grids?**
+- GridSearchCV
+- Manual tuning
+- Leave-one-out cross-validation
+- BayesSearchCV (Bayesian Optimization)
+Правильный ответ: 4
+
+**101. Why must categorical variables be encoded before training most ML models?**
+- Categorical data always has outliers
+- Encoding reduces model training time
+- Categorical columns cause data leakage
+- Most ML algorithms require numerical inputs to compute distances or gradients
+Правильный ответ: 4
+
+**102. What is nominal data?**
+- Data with a natural ordering
+- Data measured on a continuous scale
+- Data representing time intervals
+- Categorical data without any intrinsic order (e.g., hair color, country)
+Правильный ответ: 4
+
+**103. What is ordinal data?**
+- Data without any meaningful order
+- Continuous numerical data
+- Binary data with two values
+- Categorical data with a meaningful order (e.g., Low < Medium < High)
+Правильный ответ: 4
+
+**104. What does one-hot encoding produce?**
+- A single integer per category
+- An ordinal ranking of categories
+- A probability for each category
+- A binary column per category indicating presence or absence
+Правильный ответ: 4
+
+**105. What is the ****'****dummy variable trap****'**** in one-hot encoding?**
+- Too many categories per column
+- Missing values introduced
+- Ordinal ordering assigned to nominal data
+- Perfect multicollinearity caused by keeping all binary columns (drop one)
+Правильный ответ: 4
+
+**106. What is label encoding?**
+- Creating binary columns per category
+- Replacing categories with their frequency
+- Using ordinal ranking from a dictionary
+- Assigning an integer to each category (e.g., red=0, green=1, blue=2)
+Правильный ответ: 4
+
+**107. Why is label encoding problematic for nominal data in distance-based models?**
+- It creates too many columns
+- It is computationally expensive
+- It does not work with sklearn
+- It implies a false ordinal relationship between unordered categories
+Правильный ответ: 4
+
+**108. What does ordinal encoding preserve?**
+- Equal distances between all categories
+- Binary representation of categories
+- Frequency of each category
+- The natural ordering of ordinal categories (e.g., Low=1, Medium=2, High=3)
+Правильный ответ: 4
+
+**109. What is frequency encoding?**
+- Counting how many columns a feature has
+- Replacing categories with binary codes
+- Sorting categories by importance
+- Replacing each category with how frequently it appears in the dataset
+Правильный ответ: 4
+
+**110. What is binary encoding?**
+- Assigning 0 or 1 based on label
+- Creating one hot column per category
+- Mapping all features to [0,1] range
+- Converting the integer label to binary digits, each bit becoming a feature
+Правильный ответ: 4
+
+**111. Which encoding technique is best for high-cardinality nominal features (many categories)?**
+- One-hot encoding
+- Label encoding
+- Ordinal encoding
+- Binary encoding or target encoding to reduce dimensionality
+Правильный ответ: 4
+
+**112. What is the difference between nominal and ordinal variables when encoding for tree-based models?**
+- Ordinal must always be one-hot encoded
+- Nominal variables cannot be used in tree models
+- Tree models require all features to be normalized first
+- Tree models are less sensitive to encoding choice since they use splits, not distances
+Правильный ответ: 4
+
+**113. What is polynomial regression used for?**
+- Encoding categorical variables
+- Clustering data
+- Reducing the number of features
+- Modeling non-linear relationships by adding polynomial feature terms
+Правильный ответ: 4
+
+**114. What is the problem with applying polynomial feature transformation before the train-test split?**
+- Polynomial features are too slow to compute
+- The polynomial degree cannot be tuned
+- Polynomial features remove missing values
+- Data leakage — test set information influences the transformation
+Правильный ответ: 4
+
+**115. Which chi-square test is used for nominal unmatched category data with expected frequency ≥ 5?**
+- McNemar Test
+- Cochran's Q Test
+- Wilcoxon rank-sum test
+- Chi-Square Test of Independence
+Правильный ответ: 4
+
+**116. What does pd.get_dummies() do in pandas?**
+- Removes all categorical columns
+- Computes summary statistics for categories
+- Scales categorical values
+- Creates one-hot encoded binary columns from categorical features
+Правильный ответ: 4
+
+**117. What is a Likert scale an example of?**
+- Nominal data
+- Continuous numerical data
+- Binary data
+- Ordinal categorical data
+Правильный ответ: 4
+
+**118. What is target (mean) encoding?**
+- Replacing categories with their frequency count
+- Ranking categories by count
+- Using one binary column per category
+- Replacing each category with the mean of the target variable for that category
+Правильный ответ: 4
+
+**119. Why can mean encoding cause data leakage if not done properly?**
+- It adds too many new features
+- It only works on binary targets
+- It fails on large datasets
+- Computing the mean target on the full data before splitting leaks test information
+Правильный ответ: 4
+
+**120. What does the category_encoders library provide?**
+- Only one-hot and label encoding
+- Only ordinal encoding
+- Automatic model selection for categorical data
+- 15 different encoding schemes including binary, frequency, and target encoding
+Правильный ответ: 4
+
+**121. What does ****'****Missing Completely At Random (MCAR)****'**** mean?**
+- Data is missing because of its own value
+- Missing data follows a time pattern
+- Missing data is related to other observed variables
+- The fact that data is missing is unrelated to any values in the dataset
+Правильный ответ: 4
+
+**122. What does ****'****Not Missing At Random (NMAR)****'**** mean?**
+- Data is missing randomly
+- Missing data is unrelated to the dataset
+- Data is missing independently of all variables
+- The missing values are related to the actual (unobserved) missing data itself
+Правильный ответ: 4
+
+**123. What is listwise deletion?**
+- Removing only the columns with missing values
+- Filling missing values with the mean
+- Removing rows based on which column is analyzed
+- Removing all rows that contain any missing value
+Правильный ответ: 4
+
+**124. What is pairwise deletion?**
+- Removing all rows with at least one missing value
+- Filling missing values using KNN
+- Imputing using linear regression
+- Using all available data for each analysis, only excluding rows where the analyzed variable is missing
+Правильный ответ: 4
+
+**125. What is simple mean imputation?**
+- Using KNN to estimate missing values
+- Removing rows with missing values
+- Fitting a regression model to predict missing values
+- Replacing missing values with the column mean
+Правильный ответ: 4
+
+**126. What is a disadvantage of mean imputation?**
+- It introduces negative values
+- It is computationally very expensive
+- It cannot handle numerical data
+- It reduces variance in the dataset and distorts correlations
+Правильный ответ: 4
+
+**127. What is KNN imputation?**
+- Using cluster centroids to fill missing values
+- Filling with the most frequent value
+- Filling with the last observed value
+- Replacing missing values with the mean of the k most similar observed rows
+Правильный ответ: 4
+
+**128. What is MICE (Multiple Imputation by Chained Equations)?**
+- A simple mean imputation method
+- A method for removing missing rows
+- An oversampling technique for imbalanced data
+- Iteratively imputing each feature as a function of all others using regression
+Правильный ответ: 4
+
+**129. What is data leakage in imputation?**
+- Including outliers in the imputed values
+- Removing too many rows
+- Using KNN with too many neighbors
+- Using test set information (e.g., its mean) when imputing training data
+Правильный ответ: 4
+
+**130. When is dropping an entire column (variable) appropriate?**
+- When any value is missing
+- When the column is numeric
+- When there are fewer than 10 missing values
+- When more than ~60% of values are missing and the variable is insignificant
+Правильный ответ: 4
+
+**131. What is an imbalanced dataset?**
+- A dataset with equal class proportions
+- A dataset with missing values
+- A dataset with only continuous features
+- A dataset where one class heavily dominates the other (e.g., 90% vs. 10%)
+Правильный ответ: 4
+
+**132. What is undersampling?**
+- Generating synthetic minority samples
+- Adding noise to the majority class
+- Removing minority class samples
+- Removing majority class samples to balance the class distribution
+Правильный ответ: 4
+
+**133. What is oversampling?**
+- Removing majority class samples
+- Using only a subset of minority class
+- Deleting rows with missing values
+- Duplicating or generating new minority class samples to balance classes
+Правильный ответ: 4
+
+**134. What does SMOTE stand for?**
+- Stochastic Method Of Training Encoders
+- Sequential Majority Oversampling Technique
+- Structured Model Of Target Encoding
+- Synthetic Minority Oversampling Technique
+Правильный ответ: 4
+
+**135. How does SMOTE generate new samples?**
+- By duplicating existing minority samples
+- By computing the mean of all minority samples
+- By adding Gaussian noise to minority samples
+- By interpolating between existing minority samples in feature space
+Правильный ответ: 4
+
+**136. What is Balanced Random Forest?**
+- A random forest that uses only the minority class
+- A random forest with fixed tree depth
+- A random forest with no bootstrapping
+- A random forest that balances classes by bootstrapping minority samples at each iteration
+Правильный ответ: 4
+
+**137. What metric is most appropriate for evaluating classifiers on imbalanced datasets?**
+- Accuracy
+- R²
+- Mean Squared Error
+- F1-score or AUC-ROC
+Правильный ответ: 4
+
+**138. Why is accuracy a misleading metric for imbalanced datasets?**
+- It cannot be computed for binary classification
+- It changes with every random seed
+- It requires equal class sizes to be valid
+- A model predicting only the majority class achieves high accuracy without learning
+Правильный ответ: 4
+
+**139. What does the missingno library help with?**
+- Imputing missing values automatically
+- Training models on incomplete datasets
+- Balancing class distributions
+- Visualizing patterns and distributions of missing values in a dataset
+Правильный ответ: 4
+
+**140. What does a high recall but low precision indicate?**
+- Model is conservative in predicting positives
+- Model has many false negatives
+- Model ignores the minority class
+- Model predicts many positives but many of them are false positives
+Правильный ответ: 4
+
+**141. What is the key difference between supervised and unsupervised learning?**
+- Unsupervised learning is always faster
+- Supervised learning does not use data
+- Unsupervised learning requires more features
+- Unsupervised learning has no labeled target variable
+Правильный ответ: 4
+
+**142. Which of the following is NOT an unsupervised learning task?**
+- Clustering
+- Dimensionality reduction
+- Anomaly detection
+- Email spam classification
+Правильный ответ: 4
+
+**143. What is the goal of clustering?**
+- Predict a continuous target value
+- Assign labels based on prior knowledge
+- Maximize a loss function
+- Group data points so similar points are in the same cluster
+Правильный ответ: 4
+
+**144. What is a cluster prototype?**
+- A labeled example used for training
+- A visualization of the cluster boundary
+- A regularization parameter
+- A representative data point (centroid or medoid) that characterizes a cluster
+Правильный ответ: 4
+
+**145. What is a centroid-based cluster?**
+- A cluster defined by pairwise distances only
+- A cluster with no defined center
+- A cluster formed by hierarchical merging
+- A cluster where each point is closer to its own centroid than any other
+Правильный ответ: 4
+
+**146. What is the difference between exclusive and overlapping clustering?**
+- Exclusive uses labels; overlapping does not
+- Overlapping requires more data
+- Exclusive is always hierarchical
+- Exclusive assigns each point to exactly one cluster; overlapping allows multiple memberships
+Правильный ответ: 4
+
+**147. What is fuzzy clustering?**
+- Clustering with noisy label assignments
+- Clustering that removes outliers
+- Clustering that uses random centroids
+- Each point belongs to every cluster with a membership weight between 0 and 1
+Правильный ответ: 4
+
+**148. What is hierarchical clustering?**
+- Clustering with fixed number of clusters
+- Clustering that assigns all points to one group
+- Partitional clustering with centroid updates
+- Clustering that builds a nested tree of clusters (dendrogram)
+Правильный ответ: 4
+
+**149. What is a well-separated cluster?**
+- A cluster with exactly one point
+- A cluster sharing points with others
+- A cluster defined by a probability threshold
+- A cluster where every point is closer to its cluster members than to any other cluster point
+Правильный ответ: 4
+
+**150. What is graph-based clustering?**
+- Clustering by distance to a centroid
+- Clustering by hierarchical merging
+- Clustering based on density of points
+- Clustering where data points are nodes and edges connect similar nearby points
+Правильный ответ: 4
+
+**151. Clustering is used in marketing to:**
+- Predict customer lifetime value exactly
+- Classify customers into spam or not
+- Regress sales figures
+- Segment customers by similarity for targeted campaigns
+Правильный ответ: 4
+
+**152. What is vector quantization in the context of clustering?**
+- A method to merge cluster centroids
+- A technique to add noise to data
+- An alternative to K-means
+- Representing each data point by the index of its cluster prototype for compression
+Правильный ответ: 4
+
+**153. What is a partial clustering?**
+- A clustering with only one cluster
+- A clustering where all points are noise
+- A fuzzy clustering with low membership
+- A clustering where not all points are assigned to clusters (some treated as noise)
+Правильный ответ: 4
+
+**154. In biology, clustering has been used to:**
+- Predict protein sequences directly
+- Replace supervised classification
+- Remove outlier genomes
+- Find groups of genes with similar functions
+Правильный ответ: 4
+
+**155. What does ****'****inertia****'**** measure in K-means clustering?**
+- Number of clusters
+- Model accuracy on test data
+- Time required for convergence
+- Total sum of squared distances of points to their cluster centroids
+Правильный ответ: 4
+
+**156. Association rule mining is considered unsupervised because:**
+- It requires cluster labels
+- It uses a regression model
+- It needs a validation set
+- It discovers patterns in unlabeled transaction data without a target variable
+Правильный ответ: 4
+
+**157. Why is it important to scale features before clustering?**
+- To remove irrelevant features
+- To make cluster centroids equal
+- To convert categorical to numerical data
+- To ensure all features contribute equally to distance calculations
+Правильный ответ: 4
+
+**158. What is the main difference between K-means and hierarchical clustering?**
+- K-means is always more accurate
+- Hierarchical clustering requires labels
+- K-means builds a dendrogram
+- K-means requires k specified upfront; hierarchical builds a full dendrogram
+Правильный ответ: 4
+
+**159. In a complete clustering, every data point:**
+- Belongs to multiple clusters
+- Is treated as noise
+- Has a membership weight of 0 or 1 only
+- Is assigned to exactly one cluster
+Правильный ответ: 4
+
+**160. Clustering of web pages returned by a search engine is useful because:**
+- It removes duplicate pages
+- It predicts click-through rates
+- It filters spam content
+- It organizes results into topic groups for easier exploration
+Правильный ответ: 4
+
+**161. How does the basic K-means algorithm begin?**
+- By computing a dendrogram
+- By hierarchically merging nearest points
+- By assigning all points to one cluster
+- By randomly initializing K cluster centroids
+Правильный ответ: 4
+
+**162. What is the centroid in K-means?**
+- The point with the minimum distance to all others
+- The most frequently occurring point
+- The point with the highest density
+- The mean of all points assigned to a cluster
+Правильный ответ: 4
+
+**163. What is the K-means objective function?**
+- Maximize average cluster size
+- Maximize distance between cluster centers
+- Minimize the number of clusters
+- Minimize the total Sum of Squared Errors (SSE) within clusters
+Правильный ответ: 4
+
+**164. When does the K-means algorithm stop iterating?**
+- After exactly k iterations
+- When SSE exceeds a threshold
+- When all clusters are empty
+- When cluster assignments no longer change (convergence)
+Правильный ответ: 4
+
+**165. What is the effect of poor initial centroid placement?**
+- Algorithm cannot run
+- Clusters always improve after one iteration
+- Results are always globally optimal
+- K-means may converge to a suboptimal local minimum
+Правильный ответ: 4
+
+**166. Why are multiple runs of K-means recommended?**
+- To find the correct value of k
+- To compute the dendrogram
+- To reduce memory usage
+- To increase the chance of finding a globally good solution despite random initialization
+Правильный ответ: 4
+
+**167. What is the Elbow Method for selecting k in K-means?**
+- Choose k with the highest SSE
+- Choose k with the maximum silhouette score
+- Choose k where variance is maximum
+- Plot SSE vs. k and choose k where the decrease in SSE flattens (elbow point)
+Правильный ответ: 4
+
+**168. What is the Silhouette score?**
+- The average within-cluster sum of squares
+- The ratio of between-cluster to within-cluster variance
+- A measure of cluster purity based on labels
+- A measure of how similar a point is to its own cluster vs. neighboring clusters
+Правильный ответ: 4
+
+**169. A Silhouette score close to 1 means:**
+- The point is between two clusters
+- The point should be assigned to another cluster
+- The cluster is empty
+- The point is well-matched to its cluster and far from neighboring clusters
+Правильный ответ: 4
+
+**170. What is Bisecting K-means?**
+- K-means initialized with medoids
+- K-means that removes half the clusters each step
+- K-means that only runs two iterations
+- A divisive variant that repeatedly splits one cluster using K-means with K=2
+Правильный ответ: 4
+
+**171. What is the time complexity of one iteration of K-means with n points, k clusters, d features?**
+- O(k·d)
+- O(n·k)
+- O(d·k²)
+- O(n·k·d)
+Правильный ответ: 4
+
+**172. Why does K-means struggle with non-globular (e.g., ring-shaped) clusters?**
+- K-means cannot handle continuous features
+- Centroids are always placed at cluster borders
+- Ring clusters always have equal SSE
+- K-means assumes spherical clusters using Euclidean distance to centroids
+Правильный ответ: 4
+
+**173. How are outliers problematic for K-means?**
+- Outliers are always assigned to their own cluster
+- Outliers speed up convergence
+- Outliers decrease the number of required iterations
+- Outliers distort centroid positions, increasing SSE for all cluster members
+Правильный ответ: 4
+
+**174. What is the K-medoid algorithm?**
+- A variant of K-means that uses the median instead of mean
+- A hierarchical clustering variant
+- A density-based clustering method
+- A variant that uses actual data points (medoids) as prototypes instead of means
+Правильный ответ: 4
+
+**175. What is inertia in sklearn****'****s KMeans?**
+- Number of iterations to converge
+- Number of clusters found
+- Average silhouette score
+- Sum of squared distances of each sample to its nearest cluster center
+Правильный ответ: 4
+
+**176. What distance metric does standard K-means use?**
+- Cosine similarity
+- Manhattan (L1) distance
+- Jaccard distance
+- Euclidean (L2) distance
+Правильный ответ: 4
+
+**177. When all points are labeled as noise in DBSCAN (which appeared in this lecture context), eps is likely:**
+- Too large
+- Correct
+- Not relevant
+- Too small — no point has enough neighbors within eps
+Правильный ответ: 4
+
+**178. DBSCAN with very large eps produces:**
+- All points as noise
+- Many small clusters
+- Infinite clusters
+- One large cluster containing all points
+Правильный ответ: 4
+
+**179. What is the main advantage of DBSCAN over K-means?**
+- It always converges faster
+- It requires k to be specified
+- It only works on spherical clusters
+- It can find arbitrarily shaped clusters and automatically identifies noise points
+Правильный ответ: 4
+
+**180. After calling kmeans.fit(X_new) on an already-fitted model, what happens?**
+- Results from X_old are preserved
+- An error is raised
+- The model averages both fits
+- The previous model is overwritten with a new fit on X_new
+Правильный ответ: 4
+
+**181. What does a dendrogram visualize?**
+- Feature importance across clusters
+- Distribution of cluster sizes
+- Silhouette scores per cluster
+- The hierarchical merging structure of clusters and distances between them
+Правильный ответ: 4
+
+**182. What is agglomerative clustering?**
+- Splitting one large cluster into smaller ones
+- Randomly assigning points to clusters
+- Merging one cluster into all others
+- Bottom-up clustering: each point starts as its own cluster and clusters are merged
+Правильный ответ: 4
+
+**183. What is divisive hierarchical clustering?**
+- Starting with each point as its own cluster
+- Merging all clusters into one
+- Using centroids to split data
+- Top-down clustering: starting with one cluster and recursively splitting it
+Правильный ответ: 4
+
+**184. What does single linkage use to measure the distance between two clusters?**
+- Average of all pairwise distances
+- Distance between cluster centroids
+- Distance between the two farthest points
+- Distance between the two nearest points, one from each cluster
+Правильный ответ: 4
+
+**185. What does complete linkage use to measure cluster distance?**
+- Nearest point between clusters
+- Centroid-to-centroid distance
+- Average pairwise distance
+- Distance between the two farthest points, one from each cluster
+Правильный ответ: 4
+
+**186. What does average linkage measure?**
+- Distance of centroids
+- Minimum pairwise distance
+- Maximum pairwise distance
+- Average of all pairwise distances between points from the two clusters
+Правильный ответ: 4
+
+**187. What does Ward****'****s linkage method minimize?**
+- Maximum cluster diameter
+- Average inter-cluster distance
+- Number of singleton clusters
+- The total within-cluster sum of squared distances after merging
+Правильный ответ: 4
+
+**188. How do you determine the number of clusters from a dendrogram?**
+- By counting all leaves
+- By choosing the smallest branch
+- By finding the longest distance in the tree
+- By cutting the dendrogram at a chosen height (distance threshold)
+Правильный ответ: 4
+
+**189. What does a larger y-axis value in a dendrogram indicate?**
+- Clusters are very similar
+- The clusters were merged early
+- The number of features used
+- Clusters were merged at a greater distance (less similar)
+Правильный ответ: 4
+
+**190. What is the naive time complexity of agglomerative clustering?**
+- O(n)
+- O(n log n)
+- O(n²)
+- O(n³)
+Правильный ответ: 4
+
+**191. What is the Silhouette Coefficient of -1?**
+- Point is perfectly clustered
+- Point is equidistant from two clusters
+- Point has no neighbors
+- Point is likely assigned to the wrong cluster
+Правильный ответ: 4
+
+**192. What is the Calinski-Harabasz Index?**
+- Ratio of within-cluster to between-cluster distances
+- Sum of silhouette scores
+- Total inertia divided by number of clusters
+- Ratio of between-cluster to within-cluster dispersion (higher is better)
+Правильный ответ: 4
+
+**193. What does the Davies-Bouldin Index measure?**
+- Average silhouette across all points
+- Ratio of cluster size to variance
+- Sum of inertia across clusters
+- Average similarity between each cluster and its most similar cluster (lower is better)
+Правильный ответ: 4
+
+**194. What is the Gap Statistic used for?**
+- Measuring cluster purity
+- Visualizing the dendrogram
+- Computing within-cluster distances
+- Comparing the observed within-cluster inertia to that expected under random data to select k
+Правильный ответ: 4
+
+**195. Compared to agglomerative clustering, divisive clustering is generally:**
+- Faster
+- Less accurate at top-level partitions
+- Simpler to implement
+- More accurate at top-level partitions but more complex to implement
+Правильный ответ: 4
+
+**196. What is the default linkage method in sklearn****'****s AgglomerativeClustering?**
+- single
+- complete
+- average
+- ward
+Правильный ответ: 4
+
+**197. What is the agglomerative clustering algorithm****'****s key operation at each step?**
+- Computing cluster entropy
+- Splitting the largest cluster
+- Updating centroid positions
+- Merging the two closest clusters and updating the proximity matrix
+Правильный ответ: 4
+
+**198. Why should features be normalized before hierarchical clustering?**
+- To produce integer cluster labels
+- To reduce computation to O(n)
+- To ensure dendrograms are symmetric
+- To prevent features with larger scales from dominating the distance calculations
+Правильный ответ: 4
+
+**199. When comparing Ward vs. complete linkage, the main difference is:**
+- Ward requires k specified upfront
+- Complete linkage always produces more clusters
+- Ward is limited to two clusters
+- Ward tends to produce compact, similarly-sized clusters; complete linkage produces tighter but possibly unequal clusters
+Правильный ответ: 4
+
+**200. What does a Bayesian Information Criterion (BIC) value help you determine in clustering?**
+- Which distance metric to use
+- Which linkage method is fastest
+- How to normalize the data
+- The optimal number of clusters by balancing model fit and complexity
+Правильный ответ: 4
+
+**201. What is the main goal of Principal Component Analysis (PCA)?**
+- Classify data into predefined groups
+- Predict a continuous target variable
+- Train a supervised model faster
+- Reduce dimensionality while retaining maximum variance
+Правильный ответ: 4
+
+**202. What does the first principal component represent?**
+- The direction of minimum variance
+- The original feature with highest variance
+- The cluster centroid
+- The direction of maximum variance in the data
+Правильный ответ: 4
+
+**203. What are eigenvectors of the covariance matrix in PCA?**
+- The mean values of each feature
+- The cluster assignments
+- The regularization penalties
+- The principal component directions (axes of maximum variance)
+Правильный ответ: 4
+
+**204. What do eigenvalues represent in PCA?**
+- The number of data points in each component
+- The correlation between features
+- The distance between principal components
+- The amount of variance explained by each principal component
+Правильный ответ: 4
+
+**205. Why must data be standardized before PCA?**
+- To make eigenvalues non-negative
+- To guarantee orthogonal components
+- To reduce the number of features to 1
+- To ensure features with larger scales do not dominate the principal components
+Правильный ответ: 4
+
+**206. What does n_components=0.95 mean in sklearn PCA?**
+- Use exactly 95 components
+- Remove 95% of the features
+- Reduce to 0.95 dimensions
+- Keep enough components to retain 95% of the total variance
+Правильный ответ: 4
+
+**207. What is the covariance between two variables that are independent?**
+- Equal to the variance of each variable
+- Equal to 1
+- Equal to -1
+- Zero
+Правильный ответ: 4
+
+**208. What does a positive covariance between two variables indicate?**
+- They are independent
+- One increases while the other decreases
+- They have the same variance
+- Both variables tend to increase or decrease together
+Правильный ответ: 4
+
+**209. What is the covariance matrix for a d-dimensional dataset?**
+- A d×1 vector of means
+- A d×d diagonal matrix of variances
+- A 1×1 scalar of total variance
+- A d×d symmetric matrix where entry (i,j) is the covariance between features i and j
+Правильный ответ: 4
+
+**210. What is the feature vector in PCA?**
+- The mean vector of the training data
+- The set of original input features
+- The cluster assignments after PCA
+- The matrix of selected eigenvectors used to project data to lower dimensions
+Правильный ответ: 4
+
+**211. What is a scree plot used for in PCA?**
+- Visualizing cluster boundaries
+- Plotting pairwise feature correlations
+- Showing regularization paths
+- Visualizing the variance explained by each principal component
+Правильный ответ: 4
+
+**212. PCA is an unsupervised technique because:**
+- It uses Euclidean distances only
+- It requires many more samples than features
+- It relies on cluster labels
+- It finds structure in data without using any class labels
+Правильный ответ: 4
+
+**213. What is DBSCAN?**
+- A supervised classification algorithm
+- A hierarchical clustering method
+- An oversampling technique
+- A density-based clustering algorithm that finds arbitrarily-shaped clusters and noise
+Правильный ответ: 4
+
+**214. What is the ****'****eps****'**** parameter in DBSCAN?**
+- Minimum number of clusters
+- Learning rate
+- Maximum number of iterations
+- The maximum distance between two points for them to be considered neighbors
+Правильный ответ: 4
+
+**215. What is the ****'****MinPts****'**** parameter in DBSCAN?**
+- Minimum cluster size allowed
+- Maximum number of clusters
+- Target variance for stopping
+- Minimum number of points within eps to classify a point as a core point
+Правильный ответ: 4
+
+**216. What is a core point in DBSCAN?**
+- Any point at the edge of a cluster
+- Any labeled point in the dataset
+- The centroid of a cluster
+- A point with at least MinPts neighbors within eps radius
+Правильный ответ: 4
+
+**217. What is a noise point (outlier) in DBSCAN?**
+- A point assigned to the largest cluster
+- A point with more than MinPts neighbors
+- A point with exactly MinPts neighbors
+- A point that is neither a core point nor in the neighborhood of a core point
+Правильный ответ: 4
+
+**218. What is the label assigned to noise points in sklearn DBSCAN?**
+- 0
+- None
+- NaN
+- -1
+Правильный ответ: 4
+
+**219. What is the main advantage of DBSCAN over K-means for spatial data?**
+- It requires fewer distance computations
+- It always finds the global optimum
+- It runs faster on large data
+- It can discover clusters of arbitrary shape and handle noise automatically
+Правильный ответ: 4
+
+**220. If PCA is applied before train-test split, what is the problem?**
+- PCA cannot be fitted more than once
+- PCA requires labels during fitting
+- n_components must be an integer
+- Information from test data leaks into the PCA transformation
+Правильный ответ: 4
+
+**221. What is the curse of dimensionality?**
+- Overfitting caused by too few samples
+- Underfitting caused by too many clusters
+- Slow convergence of K-means with many clusters
+- With too many features, distance measures break down and model performance degrades
+Правильный ответ: 4
+
+**222. What is the main difference between LDA and PCA?**
+- LDA is unsupervised; PCA is supervised
+- LDA maximizes variance; PCA maximizes class separation
+- Both are identical in computation
+- LDA uses class labels to maximize class separability; PCA is unsupervised and maximizes variance
+Правильный ответ: 4
+
+**223. What does LDA stand for?**
+- Latent Dimensional Analysis
+- Large-scale Data Alignment
+- Linear Distance Algorithm
+- Linear Discriminant Analysis
+Правильный ответ: 4
+
+**224. What is SVD (Singular Value Decomposition)?**
+- A clustering technique for sparse data
+- A regularization technique for regression
+- A supervised classification method
+- A matrix factorization decomposing a matrix into U, Σ, and Vᵀ
+Правильный ответ: 4
+
+**225. What is Truncated SVD?**
+- SVD applied to square matrices only
+- SVD that includes all singular values
+- SVD run on normalized data
+- SVD that retains only the top k singular values/vectors, discarding the rest
+Правильный ответ: 4
+
+**226. What is the key advantage of Truncated SVD over PCA for text data?**
+- It uses class labels for better reduction
+- It produces orthogonal components always
+- It cannot handle negative values
+- Truncated SVD works directly on sparse matrices without centering
+Правильный ответ: 4
+
+**227. What does the first principal component in PCA capture?**
+- The least variable direction
+- The average of all features
+- The direction perpendicular to variance
+- The direction of maximum variance in the data
+Правильный ответ: 4
+
+**228. What does the second principal component capture?**
+- The same direction as the first
+- The direction of minimum variance
+- A direction correlated with the first component
+- The direction of maximum remaining variance, orthogonal to the first component
+Правильный ответ: 4
+
+**229. What are the three matrices produced by SVD of a matrix A?**
+- A, B, C matrices of equal size
+- Left matrix, mean matrix, right matrix
+- Covariance, diagonal, inverse matrices
+- U (left singular vectors), Σ (diagonal of singular values), Vᵀ (right singular vectors)
+Правильный ответ: 4
+
+**230. What does ****'****dimensionality reduction****'**** do to a dataset?**
+- Adds synthetic features
+- Increases the number of samples
+- Trains a classification model
+- Transforms data into fewer dimensions while minimizing information loss
+Правильный ответ: 4
+
+**231. Why is dimensionality reduction often applied before clustering?**
+- To assign cluster labels automatically
+- To remove the need for distance metrics
+- To convert data to categorical type
+- To reduce noise and computational cost, improving cluster quality
+Правильный ответ: 4
+
+**232. What is sparse data?**
+- Data with very high variance
+- Data collected over a long time period
+- Data with many correlated features
+- Data where most values are zero or missing (high proportion of empty cells)
+Правильный ответ: 4
+
+**233. What is the difference between Feature Elimination and Feature Extraction in dimensionality reduction?**
+- Elimination creates new features; extraction removes original ones
+- Both produce the same transformed features
+- Neither reduces dimensionality
+- Elimination selects a subset of original features; extraction creates new combinations
+Правильный ответ: 4
+
+**234. If LDA is applied without class labels, what happens?**
+- It behaves like Truncated SVD
+- It clusters data into groups
+- It defaults to PCA behavior
+- LDA cannot be applied — it requires class labels to compute between-class variance
+Правильный ответ: 4
+
+**235. What does ordination (dimensionality reduction) aim to achieve?**
+- Cluster data into predefined groups
+- Add polynomial features
+- Label unlabeled data
+- Transform high-dimensional data to lower dimensions with minimal information loss
+Правильный ответ: 4
+
+**236. For a dataset with 100 features, how many principal components can PCA produce?**
+- Depends on the number of classes
+- Always 2
+- Depends on the dataset size
+- Up to 100 principal components (same as number of original features)
+Правильный ответ: 4
+
+**237. What does a projection onto a principal component represent?**
+- A cluster assignment
+- A class probability
+- A regularization penalty
+- The coordinate of a data point along that principal component axis
+Правильный ответ: 4
+
+**238. Why might PCA harm classification accuracy?**
+- PCA introduces data leakage
+- PCA cannot handle binary features
+- PCA always removes the most important features
+- PCA may discard low-variance components that are highly discriminative for the target
+Правильный ответ: 4
+
+**239. What does the percentage of explained variance in PCA tell you?**
+- How many samples can be removed
+- How correlated features are with each other
+- How much of the total variance each class contains
+- What proportion of the data's variability is captured by a given set of components
+Правильный ответ: 4
+
+**240. In which scenario is PCA most appropriate?**
+- When class labels are needed for reduction
+- When features are all categorical
+- When the dataset has fewer than 3 features
+- When features are correlated and dimensionality needs to be reduced without supervision
+Правильный ответ: 4
+
+**241. What is NMF?**
+- A supervised classification technique
+- A distance-based clustering algorithm
+- A gradient boosting method
+- A dimensionality reduction method that factorizes a non-negative matrix into two non-negative matrices
+Правильный ответ: 4
+
+**242. What is the key constraint of NMF?**
+- All matrix values must be binary
+- The matrices must be square
+- The components must be orthogonal
+- All values in the input data and factorized matrices must be non-negative
+Правильный ответ: 4
+
+**243. What does NMF approximate?**
+- The inverse of the input matrix
+- The eigendecomposition of the covariance matrix
+- The sorted singular values
+- The original matrix X as a product of two non-negative matrices W and H
+Правильный ответ: 4
+
+**244. Why is NMF considered more interpretable than PCA?**
+- NMF uses class labels for decomposition
+- NMF always produces orthogonal components
+- NMF requires fewer components
+- NMF produces additive, non-negative parts that can be interpreted as meaningful building blocks
+Правильный ответ: 4
+
+**245. What is NMF commonly used for in NLP?**
+- Named entity recognition
+- Part-of-speech tagging
+- Sentence alignment
+- Topic modeling — finding latent topics in document-term matrices
+Правильный ответ: 4
+
+**246. What happens when n_components is increased in NMF?**
+- Reconstruction error increases
+- Training becomes impossible
+- Negative values appear
+- The reconstruction error decreases as the factorization better approximates X
+Правильный ответ: 4
+
+**247. Why can****'****t NMF be applied directly to StandardScaler-scaled data?**
+- StandardScaler changes the data type
+- StandardScaler removes all features
+- NMF requires integer values
+- StandardScaler introduces negative values, violating the non-negativity constraint
+Правильный ответ: 4
+
+**248. How does NMF differ from PCA in terms of component orthogonality?**
+- Both guarantee orthogonal components
+- Neither produces orthogonal components
+- PCA never produces orthogonal components
+- PCA produces orthogonal components; NMF does not require orthogonality
+Правильный ответ: 4
+
+**249. What is Latent Semantic Analysis (LSA) in the context of NMF?**
+- A supervised text classification method
+- An image compression technique
+- A distance metric for documents
+- Using matrix factorization (NMF or SVD) to reveal latent topic structure in document-term matrices
+Правильный ответ: 4
+
+**250. Why is NMF preferred over SVD for document clustering interpretability?**
+- SVD is too slow for text data
+- SVD always produces more components
+- SVD cannot handle sparse matrices
+- NMF's non-negative components are easier to interpret as topics than SVD's negative values
+Правильный ответ: 4
+
+**251. What does the W matrix in NMF represent when applied to documents?**
+- Word frequencies in each topic
+- Distance between documents
+- Singular values of the term matrix
+- The encoding of each document in terms of the latent topics (topic loadings)
+Правильный ответ: 4
+
+**252. What does the H matrix in NMF represent?**
+- Document-level cluster assignments
+- Eigenvalues of the data matrix
+- Pairwise distances between topics
+- The learned topic-feature matrix showing how each topic relates to input features
+Правильный ответ: 4
+
+**253. What is the sklearn syntax for applying NMF with 5 components?**
+- NMF(components=5)
+- NMF().fit(X, n=5)
+- NMF(n_topics=5)
+- NMF(n_components=5)
+Правильный ответ: 4
+
+**254. Because NMF only allows additive combinations, it is ****'****careful****'**** about what it adds. This means:**
+- NMF removes more information than PCA always
+- NMF always gives sparser results than SVD
+- NMF is faster than PCA on all datasets
+- NMF tends to learn parts-based representations rather than holistic ones
+Правильный ответ: 4
+
+**255. What type of data is NMF especially well-suited for?**
+- Negative-valued time series
+- Binary classification targets
+- Integer-coded ordinal features
+- Non-negative data such as pixel intensities, word counts, or frequency matrices
+Правильный ответ: 4
+
+**256. How is cluster membership determined from NMF results?**
+- By the largest eigenvalue
+- By the smallest reconstruction error
+- By the sign of the component value
+- By finding the topic (component) with the highest loading for each document
+Правильный ответ: 4
+
+**257. How does NMF relate to document clustering?**
+- NMF replaces K-means after the clustering step
+- NMF assigns documents to topics before K-means
+- NMF cannot be used for document clustering
+- NMF results can directly serve as soft cluster assignments by choosing the dominant topic
+Правильный ответ: 4
+
+**258. NMF is minimized using:**
+- Gradient descent on a convex function
+- Eigenvalue decomposition
+- Singular value decomposition directly
+- Alternating minimization of W and H iteratively
+Правильный ответ: 4
+
+**259. What is the reconstruction error in NMF?**
+- Silhouette score of the factorized components
+- Cross-entropy between W and H
+- Ratio of variance explained
+- The difference (e.g., Frobenius norm) between the original matrix X and its approximation W·H
+Правильный ответ: 4
+
+**260. Compared to SVD, NMF tends to lose more information when truncating because:**
+- NMF uses more components
+- NMF maximizes variance in each component
+- NMF requires orthogonal components
+- The non-negativity constraint makes NMF less flexible, forcing a stricter approximation
+Правильный ответ: 4
+
+**261. What is ensemble learning?**
+- Training a single very deep model
+- Using one algorithm with many features
+- Reducing the number of training samples
+- Combining predictions from multiple models to improve performance
+Правильный ответ: 4
+
+**262. What is bagging (Bootstrap Aggregating)?**
+- Training models sequentially to fix each other's errors
+- Training one model on the full dataset repeatedly
+- Combining different distance metrics
+- Training multiple models independently on bootstrap samples and aggregating their predictions
+Правильный ответ: 4
+
+**263. What is boosting?**
+- Training all models in parallel on different data subsets
+- Using a single model with regularization
+- Training models on clustered data
+- Training models sequentially, with each model focusing on errors made by the previous one
+Правильный ответ: 4
+
+**264. What is a bootstrap sample?**
+- A stratified sample that preserves class ratios
+- A random sample without any replacement
+- A sample from the test set
+- A random sample drawn with replacement from the training data
+Правильный ответ: 4
+
+**265. How does Random Forest differ from simple bagging of decision trees?**
+- Random Forest uses boosting instead
+- Random Forest uses only one tree
+- Random Forest does not use bootstrap samples
+- Random Forest also randomly selects a subset of features at each split, adding extra diversity
+Правильный ответ: 4
+
+**266. What is the main benefit of ensemble methods?**
+- They are always faster than single models
+- They require no hyperparameter tuning
+- They work only for classification
+- They reduce variance and/or bias, improving generalization over single models
+Правильный ответ: 4
+
+**267. What is the key difference between bagging and boosting in terms of model training?**
+- Bagging is always sequential; boosting is always parallel
+- Both are trained identically
+- Bagging uses deep trees; boosting uses shallow trees only
+- Bagging trains models in parallel; boosting trains models sequentially
+Правильный ответ: 4
+
+**268. What is AdaBoost?**
+- A bagging algorithm using decision trees
+- A dimensionality reduction method
+- A regularization technique for linear models
+- A boosting algorithm that adjusts sample weights to focus on misclassified instances
+Правильный ответ: 4
+
+**269. What is Gradient Boosting?**
+- A method that trains trees in parallel
+- A variant of bagging with gradient descent
+- A method that reduces variance by random sampling
+- A boosting method where each new model fits the residual errors of the previous models
+Правильный ответ: 4
+
+**270. What does XGBoost stand for?**
+- eXponential Gradient Optimization
+- eXtended Greedy Boosting
+- eXact Generalization Boosting
+- eXtreme Gradient Boosting
+Правильный ответ: 4
+
+**271. What is the main advantage of LightGBM over standard Gradient Boosting?**
+- LightGBM always achieves higher accuracy
+- LightGBM uses bagging instead of boosting
+- LightGBM requires no hyperparameter tuning
+- LightGBM is faster and uses less memory by growing trees leaf-wise
+Правильный ответ: 4
+
+**272. What is CatBoost designed for?**
+- Only regression tasks
+- Only image classification
+- Only very large datasets
+- Handling categorical features natively without manual encoding
+Правильный ответ: 4
+
+**273. What is stacking (stacked generalization)?**
+- Training multiple copies of the same model
+- Using all models to vote equally
+- Training models with different random seeds
+- Training a meta-model to combine the predictions of multiple base models
+Правильный ответ: 4
+
+**274. What is hard voting in ensemble classification?**
+- Each model's probability is averaged
+- The model with highest confidence wins
+- Only the best model's vote is counted
+- The class predicted by the majority of models is selected
+Правильный ответ: 4
+
+**275. What is soft voting?**
+- Each model votes once with equal weight
+- The minimum probability across models is used
+- The class with the fewest votes is selected
+- Averaging the predicted probabilities across all models and choosing the highest
+Правильный ответ: 4
+
+**276. What is blending in ensemble learning?**
+- Identical to boosting
+- A form of dimensionality reduction
+- Training all models on the same data
+- A simplified stacking where base models and the meta-model are trained on different data splits
+Правильный ответ: 4
+
+**277. Why is boosting sensitive to noise?**
+- Boosting ignores outliers by design
+- Boosting trains all models on the same data
+- Boosting averages predictions only
+- Boosting increases weights of misclassified points, which amplifies the effect of noisy labels
+Правильный ответ: 4
+
+**278. For which type of data does boosting typically NOT outperform linear models?**
+- Tabular data with mixed types
+- Structured data with numeric features
+- Data with categorical features
+- Very high-dimensional sparse data such as TF-IDF text representations
+Правильный ответ: 4
+
+**279. What is the ****'****weak learner****'**** in boosting?**
+- A model with very high complexity
+- A random classifier that always guesses
+- A model trained on test data
+- A model that performs only slightly better than random chance (e.g., a shallow decision tree)
+Правильный ответ: 4
+
+**280. Why is boosting considered the strongest classical ML method for structured/tabular data?**
+- It uses deep learning internally
+- It requires no training data preprocessing
+- It always uses linear models
+- It builds trees sequentially to correct errors, capturing complex non-linear patterns with regularization
+Правильный ответ: 4

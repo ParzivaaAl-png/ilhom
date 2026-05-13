@@ -1,0 +1,1434 @@
+**1. Why is the CCNA considered valuable in the job market according to the narrative?**
+- It is the most recommended certification by IT professionals
+- It guarantees a job in any IT field
+- It currently has the highest number of job vacancies compared to other IT certifications
+- It is a trending social media topic
+Правильный ответ: 3
+
+**2. What is the main reason helpdesk staff aim to join the networking team as described?**
+- Networking is an easier job
+- Helpdesk roles have more paperwork
+- Networking involves less customer interaction
+- Networking roles offer better pay and career progression
+Правильный ответ: 4
+
+**3. How should you handle unforeseen events that disrupt your study schedule according to the plan?**
+- Fill in the entire schedule at once and stick to it no matter what
+- Adapt the schedule week by week, allowing for changes as needed
+- Ignore the schedule and start over
+- Cancel all personal events to stick to the schedule
+Правильный ответ: 2
+
+**4. According to the content, which role has a greater immediate job demand than many other comparable IT roles?**
+- JavaScript developers
+- Cisco CCNA certified roles
+- Software Engineers
+- Linux Administrator roles
+Правильный ответ: 2
+
+**5. Besides the CCNA, what advice was given for someone wanting to move into a networking role?**
+- Work overtime hours consistently
+- Apply to any job you find without preparation
+- Watch more TV shows to relax
+- Follow a structured study plan to get the CCNA
+Правильный ответ: 4
+
+**6. How do you configure a router in Packet Tracer?**
+- Click on the router
+- Select the Connections icon
+- Double-click on the switch
+- Open the topology settings
+Правильный ответ: 1
+
+**7. What information is required to set up a new Skills for All account using Email?**
+- Username, Password, Gender
+- Country, Year of Birth, Month of Birth
+- Name, Address, Phone Number
+- Email Verification, Security Questions
+Правильный ответ: 2
+
+**8. Why is it important to use the correct Packet Tracer version for the course?**
+- Newer versions have bugs
+- Just a preference of the instructor
+- Older versions have more features
+- Version compatibility with course exercises
+Правильный ответ: 4
+
+**9. What should you click on to add switches to your topology in Packet Tracer?**
+- Routers
+- Connections
+- Firewalls
+- Switches
+Правильный ответ: 4
+
+**10. After logging into the Cisco Skills for All, what is the next step to download Packet Tracer?**
+- Use the Browse catalog option and search
+- Navigate to the Packet Tracer download link from a specific URL
+- Visit the Downloads page in the Skills for All portal
+- Check emails for a download link
+Правильный ответ: 2
+
+**11. Which OSI layer assigns a logical address such as an IP address for devices on a network?**
+- Network Layer
+- Transport Layer
+- Data Link Layer
+- Physical Layer
+Правильный ответ: 1
+
+**12. What type of device operates at the OSI Network Layer, responsible for forwarding data based on IP addresses?**
+- Router
+- Switch
+- Hub
+- Bridge
+Правильный ответ: 1
+
+**13. Which network connection type spans large geographic areas, connecting multiple local networks?**
+- Wide Area Network (WAN)
+- Local Area Network (LAN)
+- Campus Area Network (CAN)
+- Metropolitan Area Network (MAN)
+Правильный ответ: 1
+
+**14. Which network device is primarily used to connect multiple networks and provide routing between them?**
+- Router
+- Hub
+- Switch
+- Firewall
+Правильный ответ: 1
+
+**15. Which layer in the OSI model is responsible for data framing, error detection, and logical link control?**
+- Data Link Layer
+- Transport Layer
+- Physical Layer
+- Network Layer
+Правильный ответ: 1
+
+**16. What is the command used to erase the startup configuration on older Cisco routers?**
+- write erase
+- clear startup
+- copy erase
+- overwrite config
+Правильный ответ: 1
+
+**17. Which process restores a configuration backup on a Cisco router?**
+- Enabling recovery mode on boot.
+- By rebooting the router twice.
+- Copying the backup file to startup-config and rebooting.
+- Deleting the current running-config.
+Правильный ответ: 3
+
+**18. What is the key difference between 'show' and 'debug' commands in Cisco IOS?**
+- 'show' commands are temporary, while 'debug' commands are permanent changes.
+- 'debug' commands can only be used in User EXEC mode.
+- 'show' commands use more battery life.
+- 'show' commands provide static information; 'debug' provides real-time data.
+Правильный ответ: 4
+
+**19. What is the purpose of using command history in Cisco IOS?**
+- To organize commands by priority.
+- To quickly reuse and modify previous inputs without retyping them.
+- To permanently delete commands.
+- To create shortcuts for future commands.
+Правильный ответ: 2
+
+**20. Why should configurations not be backed up on the same device they are pulled from?**
+- It's cheaper to save to the device locally.
+- It takes less time to back up locally.
+- Local storage maximizes storage usage.
+- Remote backups ensure data is safe in case of device failure.
+Правильный ответ: 4
+
+**21. How does TCP implement flow control?**
+- By prioritizing packets based on size.
+- By sending traffic at a constant rate.
+- Via the sliding window protocol.
+- By using SYN and ACK packets only.
+Правильный ответ: 3
+
+**22. Which field is not present in a UDP header but is present in a TCP header?**
+- Checksum
+- Destination Port
+- Sequence Number
+- Source Port
+Правильный ответ: 3
+
+**23. Why are port numbers essential in network communication?**
+- They specify the IP address of the host.
+- They determine encryption status of the connection.
+- They route data to specific applications on a host.
+- They control the speed of data transmission.
+Правильный ответ: 3
+
+**24. Which of the following is a characteristic of the Transport Layer in the OSI model?**
+- Error recovery and flow control between host devices.
+- Switching and routing of packets.
+- Encoding of data into signals.
+- Physical transmission of raw bits over a medium.
+Правильный ответ: 1
+
+**25. What makes TCP a connection-oriented protocol?**
+- It sends data in large blocks all at once.
+- It communicates in a request-response style.
+- It assigns a unique identifier for each session.
+- It performs a three-way handshake to establish a connection.
+Правильный ответ: 4
+
+**26. In a given subnet, how can you identify network and broadcast addresses?**
+- By checking for 0 in the host part
+- By routing table inspection
+- Through ARP table analysis
+- By searching for DHCP configuration
+Правильный ответ: 1
+
+**27. Why was the Internet Assigned Numbers Authority (IANA) formed?**
+- Ensure unique IP allocations globally
+- Manage private address distributions
+- Monitor internet speeds worldwide
+- Facilitate network hardware communications
+Правильный ответ: 1
+
+**28. Identify the valid range for Class B IP addresses.**
+- 128.0.0.0 to 191.255.0.0
+- 192.0.0.0 to 223.255.255.0
+- 1.0.0.0 to 126.0.0.0
+- 224.0.0.0 to 239.255.255.255
+Правильный ответ: 1
+
+**29. What unique feature distinguishes Class D IP addresses from other classes?**
+- Exclusive multicast usage
+- Employed as loopback
+- Used for unicast traffic
+- Reserved for future use
+Правильный ответ: 1
+
+**30. What is the primary purpose of subnetting?**
+- Divides a network into smaller, more manageable sections
+- Creates multiple points of network access
+- Encourages faster IP packet transfers to internet nodes
+- Assigns reserved addresses to each host
+Правильный ответ: 1
+
+**31. What is the purpose of writing both an IP address and its subnet mask in binary?**
+- Differentiate between network and host portions
+- Determine data transmission rate
+- Identify the default gateway
+- Set administrative privileges
+Правильный ответ: 1
+
+**32. What is the range of values for each octet within an IPv4 address?**
+- 0-255
+- 0-512
+- 0-1024
+- 0-128
+Правильный ответ: 1
+
+**33. What type of traffic is sent to all hosts on a network subnet?**
+- Broadcast
+- Unicast
+- Anycast
+- Multicast
+Правильный ответ: 1
+
+**34. What information does the protocol field in an IP header provide?**
+- Layer 4 protocol
+- Source IP address
+- Checksum information
+- Destination IP address
+Правильный ответ: 1
+
+**35. If you have 44 and are converting to binary, which value fits entirely into the remainder after placing a 32?**
+- 16
+- 2
+- 8
+- 4
+Правильный ответ: 3
+
+**36. What is the primary purpose of subnetting a network?**
+- To divide a network into smaller networks
+- To simplify IP addressing
+- To increase the size of a network
+- To enhance encryption
+Правильный ответ: 1
+
+**37. Which method can be used to convert subnet masks from slash notation?**
+- Convert each bit to decimal equivalent
+- Add 10 to the slash value
+- Multiply the value by 4
+- Reverse the binary value
+Правильный ответ: 1
+
+**38. Given the following network range, 192.168.1.0/24, what is the broadcast address?**
+- 192.168.1.255
+- 192.168.1.1
+- 192.168.1.0
+- 192.168.1.254
+Правильный ответ: 1
+
+**39. In subnetting, what is the 'Magic Number' used for?**
+- To calculate subnet size
+- To increase DNS efficiency
+- To enhance network security
+- To determine IP class
+Правильный ответ: 1
+
+**40. What is the advantage of using Variable Length Subnet Mask (VLSM)?**
+- More efficient IP address usage
+- Simplified network design
+- Faster network speed
+- Enhanced security
+Правильный ответ: 1
+
+**41. What is a key tip for adjusting your study timetable week by week?**
+- Ensure it is identical every week, regardless of circumstances
+- Make it challenging yet doable
+- Leave the entire week blank and improvise daily
+- Make it extremely easy to achieve
+Правильный ответ: 2
+
+**42. What should be avoided when creating a study timetable using the sample template?**
+- Pre-populating the entire schedule at once
+- Planning studies during weekends
+- Seeking help when falling behind
+- Starting with a blank timetable each week
+Правильный ответ: 1
+
+**43. How can you ensure that your Progress in a Packet Tracer lab doesn't get lost?**
+- Export configuration as an XML
+- Save your work frequently
+- Create a manual network backup
+- Close the application after each session
+Правильный ответ: 2
+
+**44. What are the different options available for creating a new account on Skills for All?**
+- Only Email-based signup
+- Existing Cisco account or Google account
+- Email, existing Cisco account, or Google account
+- Just Google account
+Правильный ответ: 3
+
+**45. Which Transport Layer protocol is best suited for live video streaming, where speed is preferred over reliability?**
+- SMTP
+- UDP
+- TCP
+- FTP
+Правильный ответ: 2
+
+**46. Which protocol, part of the Transport Layer, is chosen when data transmission reliability is crucial?**
+- FTP
+- TCP
+- UDP
+- HTTP
+Правильный ответ: 2
+
+**47. What layer of the OSI Model is responsible for encrypting data to further protect sensitive information?**
+- Data Link Layer
+- Transport Layer
+- Presentation Layer
+- Network Layer
+Правильный ответ: 3
+
+**48. What is required to configure an interface with an IP address on a Cisco router?**
+- You need to be in Interface Configuration mode.
+- Global Configuration mode suffices.
+- No specific mode needed, use direct commands.
+- User EXEC mode is sufficient.
+Правильный ответ: 1
+
+**49. What is the purpose of Global Configuration mode?**
+- To configure settings that affect the entire device.
+- To manage power settings and battery life.
+- To configure individual user settings.
+- To reset the device to factory settings.
+Правильный ответ: 1
+
+**50. Which service can utilize both TCP and UDP?**
+- TFTP
+- HTTP
+- DNS
+- FTP
+Правильный ответ: 3
+
+**51. What is session multiplexing in networking?**
+- Interleaving data packets from different sources.
+- Managing multiple communication sessions on a single link.
+- Isolating each protocol session to prevent overlap.
+- Combining multiple signals into one.
+Правильный ответ: 2
+
+**52. Which port does HTTP traffic use?**
+- 443
+- 80
+- 22
+- 21
+Правильный ответ: 2
+
+**53. In binary subtraction for 51, which value does not fully fit into the remaining number after attempting to fit a 64?**
+- 32
+- 64
+- 8
+- 16
+Правильный ответ: 2
+
+**54. Which IP header field is responsible for ensuring that a packet has not been corrupted in transit?**
+- Time to Live
+- Checksum
+- Fragment Offset
+- Protocol
+Правильный ответ: 2
+
+**55. Which class of IP addresses is primarily used for multicast traffic?**
+- Class D
+- Class A
+- Class B
+- Class C
+Правильный ответ: 1
+
+**56. How does multicast traffic improve network efficiency?**
+- Releases bandwidth quickly
+- Transfers data using unicast routes
+- Ensures backup systems react faster
+- Sends a single data stream to multiple destinations
+Правильный ответ: 4
+
+**57. Why are Class C IP addresses typically used in smaller networks?**
+- They can quickly expand to larger canopies
+- They have less overhead
+- They support up to 254 hosts per network
+- They are easier to remember
+Правильный ответ: 3
+
+**58. Which subnet mask would you use to support exactly 2 hosts?**
+- /31
+- /29
+- /28
+- /30
+Правильный ответ: 4
+
+**59. How many host addresses are available in a /24 network?**
+- 252 usable addresses
+- 254 usable addresses
+- 128 usable addresses
+- 256 usable addresses
+Правильный ответ: 2
+
+**60. What is a key consideration when designing subnets for a growing network?**
+- Use as few subnet bits as possible
+- Minimize unused IP addresses at all times
+- Network should support future growth without reconfiguration
+- Subnets should be as large as possible
+Правильный ответ: 3
+
+**61. What is the primary purpose of the preamble in an Ethernet frame?**
+- To specify the type of data encapsulated
+- To synchronize the sender and receiver
+- To indicate the start of a frame
+- To provide error correction information
+Правильный ответ: 2
+
+**62. Which Ethernet layer function provides error checking?**
+- MAC Addressing
+- Preemption
+- Encapsulation
+- FCS
+Правильный ответ: 4
+
+**63. What role does the MAC address play in Ethernet communications?**
+- To detect errors in frame transmissions
+- To route packets across networks
+- To uniquely identify network interfaces
+- To assign IP addresses to devices
+Правильный ответ: 3
+
+**64. What is the key difference between MAC addresses and IP addresses?**
+- MAC addresses are logical; IP addresses are physical
+- MAC addresses change dynamically; IP addresses are static
+- Both are used to route traffic between networks
+- MAC addresses are physical; IP addresses are logical
+Правильный ответ: 3
+
+**65. Why don't MAC address conflicts typically occur on a network?**
+- They are dynamically assigned like IPs, preventing conflicts
+- Each MAC address is globally unique due to its structured specification
+- Network administrators manually configure each MAC address
+- Because MAC addresses are rarely used on modern networks
+Правильный ответ: 2
+
+**66. What is the maximum length of a UTP cable segment in a standard Ethernet network?**
+- 200 meters
+- 500 meters
+- 50 meters
+- 100 meters
+Правильный ответ: 4
+
+**67. In which situation is PoE most beneficial?**
+- Powering servers in a data center
+- Connecting PCs to office networks
+- Replacing older cabling with fiber
+- Supplying power to IP phones and wireless access points
+Правильный ответ: 4
+
+**68. What is a key advantage of using PoE in a network?**
+- Extends network range
+- Enables remote configuration of devices
+- Eliminates the need for separate power cables
+- Increases data transmission speed
+Правильный ответ: 3
+
+**69. What is the typical maximum length for 10 Gigabit Ethernet over Multi Mode Fiber?**
+- 400 meters
+- 1000 meters
+- 100 meters
+- 200 meters
+Правильный ответ: 1
+
+**70. What is the role of a transceiver in a fiber optic network component?**
+- Modulates the data signal
+- Splits the fiber connection into multiple paths
+- Converts signals for fiber communication
+- Amplifies the data signal
+Правильный ответ: 3
+
+**71. What operational similarity exists between Cisco IOS and NX-OS?**
+- Similar command syntax
+- Redundant configurations
+- Unique syntax for NX-OS
+- Different access protocols
+Правильный ответ: 1
+
+**72. When two switches are connected, what piece of information helps them direct traffic efficiently?**
+- MAC Address Table
+- IP Address
+- Default Gateway
+- Port Bandwidth
+Правильный ответ: 1
+
+**73. What is the primary characteristic of a hub in a network?**
+- Layer 3 operations
+- Collision prevention
+- Full duplex operation
+- Half duplex operation
+Правильный ответ: 4
+
+**74. If a network host needs to communicate with another host in a different IP subnet, what is required?**
+- Switch
+- Hub
+- Router
+- Repeater
+Правильный ответ: 3
+
+**75. Why would an organization choose a Wireless LAN Controller over standalone access points?**
+- Improved audio quality
+- Reduce collision domains
+- Centralized management for scalability
+- Cheaper overall cost
+Правильный ответ: 3
+
+**76. Which layer 4 protocol is most commonly used for web traffic?**
+- ICMP
+- TCP
+- UDP
+- SMTP
+Правильный ответ: 2
+
+**77. When a host on a network needs to find another host's MAC address, what does it send?**
+- ARP Request
+- Ping
+- DNS Query
+- DHCP Discovery
+Правильный ответ: 1
+
+**78. What entry does a switch create when it receives a packet with a source MAC address?**
+- It changes the source MAC address.
+- It maps the MAC address to the port number.
+- It encrypts the data frame.
+- It assigns a new IP address to the device.
+Правильный ответ: 2
+
+**79. Why do MAC addresses change but IP addresses remain constant as packets traverse through networks?**
+- IP addresses change for each hop; MAC remains constant
+- Both change at every hop
+- Neither change at any point
+- MAC addresses change at each hop; IP remains constant for end-to-end delivery
+Правильный ответ: 4
+
+**80. What is the primary difference between static and dynamic routing?**
+- Static routing is less secure than dynamic routing.
+- Static routing uses OSPF; dynamic routing uses BGP.
+- Static routing only supports local networks.
+- Static routing is manual; dynamic routing is automatic.
+Правильный ответ: 4
+
+**81. Describe one scenario where a hop-by-hop connectivity test would be crucial using traceroute.**
+- To analyze network throughput
+- To pinpoint the failing hop in a network route
+- To replace faulty hardware
+- To configure routing protocols
+Правильный ответ: 2
+
+**82. Which command is used to verify the router's understanding of network paths?**
+- show run
+- show ip route
+- show int
+- ipconfig /all
+Правильный ответ: 2
+
+**83. Why might it sometimes be acceptable to skip to 'Propose Hypothesis' in the Cisco troubleshooting methodology?**
+- Data gathering is complex
+- Technology constraints
+- You are confident the problem resembles a previously solved issue
+- Job pressure
+Правильный ответ: 3
+
+**84. Why is documenting troubleshooting solutions important in Cisco networks?**
+- It helps resolve similar issues faster in the future.
+- To impress management.
+- It guarantees no issues reoccur.
+- It fulfills company policies.
+Правильный ответ: 1
+
+**85. What is a crucial first step when a connectivity issue is reported by a user?**
+- Verify the issue by checking it yourself
+- Contact the user for more details
+- Log the issue in the tracking system
+- Restart the network device
+Правильный ответ: 1
+
+**86. Why is it recommended to disable unused interfaces on switches?**
+- To reduce electrical consumption significantly
+- To save device memory
+- To avoid interface exhaustion
+- To prevent unauthorized access
+Правильный ответ: 4
+
+**87. What is required to remotely manage a Cisco device using telnet?**
+- SSH version 2
+- An IP address configured on the device
+- A direct console connection
+- A configured username and password
+Правильный ответ: 2
+
+**88. What type of issues should be suspected if a duplex mismatch error is detected?**
+- Layer 2 performance issues
+- Application layer processing issues
+- Layer 1 physical connectivity issues
+- Layer 3 routing issues
+Правильный ответ: 1
+
+**89. What distinguishes LLDP from CDP?**
+- LLDP cannot discover Linux servers
+- LLDP is an open standard protocol
+- LLDP can only be used on Cisco devices
+- LLDP operates at Layer 3
+Правильный ответ: 2
+
+**90. Why might it be beneficial to use the Configuration Dialog Setup on a Cisco device?**
+- For initial setup of basic configurations
+- To load alternative firmware
+- To perform advanced network tuning
+- To automate security policies
+Правильный ответ: 1
+
+**91. What command is used to erase the startup-config on a Cisco device, resetting it to factory defaults?**
+- erase flash
+- delete nvram
+- write erase
+- clear config
+Правильный ответ: 3
+
+**92. During the password recovery process on a Cisco router, what sequence is used to interrupt the boot process?**
+- Ctrl + Break
+- Ctrl + Alt + Delete
+- Shift + Esc
+- Ctrl + R
+Правильный ответ: 1
+
+**93. What command is used to specify a new IOS system image to boot from on a Cisco device?**
+- set ios-image
+- load ios-file
+- config ios-path
+- boot system
+Правильный ответ: 4
+
+**94. Which command copies the running configuration to a TFTP server for backup purposes?**
+- copy config-server
+- backup config tftp
+- copy running-config tftp
+- copy running-config flash
+Правильный ответ: 3
+
+**95. Which command allows you to save the current IOS system image to a TFTP server?**
+- send image tftp
+- transfer flash tftp
+- copy flash tftp
+- backup tftp image
+Правильный ответ: 3
+
+**96. For what purpose is the traceroute command used in network troubleshooting?**
+- To identify the path packets take through the network
+- To create new routes
+- To encrypt data traffic
+- To increase internet speed
+Правильный ответ: 1
+
+**97. What does a local route in a routing table typically indicate?**
+- A static route configured by an administrator
+- A dynamically learned route from other routers
+- An IP address configured on a local interface
+- A default route for external networks
+Правильный ответ: 3
+
+**98. What is the purpose of a default route in a router's configuration?**
+- To act as a catch-all route for unmatched packets
+- To specify alternate gateway in case of failure
+- To improve data encryption and security
+- To provide a backup route for lost packets
+Правильный ответ: 1
+
+**99. When does a router perform load balancing?**
+- When bandwidth is below 10% usage
+- When the router's CPU usage is high
+- When all routes to destination are down
+- When multiple routes share the same metric value
+Правильный ответ: 4
+
+**100. What determines which route a packet takes when multiple routes match a destination in the routing table?**
+- The longest prefix match
+- The lowest cost route
+- The route with the highest bandwidth
+- The shortest path route
+Правильный ответ: 1
+
+**101. What happens when a link comes up in networks using OSPF?**
+- OSPF recalculates the routing table for optimal paths.
+- Traffic continues to use the old routes until manually changed.
+- The new link is only used for static routes.
+- The network must be manually reconfigured.
+Правильный ответ: 1
+
+**102. What is the primary purpose of network statements in routing protocol configuration?**
+- They adjust administrative distances for protocols.
+- They define access control lists for security.
+- They create static routes for remote networks.
+- They specify interfaces to include in routing protocol operations.
+Правильный ответ: 4
+
+**103. What is Equal Cost Multi-Path (ECMP) in routing protocols?**
+- It requires manual routing configuration to work.
+- It distributes traffic across multiple paths with equal costs.
+- It selects a single most cost-effective route.
+- It diminishes network scalability due to complexity.
+Правильный ответ: 2
+
+**104. Which of the following is a common characteristic of all dynamic routing protocols?**
+- They are all exterior gateway protocols (EGPs).
+- They require manual route configuration.
+- They dynamically learn and advertise routes.
+- They employ administrative distances to determine the best route.
+Правильный ответ: 3
+
+**105. Why does RIP often send traffic along the bottom path in a network diagram even if a top path seems shorter?**
+- It uses hop count as its metric for path selection.
+- It selects paths based on bandwidth.
+- It uses delay as the primary metric.
+- It factors in interface load by default.
+Правильный ответ: 1
+
+**106. Which command can be used to find the MAC address on a Linux system?**
+- route
+- netstat
+- ifconfig
+- ping
+Правильный ответ: 3
+
+**107. How many bits are there in a MAC address?**
+- 48 bits
+- 32 bits
+- 64 bits
+- 128 bits
+Правильный ответ: 1
+
+**108. Which type of cable is commonly used to connect desktop computers to network switches in Ethernet LANs?**
+- Power Line Communication
+- Fiber Optic Cable
+- Coaxial Cable
+- Unshielded Twisted Pair Cable (UTP)
+Правильный ответ: 4
+
+**109. Which fiber optic cable type is more cost-effective for shorter distances?**
+- Multi Mode Fiber
+- Plastic Optical Fiber
+- Both are equally cost-effective
+- Single Mode Fiber
+Правильный ответ: 1
+
+**110. What is the primary use for crossover cables in networking?**
+- Directly connecting two switches
+- Connecting a computer to a printer
+- Connecting a PC to a router
+- Linking a console to a monitor
+Правильный ответ: 1
+
+**111. At which OSI layers do routers primarily operate, and what is their main function?**
+- Layers 2 and 4; filtering data
+- Layer 3; routing data
+- Layer 1; physical data transmission
+- Layer 2; switching data
+Правильный ответ: 2
+
+**112. What types of interfaces are typically found on switches?**
+- ADSL and Ethernet
+- Ethernet only
+- Serial and ISDN
+- Wireless and Serial
+Правильный ответ: 2
+
+**113. Which command allows a Cisco router to resolve domain names?**
+- dns resolv
+- ip dns-server
+- ip domain-name
+- ip domain-lookup
+Правильный ответ: 4
+
+**114. Why do original source and destination IP addresses remain unchanged during packet transmissions across different networks?**
+- To provide security through constant IP addressing
+- To allow dynamic route updating
+- To allow packet payload encryption
+- To maintain end-to-end consistency in delivery
+Правильный ответ: 4
+
+**115. According to the Cisco troubleshooting process, after gathering information, what is the next step?**
+- Identify and Isolate the Issue
+- Gather More Details
+- Verify Physical Layer
+- Restart Devices
+Правильный ответ: 1
+
+**116. Which telnet command confirms if the DNS service is operational on router R3?**
+- telnet 10.10.30.1 80
+- telnet 10.10.30.1 23
+- telnet 10.10.30.1 53
+- telnet 10.10.30.1 22
+Правильный ответ: 3
+
+**117. Which statement is true regarding the Cisco Discovery Protocol (CDP)?**
+- CDP operates at the application layer
+- CDP operates at Layer 3
+- CDP is Cisco proprietary
+- CDP requires an IP address for operation
+Правильный ответ: 3
+
+**118. Which command is necessary to activate an interface on a Cisco router after assigning an IP address?**
+- no shutdown
+- activate
+- ip enable
+- enable interface
+Правильный ответ: 1
+
+**119. Which command displays the current active configuration on a switch?**
+- show running-config
+- show interface config
+- show startup-config
+- show current-settings
+Правильный ответ: 1
+
+**120. What happens if both enable password and enable secret are configured on a Cisco device?**
+- The system uses both passwords.
+- The enable secret takes precedence.
+- The enable password is used.
+- The system defaults to no password requirement.
+Правильный ответ: 2
+
+**121. What happens if a Cisco device cannot find a valid system image in Flash during boot?**
+- The device will enter ROMMON mode.
+- The device will enter setup mode to request a new image.
+- The device will continuously reboot until a system image is found.
+- The device will load the backup system image from NVRAM.
+Правильный ответ: 1
+
+**122. What must be true for a configured static route to be used by a router?**
+- The route must have the highest administrative distance
+- The router must have a direct connection to the destination network
+- The route must be stored in NVRAM
+- The next hop IP or interface must be reachable
+Правильный ответ: 4
+
+**123. What is the typical destination configuration for a default route?**
+- Multicast address
+- The address 0.0.0.0/0
+- Broadcast address
+- DNS server address
+Правильный ответ: 2
+
+**124. Why might OSPF prefer paths with higher link costs in certain configurations?**
+- Lower bandwidth interfaces might lead OSPF to prefer alternate paths.
+- OSPF ignores link costs in favor of system defaults.
+- Bandwidth settings are ignored by default.
+- Higher link costs always correspond to shorter paths.
+Правильный ответ: 1
+
+**125. Why does a loopback interface on a router immediately go up without a 'no shutdown' command?**
+- Because they are virtual interfaces not affected by physical layer states.
+- They are always configured as down initially.
+- Because they automatically fetch configurations from the server.
+- Their status is managed by dynamic routing protocols.
+Правильный ответ: 1
+
+**126. What is the major benefit of route summarization in RIP?**
+- Prevents route flapping in dynamic networks.
+- Improves route security through authentication.
+- Reduces the size of routing tables.
+- Increases routing update frequency.
+Правильный ответ: 3
+
+**127. Which of the following statements is true regarding the selection of an EIGRP Router ID?**
+- It is chosen from the lowest IP address available on the router.
+- It cannot be changed once set initially.
+- It defaults to the highest IP address on any loopback interface configured on the router.
+- It is manually configured and takes precedence over any interface addresses.
+Правильный ответ: 3
+
+**128. What is a distinguishing feature of RIPng compared to RIPv2?**
+- Increased security features.
+- Decreased update interval.
+- Uses a distance-vector algorithm.
+- Support for IPv6.
+Правильный ответ: 4
+
+**129. What is the main limitation of RIP that affects its scalability in large networks?**
+- Lack of support for IPv6.
+- Inability to perform route summarization.
+- Maximum hop count of 15.
+- Slow convergence time.
+Правильный ответ: 3
+
+**130. Why is RIPv1 considered unsuitable for modern networks?**
+- No support for IPv6.
+- Does not send subnet mask information in updates.
+- Consumes too much memory.
+- Lack of authentication support.
+Правильный ответ: 2
+
+**131. What is the role of a Designated Router (DR) in OSPF?**
+- Routes packets directly to external networks
+- Ensures all routers have synchronized clocks
+- Acts as a backup router
+- Generates LSAs for the subnet
+Правильный ответ: 4
+
+**132. What happens if an OSPF router does not receive a Hello packet from a neighbor within the Dead Interval?**
+- The router sends a link-state request
+- The OSPF process restarts
+- The neighbor adjacency is considered down
+- The router reloads its configuration
+Правильный ответ: 3
+
+**133. Which OSPF packet type is responsible for establishing and maintaining neighbor relationships?**
+- Link State Update
+- Acknowledgment
+- Hello
+- Database Description
+Правильный ответ: 3
+
+**134. Why is manipulating OSPF cost generally preferred over adjusting bandwidth?**
+- Improves hardware performance
+- Reduces overall network congestion
+- It's simpler and does not affect other bandwidth-related protocols
+- OSPF cost changes affect other routing protocols
+Правильный ответ: 3
+
+**135. In the OSPF state machine, what is the order of states when forming an adjacency?**
+- Full, Loading, Exchange, ExStart, Two-way, Init
+- Two-way, Init, ExStart, Exchange, Loading, Full
+- Init, Two-way, Exchange, ExStart, Loading, Full
+- Init, Two-way, ExStart, Exchange, Loading, Full
+Правильный ответ: 4
+
+**136. What is the default VLAN for all switch ports when not configured otherwise?**
+- VLAN 10
+- VLAN 0
+- VLAN 100
+- VLAN 1
+Правильный ответ: 4
+
+**137. What does a switch operating in VTP Transparent mode do in terms of VLAN synchronization?**
+- Fully synchronizes VLAN database with all VTP switches
+- Does not synchronize VLAN database
+- Filters out VTP advertisements
+- Synchronizes only with VTP servers
+Правильный ответ: 2
+
+**138. What does the command 'switchport mode access' do on a switch port?**
+- Turns the port into a trunk carrying multiple VLANs
+- Disables the port
+- Makes the port a router interface
+- Sets the port as an access port for one VLAN
+Правильный ответ: 4
+
+**139. What is a recommended practice when configuring new VLANs?**
+- Ensure all VLANs are transparent
+- Always assign VLAN id 1
+- Use descriptive names for VLANs
+- Avoid using VLAN ids below 100
+Правильный ответ: 3
+
+**140. What are the primary layers involved in designing a campus network?**
+- Physical, Data Link, and Network Layers
+- Core, Distribution, and Access Layers
+- Application, Presentation, and Session Layers
+- Transport, Network, and Data Link Layers
+Правильный ответ: 2
+
+**141. What role do Switch Virtual Interfaces (SVIs) play in a network?**
+- They create VLANs on a switch.
+- They manage IP addresses on a router.
+- They provide physical connections between devices in a VLAN.
+- They allow routing between VLANs on a switch.
+Правильный ответ: 4
+
+**142. What is the primary purpose of configuring a switch port as a trunk port?**
+- To carry traffic for multiple VLANs between switches.
+- To isolate a VLAN from the rest of the network.
+- To connect a switch to a router for routing services.
+- To convert a switch port into a Layer 3 interface.
+Правильный ответ: 1
+
+**143. What is a unique feature of Layer 3 switches compared to Layer 2 switches?**
+- They only support one VLAN at a time.
+- They connect to all VLANs through dedicated interfaces.
+- They only operate using MAC addresses.
+- They can route traffic between VLANs without external routers.
+Правильный ответ: 4
+
+**144. Before configuring a trunk link between two switches, which setting must be verified?**
+- VTP domain names must match.
+- Same encapsulation type (dot1q or isl) on both switches.
+- Matching IP addresses on each switch.
+- Ensure identical switch hardware models.
+Правильный ответ: 2
+
+**145. What is a 'Router on a Stick' configuration in networking?**
+- A single router interface managing multiple VLANs using sub-interfaces.
+- A router connected to a single VLAN on a switch.
+- A method to bypass a router using a direct switch connection.
+- A virtual routing method that does not use physical interfaces.
+Правильный ответ: 1
+
+**146. Which type of devices are generally good candidates to be DHCP clients?**
+- Desktop PCs and laptops
+- Network switches
+- Core routers and firewalls
+- Remote servers hosting critical applications
+Правильный ответ: 1
+
+**147. Why might a router need to act as a DHCP client on its outgoing interface?**
+- To assign IP addresses to internal hosts using its own pool.
+- To obtain a dynamic public IP address from an ISP for internet connectivity.
+- To automatically discover target routing devices on the network.
+- To enhance security by frequently changing its internal IP.
+Правильный ответ: 2
+
+**148. What command is used to configure a Cisco router to forward DHCP requests to an external DHCP server?**
+- 'ip dhcp relay' with the DHCP server's IP address.
+- 'set dhcp relay address' with the server's details.
+- 'ip helper-address' followed by the DHCP server's IP address.
+- 'ip forward dhcp' followed by the external server's address.
+Правильный ответ: 3
+
+**149. Which command is used on MacOS to display the default gateway information for network interfaces?**
+- 'ip route'
+- 'netstat -rn'
+- 'ifconfig'
+- 'route -n'
+Правильный ответ: 2
+
+**150. How is a dynamic IP address assigned to a router's external interface?**
+- By using static IP configuration with manual entry.
+- By assigning a loopback address on the interface.
+- By enabling IP address virtualization features.
+- By being configured as a DHCP client to dynamically receive an IP from the ISP.
+Правильный ответ: 4
+
+**151. Why is a default static route configured on a router like R1?**
+- To limit the bandwidth usage on a link.
+- To maintain loop-free redundancy.
+- To encrypt all outgoing traffic.
+- To provide a fallback routing option to any destination.
+Правильный ответ: 4
+
+**152. Why are redundant links important in network design?**
+- They increase bandwidth between connected devices.
+- They reduce network interference.
+- They provide additional paths to prevent connectivity loss.
+- They enhance network security.
+Правильный ответ: 3
+
+**153. In configuring HSRP, which command sets the virtual IP address on an interface?**
+- virtual assign 10.10.10.1
+- ip virtual setup 10.10.10.1
+- standby 1 ip 10.10.10.1
+- gateway virtual 10.10.10.1
+Правильный ответ: 3
+
+**154. Which keyword is used in VRRP configurations, comparing it with HSRP?**
+- spare
+- vrrp
+- active
+- route
+Правильный ответ: 2
+
+**155. In an HSRP setup, what effect does configuring a higher priority on a router have?**
+- The router cannot participate in HSRP.
+- The router becomes standby permanently.
+- The router becomes secondary by default.
+- The router is preferred as the active router.
+Правильный ответ: 4
+
+**156. What role do BPDU's play in spanning tree operations?**
+- They identify loops and manage port states
+- They synchronize time settings across switches
+- They carry data across VLANs
+- They transmit routing table updates
+Правильный ответ: 1
+
+**157. What distinguishes PVST+ from standard IEEE spanning tree protocol?**
+- PVST+ is slower in convergence compared to IEEE STP
+- PVST+ groups VLANs as one instance
+- PVST+ creates a separate instance for each VLAN
+- PVST+ supports only legacy devices
+Правильный ответ: 3
+
+**158. How do switches differ from hubs in managing network traffic?**
+- Switches use IP addresses to forward packets
+- Both devices filter traffic based on IP
+- Hubs filter packets based on MAC addresses
+- Switches learn MAC addresses and forward traffic directly
+Правильный ответ: 4
+
+**159. What is the likely cause when traffic does not follow the expected most direct path?**
+- Routing protocols override spanning tree
+- A device is physically malfunctioning
+- Spanning tree path selection
+- DNS lookup failures
+Правильный ответ: 3
+
+**160. What happens if all switches have the same bridge priority but different MAC addresses?**
+- The switch with the highest MAC address becomes root
+- The switches enter a fail-safe mode
+- Priority is randomly assigned by traffic conditions
+- The switch with the lowest MAC address becomes root
+Правильный ответ: 4
+
+**161. Which protocol is proprietary and generally not recommended for use with EtherChannel?**
+- LACP
+- RSTP
+- Static
+- PAgP
+Правильный ответ: 4
+
+**162. Which command provides a summary of EtherChannel configurations in IOS?**
+- show port-channel
+- show interfaces
+- show spanning-tree
+- show etherchannel summary
+Правильный ответ: 4
+
+**163. How is IP addressing typically handled in an EtherChannel setup?**
+- No IP address is needed
+- One IP address per link
+- One IP address for the entire bundle
+- Multiple IPs are assigned for redundancy
+Правильный ответ: 3
+
+**164. What design allows spanning tree to avoid disabling any links in an EtherChannel setup?**
+- Multi-chassis EtherChannel
+- Standard EtherChannel
+- Rapid Spanning Tree Protocol
+- Per VLAN Spanning Tree
+Правильный ответ: 1
+
+**165. Why might administrators use NIC Teaming in a server environment?**
+- Reduced hardware costs
+- Less complex configuration
+- Enhanced redundancy and speed
+- Lower power consumption
+Правильный ответ: 3
+
+**166. What malicious activity does Dynamic ARP Inspection protect against?**
+- Denial of Service
+- ARP spoofing
+- Phishing
+- Packet sniffing
+Правильный ответ: 2
+
+**167. When configuring DHCP Snooping, which type of ports should be marked as trusted?**
+- All switch ports by default
+- Uplink ports and ports connected to DHCP servers
+- Ports connected to client devices
+- Console ports
+Правильный ответ: 2
+
+**168. In an 802.1X-network, what role does the switch play?**
+- Authentication Server
+- Access Gateway
+- Supplicant
+- Authenticator
+Правильный ответ: 4
+
+**169. For Dynamic ARP Inspection to function, which feature must be enabled on a switch?**
+- DHCP Snooping
+- Port Mirroring
+- Spanning Tree Protocol
+- VLAN Trunking Protocol
+Правильный ответ: 1
+
+**170. What is a potential consequence of having a rogue DHCP server on the network?**
+- Data encryption failures
+- Incorrect IP address assignments
+- Network congestion
+- Increased bandwidth usage
+Правильный ответ: 2
+
+**171. What rule is implicitly present at the end of every ACL?**
+- Log traffic
+- Permit any
+- Implicit deny all
+- Implicit permit all
+Правильный ответ: 3
+
+**172. What feature allows modifications to be made to existing ACLs without affecting active connections?**
+- Real-time management
+- ACE insertion
+- Dynamic filtering
+- IP grouping
+Правильный ответ: 2
+
+**173. Which port number is used for telnet traffic that an ACL can filter?**
+- 23
+- 21
+- 22
+- 80
+Правильный ответ: 1
+
+**174. Which tool can you use to verify ACL functionality after configuration changes?**
+- Ping
+- Config viewer
+- Traceroute
+- ARP cache
+Правильный ответ: 1
+
+**175. What is the purpose of a wildcard mask in an ACL entry?**
+- To specify a range of IP addresses
+- To limit packet size
+- To enhance routing speed
+- To encrypt data packets
+Правильный ответ: 1
+
+**176. What is necessary to configure an interface for Dynamic NAT?**
+- Configure as ip nat inside or outside.
+- Assign a static IP address.
+- Enable IP forwarding.
+- Set as a primary interface.
+Правильный ответ: 1
+
+**177. What happens if you send traffic with a private IP address to the Internet?**
+- It is delayed indefinitely.
+- It is dropped by the ISPs.
+- It is assigned a new IP.
+- It is routed normally.
+Правильный ответ: 2
+
+**178. Which command sets an interface as a NAT outside?**
+- interface nat external
+- ip nat enable
+- ip nat outside
+- nat set external
+Правильный ответ: 3
+
+**179. What is the primary purpose of Dynamic NAT?**
+- To enforce security policies.
+- To map many private IPs to a pool of public IPs for outbound connections.
+- To ensure high availability.
+- To enable load balancing.
+Правильный ответ: 2
+
+**180. What is Static NAT mainly used for?**
+- To balance traffic loads.
+- To map multiple private IPs to a single public IP.
+- To provide a backup in case of failure.
+- To map one private IP to one public IP permanently.
+Правильный ответ: 4
+
+**181. Why is it mandatory for IPv6-enabled interfaces to have a Link Local address?**
+- They provide global internet connectivity.
+- They allow basic communication on the connected link.
+- They serve as unique identifiers in DNS configurations.
+- They guarantee secure communication channels.
+Правильный ответ: 2
+
+**182. What is the term for each part of an IPv4 address?**
+- Segment
+- Partition
+- Octet
+- Field
+Правильный ответ: 3
+
+**183. What issue arises when multimedia applications use NAT?**
+- NAT does not support IPv6 at all.
+- IP address translations break end-to-end communication.
+- NAT adds excessive delay making communication unusable.
+- Multimedia applications require public IP addresses only.
+Правильный ответ: 2
+
+**184. What is the main difference between showing IPv4 and IPv6 routes on a device?**
+- The command 'show ipv6 route' is used for IPv6 routes.
+- Device consoles should auto-detect the address type for routing tables.
+- No command exists for IPv6; routes are automatically shown with IPv4.
+- IPv6 uses the same command as IPv4 but with the addition of '-v6'.
+Правильный ответ: 1
+
+**185. How do routers handle packets addressed with Link Local addresses?**
+- Packets are kept within the local link and not forwarded.
+- They are converted to Global Unicast addresses for forwarding.
+- Use Link Local addresses for internal DNS resolution.
+- Route them to configured default gateways automatically.
+Правильный ответ: 1
+
+**186. How do MPLS networks determine the path for packet forwarding?**
+- Depending on IP address headers for routing
+- Assigning labels to packets for path selection
+- Using MAC addresses for path determination
+- Dynamically adapting to network congestion
+Правильный ответ: 2
+
+**187. Which communication protocol is replacing T1/E1 leased lines for corporate communications?**
+- PPPoE
+- Frame Relay
+- Dial-up
+- Ethernet using SIP
+Правильный ответ: 4
+
+**188. Which protocol is often used to support multicast routing in IPsec site-to-site VPNs?**
+- GRE
+- PPP
+- DMVPN
+- MPLS
+Правильный ответ: 1
+
+**189. What is the primary purpose of a Wide Area Network (WAN)?**
+- To connect multiple LANs across diverse geographic locations
+- To reduce the costs of network installations
+- To connect devices within a single local network
+- To secure internet access through encryption
+Правильный ответ: 1
+
+**190. What distinguishes a leased line from other types of WAN connections?**
+- It always offers the lowest cost solution
+- It uses satellite technology exclusively
+- It is a shared connection among multiple users
+- It is a dedicated line with guaranteed performance metrics
+Правильный ответ: 4
+
+**191. What type of device is primarily used to filter traffic between different network segments and enforce security policies?**
+- Firewall
+- Hub
+- Router
+- Switch
+Правильный ответ: 1
+
+**192. What is the function of Internet Key Exchange (IKE) in IPSec?**
+- Securing email transmissions
+- Providing redundancy
+- Negotiating protocols and keys
+- Encrypting all data directly
+Правильный ответ: 3
+
+**193. What is the effect of applying an outbound Access Control List (ACL) only?**
+- No effect on outgoing traffic
+- All outgoing traffic is blocked
+- All incoming traffic is allowed
+- All incoming traffic is blocked
+Правильный ответ: 3
+
+**194. Which security feature helps detect and block ARP spoofing attacks?**
+- WPA2 Security
+- Dynamic ARP Inspection (DAI)
+- Firewall
+- NAT
+Правильный ответ: 2
+
+**195. Which encryption algorithm is more likely to be used in Site-to-Site VPNs nowadays?**
+- AES
+- 3DES
+- DES
+- MD5
+Правильный ответ: 1
+
+**196. What is the primary role of a AAA server in network device management?**
+- Backup device configuration data
+- Encrypt all transmitted data
+- Authenticate, authorize, and account for user access
+- Improve network routing efficiency
+Правильный ответ: 3
+
+**197. Which command is used to enable secure command line access on Cisco devices for administrators?**
+- enable password
+- enable secret
+- interface configure
+- configure terminal
+Правильный ответ: 2
+
+**198. What is the best practice regarding unused services on a network device?**
+- Enable advanced logging for all services.
+- Leave them enabled for easier troubleshooting.
+- Disable them to reduce security vulnerabilities.
+- Change default settings and keep them running.
+Правильный ответ: 3
+
+**199. What is PuTTY primarily used for in network management?**
+- Encrypt network traffic
+- Manage routing protocols
+- Create firewall rules
+- Establish SSH and Telnet connections
+Правильный ответ: 4
+
+**200. Which SNMP message type is used by a management station to read data from an agent?**
+- Get
+- Response
+- Trap
+- Set
+Правильный ответ: 1
+
+**201. In SNMP, what is the purpose of configuring a 'trap'?**
+- To initiate configuration changes.
+- To alert for significant events.
+- To periodically collect data.
+- To store event logs.
+Правильный ответ: 2
+
+**202. Which Syslog configuration command is used to prevent messages from interrupting inputs in a command-line session?**
+- logging synchronous
+- no logging console
+- logging monitor
+- logging buffer
+Правильный ответ: 1
+
+**203. How does Low Latency Queuing (LLQ) enhance QoS configurations?**
+- Increases bulk data throughput
+- Prioritizes latency-sensitive traffic
+- Improves bandwidth allocation equity
+- Enhances link redundancy
+Правильный ответ: 2
+
+**204. What is the role of policy maps in QoS configurations?**
+- Define traffic handling strategies
+- Log network activities
+- Route traffic through alternate paths
+- Encrypt all outgoing data
+Правильный ответ: 1
+
+**205. What is a limitation of NBAR compared to DSCP for identifying traffic types?**
+- NBAR increases error rates
+- NBAR ignores encrypted traffic
+- NBAR needs regular updates
+- NBAR increases latency
+Правильный ответ: 3
