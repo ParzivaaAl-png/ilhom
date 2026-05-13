@@ -322,6 +322,7 @@ body::before{
   .nav{justify-content:space-between}
 }
 </style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mammoth/1.6.0/mammoth.browser.min.js"></script>
 </head>
 <body>
 <div class="container">
@@ -448,8 +449,8 @@ body::before{
 <script>
 // ====== CONFIG ======
 const SUBJECTS = [
-  { name: 'Управление БД',    file: 'management_questions.txt', icon: '🗄️',  desc: 'SQL, нормализация, реляционная алгебра' },
-  { name: 'Сети CISCO',       file: 'cisco_questions.txt',      icon: '🌐',  desc: 'CCNA, маршрутизация, OSI, Packet Tracer' },
+  { name: 'Управление БД',    file: 'База по управлению .docx', icon: '🗄️',  desc: 'SQL, нормализация, реляционная алгебра' },
+  { name: 'Сети CISCO',       file: 'CISCO Coursera Quiz.docx',      icon: '🌐',  desc: 'CCNA, маршрутизация, OSI, Packet Tracer' },
   { name: 'Машинное обучение',file: 'ml_questions.txt',         icon: '🤖',  desc: 'K-NN, регрессия, нейросети, классификация' },
   { name: 'Кибербезопасность',file: 'cybersecurity_questions.txt', icon: '🔐', desc: 'SIEM, угрозы, OSINT, защита данных' },
 ];
@@ -569,11 +570,61 @@ async function loadQuestionsFromFile(subject){
   try{
     const resp = await fetch(s.file);
     if(!resp.ok) throw new Error('HTTP '+resp.status);
-    return parseQuestions(await resp.text(), subject);
+    
+    if (s.file.endsWith('.docx')) {
+      const arrayBuffer = await resp.arrayBuffer();
+      const result = await mammoth.convertToHtml({arrayBuffer: arrayBuffer});
+      return parseDocxHtml(result.value, subject);
+    } else {
+      return parseQuestions(await resp.text(), subject);
+    }
   } catch(e){
     console.error('Ошибка загрузки:', e);
     return [];
   }
+}
+
+function parseDocxHtml(html, subject) {
+  const parser = new DOMParser();
+  const doc = parser.parseFromString(html, 'text/html');
+  const questions = [];
+  let currentQuestion = null;
+  let qNum = 1;
+
+  for (let node of doc.body.childNodes) {
+      let rawText = (node.textContent || '').trim();
+      let unescapedRaw = rawText.replace(/&lt;/gi, '<').replace(/&gt;/gi, '>');
+      
+      let htmlContent = node.innerHTML || '';
+      if (node.nodeName === 'IMG') htmlContent = node.outerHTML;
+      let unescapedHTML = htmlContent.replace(/&lt;/gi, '<').replace(/&gt;/gi, '>');
+
+      if (unescapedRaw.match(/^<\s*question\s*>/i)) {
+          if (currentQuestion && currentQuestion.question) questions.push(currentQuestion);
+          currentQuestion = {
+              question: unescapedHTML.replace(/<\s*question\s*>/i, '').trim(),
+              questionNumber: qNum++,
+              options: [],
+              correctAnswers: [],
+              explanation: ''
+          };
+      } else if (unescapedRaw.match(/^<\s*variant\s*>/i)) {
+          if (currentQuestion) {
+              currentQuestion.options.push(unescapedHTML.replace(/<\s*variant\s*>/i, '').trim());
+          }
+      } else if (unescapedRaw.match(/^<\s*variantright\s*>/i)) {
+          if (currentQuestion) {
+              currentQuestion.options.push(unescapedHTML.replace(/<\s*variantright\s*>/i, '').trim());
+              currentQuestion.correctAnswers.push(currentQuestion.options.length); // 0-indexed, so it will be the current length
+          }
+      } else {
+          if (currentQuestion && unescapedHTML.trim() !== '') {
+              currentQuestion.question += '<br>' + unescapedHTML;
+          }
+      }
+  }
+  if (currentQuestion && currentQuestion.question) questions.push(currentQuestion);
+  return questions.filter(q => q.options.length >= 2 && q.correctAnswers.length > 0);
 }
 
 function parseQuestions(text, subject){
@@ -653,7 +704,7 @@ function renderCurrent(){
   psmall.textContent=`Вопрос ${qN} из ${totalQuestionsInTest}`;
   const pct=Math.round(((currentIndex+1)/order.length)*100);
   progressBar.style.width=pct+'%'; ppct.textContent=pct+'%';
-  qtext.textContent=q?q.question:'Вопрос не найден';
+  qtext.innerHTML=q?q.question:'Вопрос не найден';
   if(!q){ prevBtn.disabled=true; actionBtn.disabled=true; return; }
 
   const multi=isMulti(q);
@@ -671,7 +722,7 @@ function renderCurrent(){
     marker.className='opt-marker';
     marker.textContent=LETTERS[idx]||String(idx+1);
     const span=document.createElement('span');
-    span.className='opt-text'; span.textContent=pair.t;
+    span.className='opt-text'; span.innerHTML=pair.t;
     label.appendChild(input); label.appendChild(marker); label.appendChild(span);
     optionsEl.appendChild(label);
 
@@ -714,7 +765,7 @@ function evaluateSingle(qidx,chosenOrig){
   feedbackEl.textContent=correct?'✓ Правильно!':'✗ Неправильно';
   feedbackEl.className='feedback '+(correct?'correct':'incorrect');
   feedbackEl.style.display='inline-block';
-  if(q.explanation){ explainEl.textContent=q.explanation; explainEl.style.display='block'; }
+  if(q.explanation){ explainEl.innerHTML=q.explanation; explainEl.style.display='block'; }
   if(correct) score++; answered=true; questionsAnswered++;
   actionBtn.disabled=false;
   if(autoSkipOn) startBottomFill(3000); else if(!bottomActive) stopBottomFill();
@@ -738,7 +789,7 @@ function evaluateMulti(qidx){
   feedbackEl.textContent=full?'✓ Полностью правильно!':'✗ Неправильно';
   feedbackEl.className='feedback '+(full?'correct':'incorrect');
   feedbackEl.style.display='inline-block';
-  if(q.explanation){ explainEl.textContent=q.explanation; explainEl.style.display='block'; }
+  if(q.explanation){ explainEl.innerHTML=q.explanation; explainEl.style.display='block'; }
   if(full) score++; answered=true; questionsAnswered++;
   actionBtn.disabled=false;
   if(autoSkipOn) startBottomFill(4500); else if(!bottomActive) stopBottomFill();
