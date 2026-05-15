@@ -609,6 +609,9 @@ async function loadQuestionsFromFile(subject){
 }
 
 function parseDocxHtml(html, subject) {
+  // Fix for soft newlines in Word combining tags into a single paragraph
+  html = html.replace(/<br\s*\/?>/gi, '</p><p>');
+
   const parser = new DOMParser();
   const doc = parser.parseFromString(html, 'text/html');
   const questions = [];
