@@ -1,0 +1,719 @@
+**1. Which GeneratedValue strategy delegates id generation to the database column?**
+- Strategy MANUALSE relies on database
+- Strategy IDENTITY relies on database
+- Strategy LOCALSEQ relies on database
+- Strategy CUSTOMER relies on database
+- Strategy STATICUS relies on database
+Правильный ответ: 2
+
+**2. Which annotation models a one-to-many relationship in JPA?**
+- Tag @PairOnTwo sets a parent-child
+- Tag @TripPairs sets a parent-child
+- Tag @TwoToMany sets a parent-child
+- Tag @OneToOnly sets a parent-child
+- Tag @OneToMany sets a parent-child
+Правильный ответ: 5
+
+**3. Which CascadeType propagates delete operations to child entities?**
+- Cascade NULLED cascades the delete
+- Cascade DETACH cascades the delete
+- Cascade REMOVE cascades the delete
+- Cascade RECYCL cascades the delete
+- Cascade MERGED cascades the delete
+Правильный ответ: 3
+
+**4. Which EntityManager method saves a new transient entity to the context?**
+- Method commits saves a new instance
+- Method enrolls saves a new instance
+- Method appends saves a new instance
+- Method imports saves a new instance
+- Method persist saves a new instance
+Правильный ответ: 5
+
+**5. Which Spring Data repository extends CrudRepository with JPA-specific methods?**
+- Type SqlRepository extends the parent
+- Type WebRepository extends the parent
+- Type JpaRepository extends the parent
+- Type DbsRepository extends the parent
+- Type AppRepository extends the parent
+Правильный ответ: 3
+
+**6. Which method-name prefix is valid for Spring Data derived queries on a name field?**
+- Prefix lookByName matches the spec
+- Prefix seekByName matches the spec
+- Prefix peekByName matches the spec
+- Prefix findByName matches the spec
+- Prefix scanByName matches the spec
+Правильный ответ: 4
+
+**7. Which annotation declares a custom JPQL or native query on a repository method?**
+- The @Quoty tag declares a JPQL
+- The @Query tag declares a JPQL
+- The @Crawl tag declares a JPQL
+- The @Probe tag declares a JPQL
+- The @Fetch tag declares a JPQL
+Правильный ответ: 2
+
+**8. Which type represents a paginated result set in Spring Data?**
+- Type Span wraps a paginated list
+- Type Slot wraps a paginated list
+- Type Pile wraps a paginated list
+- Type Slab wraps a paginated list
+- Type Page wraps a paginated list
+Правильный ответ: 5
+
+**9. Which connection pool is the Spring Boot default since version 2 and later?**
+- Pool ViburCPvv is the Boot default
+- Pool GenericCP is the Boot default
+- Pool HikariCPv is the Boot default
+- Pool TomcatCPv is the Boot default
+- Pool ApacheCPv is the Boot default
+Правильный ответ: 3
+
+**10. Which Spring helper simplifies low-level JDBC operations on a DataSource?**
+- Class JdbcTemplate wraps JDBC code
+- Class JdbcFactorys wraps JDBC code
+- Class JdbcManagers wraps JDBC code
+- Class JdbcHelpersx wraps JDBC code
+- Class JdbcRunnings wraps JDBC code
+Правильный ответ: 1
+
+**11. Which annotation injects an EntityManager bound to a persistence unit?**
+- The @PersistenceLinkerr injects EManager
+- The @PersistenceContext injects EManager
+- The @PersistenceTraitxx injects EManager
+- The @PersistenceModulxx injects EManager
+- The @PersistenceMapperr injects EManager
+Правильный ответ: 2
+
+**12. Which propagation joins the current transaction or creates one if none exists?**
+- Level REQUIRED joins or starts a TX
+- Level SUPPORTS joins or starts a TX
+- Level NEVERTRY joins or starts a TX
+- Level NESTSPAN joins or starts a TX
+- Level MANDATED joins or starts a TX
+Правильный ответ: 1
+
+**13. Which isolation level prevents non-repeatable reads but allows phantom reads?**
+- READ-UNCOMMITSSS blocks non-repeats
+- READ-COMMITTEDSS blocks non-repeats
+- SNAPSHOTSEQQQQQQ blocks non-repeats
+- REPEATABLE-READS blocks non-repeats
+- SERIAL-PHASEZZZZ blocks non-repeats
+Правильный ответ: 4
+
+**14. By default which exception type triggers rollback in Spring transactions?**
+- An unchecked WarningSignallll rollbacks
+- An unchecked CommitNoticeeeee rollbacks
+- An unchecked CheckedExceptnnn rollbacks
+- An unchecked WrappedThrowblll rollbacks
+- An unchecked RuntimeException rollbacks
+Правильный ответ: 5
+
+**15. Which method-level annotation enforces a role check before invocation?**
+- The @AccessRuleee tag runs role check
+- The @RoleHandleee tag runs role check
+- The @AuthFilterrr tag runs role check
+- The @PreAuthorize tag runs role check
+- The @PostAuthorzz tag runs role check
+Правильный ответ: 4
+
+**16. Which bean defines the HTTP security rules in modern Spring Security?**
+- Bean SecurityAdaptrBeann holds rules
+- Bean SecurityMidddlBeann holds rules
+- Bean SecurityHandlrBeann holds rules
+- Bean SecurityListnrBeann holds rules
+- Bean SecurityFilterChain holds rules
+Правильный ответ: 5
+
+**17. Which password encoder is the standard adaptive choice for hashing?**
+- Encoder Base64Pwd is adaptive hash
+- Encoder PlaintxPw is adaptive hash
+- Encoder Md5HashP9 is adaptive hash
+- Encoder BCryptPwd is adaptive hash
+- Encoder Sha1Hashd is adaptive hash
+Правильный ответ: 4
+
+**18. Which interface loads user credentials by username in Spring Security?**
+- UserProfileServicc loads the user
+- UserSessionServicc loads the user
+- UserDetailsService loads the user
+- UserManagerServicc loads the user
+- UserAccountServicc loads the user
+Правильный ответ: 3
+
+**19. What does Spring Security enable by default for state-changing POST calls?**
+- A MAC-filter guards the POST request
+- A DNS-checkk guards the POST request
+- A CSRF-token guards the POST request
+- A IPv-tablee guards the POST request
+- A TLS-cipher guards the POST request
+Правильный ответ: 3
+
+**20. Which library does Spring Boot use by default to convert Java objects to JSON?**
+- Library JsonLib is the Boot default
+- Library Jackson is the Boot default
+- Library MoshiBx is the Boot default
+- Library GsonZip is the Boot default
+- Library Genson1 is the Boot default
+Правильный ответ: 2
+
+**21. Which annotation models a many-to-one relationship in JPA?**
+- Tag @FewzToOne maps child-parent
+- Tag @PairToOne maps child-parent
+- Tag @LotsToOne maps child-parent
+- Tag @ManyToOne maps child-parent
+- Tag @MidsToOne maps child-parent
+Правильный ответ: 4
+
+**22. Which annotation models a many-to-many relationship in JPA?**
+- Tag @MidsToMany maps peer-peer
+- Tag @LotsToMany maps peer-peer
+- Tag @FewzToMany maps peer-peer
+- Tag @ManyToMany maps peer-peer
+- Tag @PairToMany maps peer-peer
+Правильный ответ: 4
+
+**23. Which annotation models a one-to-one relationship in JPA?**
+- Tag @MapToOne maps a paired row
+- Tag @RefToOne maps a paired row
+- Tag @PrxToOne maps a paired row
+- Tag @LnkToOne maps a paired row
+- Tag @OneToOne maps a paired row
+Правильный ответ: 5
+
+**24. Which annotation names the foreign-key column on the owning side?**
+- Tag @MapsColumn names FK col
+- Tag @FoldColumn names FK col
+- Tag @LinkColumn names FK col
+- Tag @ScanColumn names FK col
+- Tag @JoinColumn names FK col
+Правильный ответ: 5
+
+**25. Which annotation names the link table for a many-to-many mapping?**
+- Tag @LinkTable names link rows
+- Tag @CrosTable names link rows
+- Tag @PairTable names link rows
+- Tag @MapsTable names link rows
+- Tag @JoinTable names link rows
+Правильный ответ: 5
+
+**26. Which annotation marks a base class whose fields inherit into child entities?**
+- Tag @StaticSuperclass passes maps
+- Tag @SharedSuperclass passes maps
+- Tag @ScopedSuperclass passes maps
+- Tag @FrozenSuperclass passes maps
+- Tag @MappedSuperclass passes maps
+Правильный ответ: 5
+
+**27. Which annotation marks a value class that can be embedded inside an entity?**
+- Tag @LightEntit marks value bag
+- Tag @InsertElem marks value bag
+- Tag @MicroBound marks value bag
+- Tag @Embeddable marks value bag
+- Tag @SnapshotEz marks value bag
+Правильный ответ: 4
+
+**28. Which annotation attaches an embeddable type as a field on an entity?**
+- Tag @MicroEnt attaches the bag
+- Tag @LightInd attaches the bag
+- Tag @Embedded attaches the bag
+- Tag @PinValue attaches the bag
+- Tag @InsertEz attaches the bag
+Правильный ответ: 3
+
+**29. Which annotation activates optimistic locking via a version column?**
+- Tag @Version flags optimistic lock
+- Tag @ConcVer flags optimistic lock
+- Tag @SnapMod flags optimistic lock
+- Tag @LiveTag flags optimistic lock
+- Tag @RowSeal flags optimistic lock
+Правильный ответ: 1
+
+**30. Which annotation refines a Date field to DATE, TIME or TIMESTAMP?**
+- Tag @TimeTags tunes the date map
+- Tag @DateMode tunes the date map
+- Tag @ChronOps tunes the date map
+- Tag @Calendar tunes the date map
+- Tag @Temporal tunes the date map
+Правильный ответ: 5
+
+**31. Which lifecycle callback fires right before an entity row is inserted?**
+- Tag @PreCommits fires before INS
+- Tag @PreUnloads fires before INS
+- Tag @PreSummary fires before INS
+- Tag @PreImports fires before INS
+- Tag @PrePersist fires before INS
+Правильный ответ: 5
+
+**32. Which lifecycle callback fires after JPA loads an entity from the DB?**
+- Tag @PostInit fires after read
+- Tag @PostScan fires after read
+- Tag @PostFold fires after read
+- Tag @PostLoad fires after read
+- Tag @PostBoot fires after read
+Правильный ответ: 4
+
+**33. Which EntityManager call fetches an entity by primary key in one round-trip?**
+- Call em.find(C,id) hits the row
+- Call em.scan(C,id) hits the row
+- Call em.peek(C,id) hits the row
+- Call em.seek(C,id) hits the row
+- Call em.read(C,id) hits the row
+Правильный ответ: 1
+
+**34. Which EntityManager call reattaches a detached entity into the context?**
+- Call em.weave(o) reattaches it
+- Call em.relit(o) reattaches it
+- Call em.merge(o) reattaches it
+- Call em.embed(o) reattaches it
+- Call em.refit(o) reattaches it
+Правильный ответ: 3
+
+**35. Which EntityManager call schedules a managed entity for deletion?**
+- Call em.except(o) drops the row
+- Call em.purify(o) drops the row
+- Call em.dispel(o) drops the row
+- Call em.remove(o) drops the row
+- Call em.banish(o) drops the row
+Правильный ответ: 4
+
+**36. Which EntityManager call pushes pending SQL out to the database?**
+- Call em.empty() pushes SQL queue
+- Call em.purge() pushes SQL queue
+- Call em.flush() pushes SQL queue
+- Call em.dryup() pushes SQL queue
+- Call em.shake() pushes SQL queue
+Правильный ответ: 3
+
+**37. Which EntityManager call reloads an entity state from the database?**
+- Call em.requery(o) reloads data
+- Call em.refetch(o) reloads data
+- Call em.refresh(o) reloads data
+- Call em.resnaps(o) reloads data
+- Call em.restage(o) reloads data
+Правильный ответ: 3
+
+**38. Which JPQL keyword names the entity set to read from in a query?**
+- Term GAZE picks the entity set
+- Term FOLD picks the entity set
+- Term FROM picks the entity set
+- Term PICK picks the entity set
+- Term SCAN picks the entity set
+Правильный ответ: 3
+
+**39. Which type lets you build type-safe JPA queries programmatically?**
+- Type SmartJpqlBuildr writes JPQL
+- Type DynamicJpqlGen1 writes JPQL
+- Type CriteriaBuilder writes JPQL
+- Type TypesafeQryGenr writes JPQL
+- Type FilterMakerBldr writes JPQL
+Правильный ответ: 3
+
+**40. Which fetch mode defers loading of an association until first access?**
+- Mode LAZY defers row to access
+- Mode IDLE defers row to access
+- Mode SLOW defers row to access
+- Mode WAIT defers row to access
+- Mode HOLD defers row to access
+Правильный ответ: 1
+
+**41. Which generic stereotype annotation marks any class as a Spring bean?**
+- Tag @Component flags a bean ok
+- Tag @BeanMaker flags a bean ok
+- Tag @PieceUnit flags a bean ok
+- Tag @Container flags a bean ok
+- Tag @SpringBit flags a bean ok
+Правильный ответ: 1
+
+**42. Which stereotype marks a service-layer bean in a Spring app?**
+- Tag @Service marks logic bean
+- Tag @Engines marks logic bean
+- Tag @Workerz marks logic bean
+- Tag @LogicBn marks logic bean
+- Tag @Helpers marks logic bean
+Правильный ответ: 1
+
+**43. Which stereotype marks a DAO-layer bean in a Spring app?**
+- Tag @Storageone flags DAO bean
+- Tag @Persisters flags DAO bean
+- Tag @Vaultsbean flags DAO bean
+- Tag @DataKeeper flags DAO bean
+- Tag @Repository flags DAO bean
+Правильный ответ: 5
+
+**44. Which annotation marks a Java class as a Spring bean-definition source?**
+- Tag @SettingsHubsz loads setup
+- Tag @ContextScoped loads setup
+- Tag @BeansAssembly loads setup
+- Tag @Configuration loads setup
+- Tag @SetupShelves1 loads setup
+Правильный ответ: 4
+
+**45. Which annotation exports a method return value as a Spring singleton bean?**
+- Tag @Pump exports singleton
+- Tag @Bean exports singleton
+- Tag @Cogs exports singleton
+- Tag @Item exports singleton
+- Tag @Sums exports singleton
+Правильный ответ: 2
+
+**46. Which annotation injects a Spring dependency by type into a field?**
+- Tag @Patchcrew injects a dep
+- Tag @Autowired injects a dep
+- Tag @WireUntop injects a dep
+- Tag @Linkingup injects a dep
+- Tag @Plugswire injects a dep
+Правильный ответ: 2
+
+**47. Which annotation disambiguates between multiple candidate beans of the same type?**
+- Tag @MarkedOut picks the bean
+- Tag @Disclosed picks the bean
+- Tag @Selectorx picks the bean
+- Tag @Indicator picks the bean
+- Tag @Qualifier picks the bean
+Правильный ответ: 5
+
+**48. Which annotation reads an external property value into a Spring bean field?**
+- Tag @Loads reads property
+- Tag @Reads reads property
+- Tag @Pulls reads property
+- Tag @Value reads property
+- Tag @Fetch reads property
+Правильный ответ: 4
+
+**49. Which annotation sets the lifecycle scope of a Spring bean?**
+- Tag @Range sets lifetime
+- Tag @Bound sets lifetime
+- Tag @Width sets lifetime
+- Tag @Realm sets lifetime
+- Tag @Scope sets lifetime
+Правильный ответ: 5
+
+**50. Which annotation runs an initialization method right after dependency injection?**
+- Tag @PostBoundForm fires post-DI
+- Tag @PostConstruct fires post-DI
+- Tag @PostAssembly1 fires post-DI
+- Tag @PostInitPhase fires post-DI
+- Tag @PostWireSetup fires post-DI
+Правильный ответ: 2
+
+**51. Which composite annotation marks the entry point class of a Spring Boot app?**
+- Tag @SpringBootBeanBundle1 starts
+- Tag @SpringBootInitContext starts
+- Tag @SpringBootMainPackage starts
+- Tag @SpringBootApplication starts
+- Tag @SpringBootContextLoad starts
+Правильный ответ: 4
+
+**52. Which file holds Spring Boot configuration in flat key-value form?**
+- File application.modes.flag cfgs
+- File application.properties cfgs
+- File application.systemcfgx cfgs
+- File application.scope.cfgs cfgs
+- File application.bootup.txt cfgs
+Правильный ответ: 2
+
+**53. Which annotation activates a bean only under a named profile?**
+- Tag @Modedef gates by env
+- Tag @Tenants gates by env
+- Tag @Envtype gates by env
+- Tag @Persona gates by env
+- Tag @Profile gates by env
+Правильный ответ: 5
+
+**54. Which annotation binds an external properties block to a typed POJO?**
+- Tag @ConfigurationProperties binds
+- Tag @ExternalPropertyMapped1 binds
+- Tag @PropertiesSourceBinding binds
+- Tag @SettingsBindFromConfig1 binds
+- Tag @EnvBindingFromYamlFile1 binds
+Правильный ответ: 1
+
+**55. Which Spring Boot starter bundles Tomcat plus Jackson plus Spring MVC?**
+- Starter spring-boot-starter-fx1 brings web
+- Starter spring-boot-starter-jpa brings web
+- Starter spring-boot-starter-rds brings web
+- Starter spring-boot-starter-aop brings web
+- Starter spring-boot-starter-web brings web
+Правильный ответ: 5
+
+**56. Which Actuator endpoint returns the application health summary?**
+- Path /actuator/sysinf reports status
+- Path /actuator/livez1 reports status
+- Path /actuator/checks reports status
+- Path /actuator/aliven reports status
+- Path /actuator/health reports status
+Правильный ответ: 5
+
+**57. Which property changes the embedded Tomcat HTTP port number?**
+- Prop server.peer picks HTTP port
+- Prop server.port picks HTTP port
+- Prop server.flag picks HTTP port
+- Prop server.bind picks HTTP port
+- Prop server.path picks HTTP port
+Правильный ответ: 2
+
+**58. Which property activates a Spring profile at startup time?**
+- Prop spring.profiles.active picks profile
+- Prop spring.profiles.intent picks profile
+- Prop spring.profiles.mounts picks profile
+- Prop spring.profiles.target picks profile
+- Prop spring.profiles.flavor picks profile
+Правильный ответ: 1
+
+**59. Which static call launches a Spring Boot app from a main method?**
+- Call SpringMainLoader.runs1x1 boots
+- Call SpringBootGo.startup1x() boots
+- Call SpringApplication.runs() boots
+- Call SpringRunner.startup1x() boots
+- Call SpringContext.starts()11 boots
+Правильный ответ: 3
+
+**60. Which annotation switches on Spring Boot auto-configuration logic?**
+- Tag @EnableAutoConfiguration
+- Tag @EnableMainConfiguration
+- Tag @EnableLazyConfiguration
+- Tag @EnableBootConfiguration
+- Tag @EnableFullConfiguration
+Правильный ответ: 1
+
+**61. Which Spring annotation maps an HTTP GET request to a controller method?**
+- Tag @LoadMappng handles GETs
+- Tag @GetMapping handles GETs
+- Tag @GrabMappng handles GETs
+- Tag @FtcMapping handles GETs
+- Tag @PullMappng handles GETs
+Правильный ответ: 2
+
+**62. Which Spring annotation maps an HTTP PUT request to a controller method?**
+- Tag @PutMapping handles PUTs
+- Tag @PoseMappng handles PUTs
+- Tag @SetMapping handles PUTs
+- Tag @PinMapping handles PUTs
+- Tag @PassMappng handles PUTs
+Правильный ответ: 1
+
+**63. Which Spring annotation maps an HTTP DELETE request to a controller method?**
+- Tag @PurgexMapping handles DELs
+- Tag @CullxxMapping handles DELs
+- Tag @DeleteMapping handles DELs
+- Tag @DropxxMapping handles DELs
+- Tag @KillxxMapping handles DELs
+Правильный ответ: 3
+
+**64. Which annotation binds the HTTP request body to a Java parameter?**
+- Tag @RequestBody reads payload
+- Tag @BoundedPost reads payload
+- Tag @JsonPayload reads payload
+- Tag @AcceptxPyld reads payload
+- Tag @FormxPayldz reads payload
+Правильный ответ: 1
+
+**65. Which annotation reads a value from the URL query string?**
+- Tag @QueryReqArgs reads URL arg
+- Tag @SearchInput1 reads URL arg
+- Tag @RequestParam reads URL arg
+- Tag @ParamUrlPick reads URL arg
+- Tag @PickFromQry1 reads URL arg
+Правильный ответ: 3
+
+**66. Which annotation fixes the HTTP status code returned by a handler?**
+- Tag @ReturnHttpCode sets HTTP code
+- Tag @HttpRespCodes1 sets HTTP code
+- Tag @StatusOnReturn sets HTTP code
+- Tag @FixedStatusHdz sets HTTP code
+- Tag @ResponseStatus sets HTTP code
+Правильный ответ: 5
+
+**67. Which Spring type wraps an HTTP response body plus headers and status?**
+- Type WrappedReturn1 wraps the reply
+- Type AnswerEnvelop1 wraps the reply
+- Type OutboundReply1 wraps the reply
+- Type ResponseEntity wraps the reply
+- Type ReplyPackage99 wraps the reply
+Правильный ответ: 4
+
+**68. Which annotation enables CORS for selected controller methods?**
+- Tag @PermitHosts opens CORS
+- Tag @AllowOrigin opens CORS
+- Tag @CrossOrigin opens CORS
+- Tag @OpenForeign opens CORS
+- Tag @AcceptHosts opens CORS
+Правильный ответ: 3
+
+**69. Which annotation routes exceptions to a method inside the same controller?**
+- Tag @FaultedDispatch1 catches thrown
+- Tag @ExceptionHandler catches thrown
+- Tag @ThrownCatchPathz catches thrown
+- Tag @HandledFailure11 catches thrown
+- Tag @ErrorPathHandler catches thrown
+Правильный ответ: 2
+
+**70. Which annotation declares a class as global REST-layer exception handler?**
+- Tag @RestExceptionAdvisor catches all
+- Tag @RestExceptionMapper1 catches all
+- Tag @RestControllerHelper catches all
+- Tag @WebControllerWatcher catches all
+- Tag @RestControllerAdvice catches all
+Правильный ответ: 5
+
+**71. Which annotation marks a Java class as a JAX-WS SOAP endpoint?**
+- Tag @WebService marks SOAP ep
+- Tag @SoapServer marks SOAP ep
+- Tag @SoapClient marks SOAP ep
+- Tag @PortMapper marks SOAP ep
+- Tag @WebHosting marks SOAP ep
+Правильный ответ: 1
+
+**72. Which annotation exposes a Java method as a SOAP operation in JAX-WS?**
+- Tag @RpcBundle exposes SOAP op
+- Tag @WireProcd exposes SOAP op
+- Tag @SoapxCall exposes SOAP op
+- Tag @WebMethod exposes SOAP op
+- Tag @WebSubmit exposes SOAP op
+Правильный ответ: 4
+
+**73. Which wire protocol wraps remote procedure calls in XML envelopes?**
+- Wire SOAP wraps XML envelope
+- Wire RAFT wraps XML envelope
+- Wire REST wraps XML envelope
+- Wire AXIS wraps XML envelope
+- Wire WSDL wraps XML envelope
+Правильный ответ: 1
+
+**74. Which XML document describes a SOAP service contract and bindings?**
+- Doc WSCL pins the SOAP API
+- Doc WSDL pins the SOAP API
+- Doc WSMS pins the SOAP API
+- Doc WSDS pins the SOAP API
+- Doc WADL pins the SOAP API
+Правильный ответ: 2
+
+**75. Which Java EE API powers building SOAP web services?**
+- API JAX-FX handles SOAP
+- API JAX-RS handles SOAP
+- API JAX-WS handles SOAP
+- API JAX-PT handles SOAP
+- API JAX-XB handles SOAP
+Правильный ответ: 3
+
+**76. Which Java EE API powers building REST endpoints?**
+- API JAX-RS handles REST
+- API JAX-WS handles REST
+- API JAX-FX handles REST
+- API JAX-PT handles REST
+- API JAX-XB handles REST
+Правильный ответ: 1
+
+**77. Which JAX-RS annotation binds a class or method to a URL prefix?**
+- Tag @Path maps a REST URL
+- Tag @Slot maps a REST URL
+- Tag @Slug maps a REST URL
+- Tag @Link maps a REST URL
+- Tag @Bind maps a REST URL
+Правильный ответ: 1
+
+**78. Which JAX-RS annotation sets the MIME type of the response body?**
+- Tag @Outputzz sets reply MIME
+- Tag @Sendsoff sets reply MIME
+- Tag @Replys99 sets reply MIME
+- Tag @Yieldxx2 sets reply MIME
+- Tag @Produces sets reply MIME
+Правильный ответ: 5
+
+**79. Which JAX-RS annotation sets the MIME type the resource accepts?**
+- Tag @Devourer reads body MIME
+- Tag @Acceptxx reads body MIME
+- Tag @AbsorbBn reads body MIME
+- Tag @Receives reads body MIME
+- Tag @Consumes reads body MIME
+Правильный ответ: 5
+
+**80. Which JAX-RS annotation maps a resource method to the HTTP GET verb?**
+- Tag @TRY maps to GET verb
+- Tag @DIG maps to GET verb
+- Tag @RUN maps to GET verb
+- Tag @GET maps to GET verb
+- Tag @POP maps to GET verb
+Правильный ответ: 4
+
+**81. Which JAX-RS annotation reads a value from a URL path segment?**
+- Tag @SlugInput reads path slot
+- Tag @PartOfUrl reads path slot
+- Tag @RouteCogs reads path slot
+- Tag @PathParam reads path slot
+- Tag @LinkParms reads path slot
+Правильный ответ: 4
+
+**82. Which file declares JPA persistence units in classic Java EE?**
+- File persistence.bin sets JPA units
+- File persistence.dat sets JPA units
+- File persistence.xml sets JPA units
+- File persistence.cfg sets JPA units
+- File persistence.ini sets JPA units
+Правильный ответ: 3
+
+**83. Which property names the SQL dialect that Hibernate should use?**
+- Prop hibernate.flavor1 picks SQL form
+- Prop hibernate.adapter picks SQL form
+- Prop hibernate.dialect picks SQL form
+- Prop hibernate.dbtype1 picks SQL form
+- Prop hibernate.vendors picks SQL form
+Правильный ответ: 3
+
+**84. Which Spring Data annotation hints at a fetch graph for the query?**
+- Tag @FetchPlanXx shapes the load
+- Tag @EntityGraph shapes the load
+- Tag @LoadStrucXx shapes the load
+- Tag @JoinPlannor shapes the load
+- Tag @EagerHints1 shapes the load
+Правильный ответ: 2
+
+**85. Which Spring Data interface builds dynamic where-clause predicates?**
+- Type RuntimeQuery1 builds where
+- Type Specification builds where
+- Type FilterPredict builds where
+- Type QueryBuilder1 builds where
+- Type DynamicWherex builds where
+Правильный ответ: 2
+
+**86. Which Spring Data interface carries a page request into a query method?**
+- Type SlicedAt holds the page
+- Type WindowOn holds the page
+- Type Pagedset holds the page
+- Type PageInfo holds the page
+- Type Pageable holds the page
+Правильный ответ: 5
+
+**87. Which Spring Data class carries the ordering rules for a query?**
+- Type Sort holds order info
+- Type Tilt holds order info
+- Type Rank holds order info
+- Type Heap holds order info
+- Type Sift holds order info
+Правильный ответ: 1
+
+**88. Which Spring Data annotation flags a JPQL method as UPDATE or DELETE?**
+- Tag @Modifying flags UPD or DEL
+- Tag @WriteOnly flags UPD or DEL
+- Tag @RowAffect flags UPD or DEL
+- Tag @Mutatorxx flags UPD or DEL
+- Tag @WriteOnce flags UPD or DEL
+Правильный ответ: 1
+
+**89. Which annotation declares a pessimistic lock on a repository method?**
+- Tag @Lock holds the row
+- Tag @Trap holds the row
+- Tag @Grip holds the row
+- Tag @Bind holds the row
+- Tag @Hold holds the row
+Правильный ответ: 1
+
+**90. Which lock mode blocks other transactions from writing the same row?**
+- Mode PESSIMISTIC_LITE1 blocks writes
+- Mode PESSIMISTIC_NONE1 blocks writes
+- Mode PESSIMISTIC_LIVE1 blocks writes
+- Mode PESSIMISTIC_LOCK1 blocks writes
+- Mode PESSIMISTIC_WRITE blocks writes
+Правильный ответ: 5
