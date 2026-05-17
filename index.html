@@ -598,10 +598,17 @@ async function loadQuestionsFromFile(subject){
     if(!resp.ok) throw new Error('HTTP '+resp.status);
 
     if (s.parser === 'gift') {
-      // Moodle GIFT format — extract plain text via mammoth then parse
+      // Moodle GIFT format — use convertToHtml and extract paragraph text
       const arrayBuffer = await resp.arrayBuffer();
-      const result = await mammoth.extractRawText({arrayBuffer: arrayBuffer});
-      return parseGiftText(result.value);
+      const result = await mammoth.convertToHtml({arrayBuffer: arrayBuffer});
+      const tmp = document.createElement('div');
+      tmp.innerHTML = result.value;
+      // Replace <br> with newline, get text of each <p>
+      tmp.querySelectorAll('br').forEach(br => br.replaceWith('\n'));
+      const lines = Array.from(tmp.querySelectorAll('p')).map(p => p.textContent);
+      const text = lines.join('\n');
+      console.log('[GIFT] extracted lines:', lines.length, 'first:', lines[0]);
+      return parseGiftText(text);
     } else if (s.file.endsWith('.docx')) {
       const arrayBuffer = await resp.arrayBuffer();
       const result = await mammoth.convertToHtml({arrayBuffer: arrayBuffer});
@@ -648,7 +655,7 @@ function parseGiftText(text) {
     // Extract question text (before the opening brace)
     let questionPart = fullBlock.substring(0, braceOpen).trim();
     // Remove ::Title:: prefix
-    questionPart = questionPart.replace(/^::.*?::/s, '').trim();
+    questionPart = questionPart.replace(/^::[\s\S]*?::/, '').trim();
     if (!questionPart) continue;
 
     // Extract answers part (inside braces)
