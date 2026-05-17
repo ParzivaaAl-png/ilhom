@@ -477,6 +477,7 @@ const SUBJECTS = [
   { name: 'Сети CISCO',       file: 'CISCO Coursera Quiz.docx',      icon: '🌐',  desc: 'CCNA, маршрутизация, OSI, Packet Tracer' },
   { name: 'Машинное обучение',file: 'ml_questions.txt',         icon: '🤖',  desc: 'K-NN, регрессия, нейросети, классификация' },
   { name: 'Кибербезопасность',file: 'cybersecurity_questions.txt', icon: '🔐', desc: 'SIEM, угрозы, OSINT, защита данных' },
+  { name: 'Инновации ИС',     file: 'Инно ИС для подготовки.docx', icon: '💡', desc: 'Инновационные информационные системы, подготовка', parser: 'gift' },
 ];
 
 // ====== STATE ======
@@ -594,8 +595,13 @@ async function loadQuestionsFromFile(subject){
   try{
     const resp = await fetch(s.file);
     if(!resp.ok) throw new Error('HTTP '+resp.status);
-    
-    if (s.file.endsWith('.docx')) {
+
+    if (s.parser === 'gift') {
+      // Moodle GIFT format — extract plain text via mammoth then parse
+      const arrayBuffer = await resp.arrayBuffer();
+      const result = await mammoth.extractRawText({arrayBuffer: arrayBuffer});
+      return parseGiftText(result.value);
+    } else if (s.file.endsWith('.docx')) {
       const arrayBuffer = await resp.arrayBuffer();
       const result = await mammoth.convertToHtml({arrayBuffer: arrayBuffer});
       return parseDocxHtml(result.value, subject);
@@ -606,6 +612,77 @@ async function loadQuestionsFromFile(subject){
     console.error('Ошибка загрузки:', e);
     return [];
   }
+}
+
+// ====== GIFT FORMAT PARSER (Moodle) ======
+// Handles: ::Title::Question text{ ~wrong =correct ~wrong }
+function parseGiftText(text) {
+  const questions = [];
+  let qNum = 1;
+
+  // Normalize line endings
+  text = text.replace(/\r\n/g, '\n').replace(/\r/g, '\n');
+
+  // Split into question blocks by empty lines
+  // Each block starts with optional comment line (// question: ...)
+  const blocks = text.split(/\n{2,}/);
+
+  for (const block of blocks) {
+    const lines = block.split('\n').map(l => l.trim()).filter(l => l);
+    if (!lines.length) continue;
+
+    // Skip pure comment lines
+    const nonComment = lines.filter(l => !l.startsWith('//'));
+    if (!nonComment.length) continue;
+
+    // Find the line containing the question text (has :: markers and/or opening {)
+    // e.g.:  ::Title::Question text{
+    let fullBlock = nonComment.join(' ');
+
+    // Must contain { ... } to be a valid question block
+    const braceOpen = fullBlock.indexOf('{');
+    const braceClose = fullBlock.lastIndexOf('}');
+    if (braceOpen === -1 || braceClose === -1) continue;
+
+    // Extract question text (before the opening brace)
+    let questionPart = fullBlock.substring(0, braceOpen).trim();
+    // Remove ::Title:: prefix
+    questionPart = questionPart.replace(/^::.*?::/s, '').trim();
+    if (!questionPart) continue;
+
+    // Extract answers part (inside braces)
+    const answersPart = fullBlock.substring(braceOpen + 1, braceClose);
+
+    // Split answers: each token starts with = or ~
+    // Handle possible % weight syntax like =%100% or ~%-... (ignore weights)
+    const answerTokens = [];
+    const ansRegex = /([=~])(%[-\d.]+%)?([^=~}]+)/g;
+    let m;
+    while ((m = ansRegex.exec(answersPart)) !== null) {
+      const marker = m[1];       // '=' correct, '~' wrong
+      const ansText = m[3].trim().replace(/#.*$/, '').trim(); // strip inline feedback after #
+      if (ansText) answerTokens.push({ marker, text: ansText });
+    }
+
+    if (answerTokens.length < 2) continue;
+
+    const options = answerTokens.map(t => t.text);
+    const correctAnswers = answerTokens
+      .map((t, i) => t.marker === '=' ? i : -1)
+      .filter(i => i >= 0);
+
+    if (!correctAnswers.length) continue;
+
+    questions.push({
+      question: questionPart,
+      questionNumber: qNum++,
+      options,
+      correctAnswers,
+      explanation: ''
+    });
+  }
+
+  return questions;
 }
 
 function parseDocxHtml(html, subject) {
