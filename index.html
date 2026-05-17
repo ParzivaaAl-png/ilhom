@@ -598,17 +598,14 @@ async function loadQuestionsFromFile(subject){
     if(!resp.ok) throw new Error('HTTP '+resp.status);
 
     if (s.parser === 'gift') {
-      // Moodle GIFT format — use convertToHtml and extract paragraph text
+      // Moodle GIFT format — extract paragraphs via mammoth
       const arrayBuffer = await resp.arrayBuffer();
       const result = await mammoth.convertToHtml({arrayBuffer: arrayBuffer});
       const tmp = document.createElement('div');
       tmp.innerHTML = result.value;
-      // Replace <br> with newline, get text of each <p>
-      tmp.querySelectorAll('br').forEach(br => br.replaceWith('\n'));
       const lines = Array.from(tmp.querySelectorAll('p')).map(p => p.textContent);
-      const text = lines.join('\n');
-      console.log('[GIFT] extracted lines:', lines.length, 'first:', lines[0]);
-      return parseGiftText(text);
+      console.log('[GIFT] total paragraphs:', lines.length);
+      return parseGiftLines(lines);
     } else if (s.file.endsWith('.docx')) {
       const arrayBuffer = await resp.arrayBuffer();
       const result = await mammoth.convertToHtml({arrayBuffer: arrayBuffer});
@@ -623,73 +620,72 @@ async function loadQuestionsFromFile(subject){
 }
 
 // ====== GIFT FORMAT PARSER (Moodle) ======
-// Handles: ::Title::Question text{ ~wrong =correct ~wrong }
-function parseGiftText(text) {
+// Line-by-line parser for GIFT format:
+//   // question: 562001  name: Title        ← comment (skip)
+//   ::Title::Question text?{                ← question start
+//   \t~Wrong answer                         ← wrong option
+//   \t=Correct answer                       ← correct option
+//   }                                       ← question end
+function parseGiftLines(lines) {
   const questions = [];
   let qNum = 1;
+  let cur = null;  // current question being built
+  let inBlock = false;  // are we inside { ... } ?
 
-  // Normalize line endings
-  text = text.replace(/\r\n/g, '\n').replace(/\r/g, '\n');
+  for (let i = 0; i < lines.length; i++) {
+    const raw = lines[i];
+    const line = raw.trim();
 
-  // Split into question blocks by empty lines
-  // Each block starts with optional comment line (// question: ...)
-  const blocks = text.split(/\n{2,}/);
+    // Skip empty lines and comments
+    if (!line || line.startsWith('//')) continue;
 
-  for (const block of blocks) {
-    const lines = block.split('\n').map(l => l.trim()).filter(l => l);
-    if (!lines.length) continue;
-
-    // Skip pure comment lines
-    const nonComment = lines.filter(l => !l.startsWith('//'));
-    if (!nonComment.length) continue;
-
-    // Find the line containing the question text (has :: markers and/or opening {)
-    // e.g.:  ::Title::Question text{
-    let fullBlock = nonComment.join(' ');
-
-    // Must contain { ... } to be a valid question block
-    const braceOpen = fullBlock.indexOf('{');
-    const braceClose = fullBlock.lastIndexOf('}');
-    if (braceOpen === -1 || braceClose === -1) continue;
-
-    // Extract question text (before the opening brace)
-    let questionPart = fullBlock.substring(0, braceOpen).trim();
-    // Remove ::Title:: prefix
-    questionPart = questionPart.replace(/^::[\s\S]*?::/, '').trim();
-    if (!questionPart) continue;
-
-    // Extract answers part (inside braces)
-    const answersPart = fullBlock.substring(braceOpen + 1, braceClose);
-
-    // Split answers: each token starts with = or ~
-    // Handle possible % weight syntax like =%100% or ~%-... (ignore weights)
-    const answerTokens = [];
-    const ansRegex = /([=~])(%[-\d.]+%)?([^=~}]+)/g;
-    let m;
-    while ((m = ansRegex.exec(answersPart)) !== null) {
-      const marker = m[1];       // '=' correct, '~' wrong
-      const ansText = m[3].trim().replace(/#.*$/, '').trim(); // strip inline feedback after #
-      if (ansText) answerTokens.push({ marker, text: ansText });
+    // Detect question start: ::Title::Question text{
+    if (line.match(/^::.*::/) && line.includes('{')) {
+      // Save previous question if any
+      if (cur && cur.options.length >= 2 && cur.correctAnswers.length > 0) {
+        questions.push(cur);
+      }
+      // Extract question text: remove ::Title:: prefix and trailing {
+      let questionText = line.replace(/^::.*?::/, '').replace(/\{\s*$/, '').trim();
+      cur = {
+        question: questionText,
+        questionNumber: qNum++,
+        options: [],
+        correctAnswers: [],
+        explanation: ''
+      };
+      inBlock = true;
+      continue;
     }
 
-    if (answerTokens.length < 2) continue;
+    // Detect closing brace — end of answers block
+    if (line === '}') {
+      if (cur && cur.options.length >= 2 && cur.correctAnswers.length > 0) {
+        questions.push(cur);
+      }
+      cur = null;
+      inBlock = false;
+      continue;
+    }
 
-    const options = answerTokens.map(t => t.text);
-    const correctAnswers = answerTokens
-      .map((t, i) => t.marker === '=' ? i : -1)
-      .filter(i => i >= 0);
-
-    if (!correctAnswers.length) continue;
-
-    questions.push({
-      question: questionPart,
-      questionNumber: qNum++,
-      options,
-      correctAnswers,
-      explanation: ''
-    });
+    // Inside answer block — parse ~wrong and =correct
+    if (inBlock && cur) {
+      const stripped = line.replace(/^\t+/, '');  // remove leading tabs
+      if (stripped.startsWith('~')) {
+        cur.options.push(stripped.substring(1).trim());
+      } else if (stripped.startsWith('=')) {
+        cur.options.push(stripped.substring(1).trim());
+        cur.correctAnswers.push(cur.options.length - 1);
+      }
+    }
   }
 
+  // Push last question if file doesn't end with }
+  if (cur && cur.options.length >= 2 && cur.correctAnswers.length > 0) {
+    questions.push(cur);
+  }
+
+  console.log('[GIFT] parsed questions:', questions.length);
   return questions;
 }
 
